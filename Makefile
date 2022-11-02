@@ -1,4 +1,6 @@
-dots := greetd
+dots :=\
+			 greetd\
+			 bpytop
 
 .PHONY:\
 	all\
