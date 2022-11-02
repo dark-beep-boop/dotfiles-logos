@@ -1,0 +1,82 @@
+#Bashtop Adapta theme
+#by olokelo
+
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]=""
+
+# Main text color
+theme[main_fg]="#4b97fb" #05
+
+# Title color for boxes
+theme[title]="#5fa3fc" #06
+
+# Higlight color for keyboard shortcuts
+theme[hi_fg]="#f3b73d" #0D
+
+# Background color of selected item in processes box
+theme[selected_bg]="#022c64" #01
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#5fa3fc" #06
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#ae327a" #0e
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#f87a31" #0b
+
+# Cpu box outline color
+theme[cpu_box]="#ae327a" #0e
+
+# Memory/disks box outline color
+theme[mem_box]="#ae327a" #0e
+
+# Net up/down box outline color
+theme[net_box]="#ae327a" #0e
+
+# Processes box outline color
+theme[proc_box]="#ae327a" #0e
+
+# Box divider line and small boxes line color
+theme[div_line]="#ae327a" #0e
+
+# Temperature graph colors
+theme[temp_start]="#f59937" #0c
+theme[temp_mid]="#fa5c2b" #0a
+theme[temp_end]="#ff1f1f" #08
+
+# CPU graph colors
+theme[cpu_start]="#f59937" #0c
+theme[cpu_mid]="#fa5c2b" #0a
+theme[cpu_end]="#ff1f1f" #08
+
+# Mem/Disk free meter
+theme[free_start]="#ff1f1f" #08
+theme[free_mid]="#fa5c2b" #0a
+theme[free_end]="#f59937" #0c
+
+# Mem/Disk cached meter
+theme[cached_start]="#f59937" #0c
+theme[cached_mid]="#fa5c2b" #0a
+theme[cached_end]="#ff1f1f" #08
+
+# Mem/Disk available meter
+theme[available_start]="#ff1f1f" #08
+theme[available_mid]="#fa5c2b" #0a
+theme[available_end]="#f59937" #0c
+
+# Mem/Disk used meter
+theme[used_start]="#f59937" #0c
+theme[used_mid]="#fa5c2b" #0a
+theme[used_end]="#ff1f1f" #08
+
+# Download graph colors
+theme[download_start]="#ff1f1f" #08
+theme[download_mid]="#fa5c2b" #0a
+theme[download_end]="#f59937" #0c
+
+# Upload graph colors
+theme[upload_start]="#ff1f1f" #08
+theme[upload_mid]="#fa5c2b" #0a
+theme[upload_end]="#f59937" #0c
+
