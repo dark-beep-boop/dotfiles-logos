@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! -f /tmp/greetd-flag ]
+then
+    sleep $1
+    touch /tmp/greetd-flag
+fi
+

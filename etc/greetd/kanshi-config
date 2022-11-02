@@ -1,0 +1,14 @@
+### Output profiles
+
+# Office display configuration
+profile office {
+    output eDP-1 disable
+    output "Goldstar Company Ltd LG ULTRAWIDE 0x00001BB2" disable
+    output "Lenovo Group Limited C24-25 U760GXCK" enable mode 1920x1080@60Hz position 0,0 scale 1 transform normal
+    output "Lenovo Group Limited C24-25 U7607KYT" disable
+}
+
+# Single display configuration
+profile single {
+    output eDP-1 enable mode 3120x2080@90Hz position 0,0 scale 2 transform normal
+}
