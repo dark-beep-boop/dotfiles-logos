@@ -1,2 +1,2 @@
-# dotfiles-purple-system
-System configuration files for my personal laptop
+# dotfiles-purple
+Configuration files for my personal laptop
