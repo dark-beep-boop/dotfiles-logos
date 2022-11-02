@@ -3,6 +3,11 @@ src_config_dir := config/
 dst_config_dir := /etc/greetd/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
 
+bin_files := greetd-oneshot-delay sway-run
+src_bin_dir := bin/
+dst_bin_dir := /usr/local/bin/
+dst_bin_files := $(addprefix $(dst_bin_dir),$(bin_files))
+
 .PHONY:\
 	all,\
 	install,\
@@ -10,14 +15,21 @@ dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
 
 all:
 
-install: $(dst_config_dir) $(dst_config_files)
+install:\
+	$(dst_config_dir) $(dst_config_files)\
+	$(dst_bin_files)
 
 $(dst_config_dir):
-	@install --owner=greeter --group=greeter --directory $(dst_config_dir)
+	install --owner=greeter --group=greeter --directory $(dst_config_dir)
 
 .SECONDEXPANSION:
 $(dst_config_files): $$(subst $$(dst_config_dir),$$(src_config_dir),$$@)
-	@install --owner=greeter --group=greeter --mode=644 $< $@
+	install --owner=greeter --group=greeter --mode=644 $< $@
+
+.SECONDEXPANSION:
+$(dst_bin_files): $$(subst $$(dst_bin_dir),$$(src_bin_dir),$$@)
+	install --owner=root --group=root --mode=755 $< $@
 
 uninstall:
 	rm -rf $(dst_config_dir)
+	rm -rf $(dst_bin_files)
