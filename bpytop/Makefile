@@ -18,18 +18,18 @@ all:
 install: $(dst_config_dir) $(dst_config_files) $(dst_theme_dir) $(dst_theme_files)
 
 $(dst_config_dir):
-	install --owner=$(USER) --group=$(USER) --directory $(dst_config_dir)
+	install --owner=$(SUDO_USER) --group=$(SUDO_USER) --directory $(dst_config_dir)
 
 .SECONDEXPANSION:
 $(dst_config_files): $$(subst $$(dst_config_dir),$$(src_config_dir),$$@)
-	install --owner=$(USER) --group=$(USER) --mode=644 $< $@
+	install --owner=$(SUDO_USER) --group=$(SUDO_USER) --mode=644 $< $@
 
 $(dst_theme_dir):
-	install --owner=$(USER) --group=$(USER) --directory $(dst_theme_dir)
+	install --owner=$(SUDO_USER) --group=$(SUDO_USER) --directory $(dst_theme_dir)
 
 .SECONDEXPANSION:
 $(dst_theme_files): $$(subst $$(dst_theme_dir),$$(src_theme_dir),$$@)
-	install --owner=$(USER) --group=$(USER) --mode=644 $< $@
+	install --owner=$(SUDO_USER) --group=$(SUDO_USER) --mode=644 $< $@
 
 uninstall:
 	rm -rf $(dst_config_dir)
