@@ -4,7 +4,8 @@ dots :=\
 			 greetd\
 			 kanshi\
 			 kitty\
-			 neofetch
+			 neofetch\
+			 neovim
 
 .PHONY:\
 	all\
