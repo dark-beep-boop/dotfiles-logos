@@ -13,6 +13,9 @@ src_background_dir := backgrounds/
 dst_background_dir := /usr/local/share/backgrounds/
 dst_background_files := $(addprefix $(dst_background_dir),$(background_files))
 
+systemd_file := /usr/lib/systemd/system/greetd.service
+backup_extension := .bak
+
 .PHONY:\
 	all,\
 	install,\
@@ -25,7 +28,7 @@ install:\
 	$(dst_config_dir) $(dst_config_files)\
 	$(dst_bin_files)\
 	$(dst_background_files)\
-	/usr/lib/systemd/system/greetd.service
+	install-systemd
 
 $(dst_config_dir):
 	install --owner=greeter --group=greeter --directory $(dst_config_dir)
@@ -44,14 +47,11 @@ $(dst_background_files):\
 	install --owner=root --group=root --mode=644 $< $@
 
 install-systemd: systemd/greetd.service
-	mv /usr/lib/systemd/system/greetd.service\
-		/usr/lib/systemd/system/greetd.service.bak
-	install --owner=root --group=root --mode=644\
-		$< /usr/lib/systemd/system/greetd.service
+	mv $(systemd_file) $(systemd_file)$(backup_extension)
+	install --owner=root --group=root --mode=644 $< $(systemd_file)
 
 uninstall:
 	rm -rf $(dst_config_dir)
 	rm -rf $(dst_bin_files)
 	rm -rf $(dst_background_files)
-	mv /usr/lib/systemd/system/greetd.service.bak\
-		/usr/lib/systemd/system/greetd.service
+	mv $(systemd_file)$(backup_extension) $(systemd_file)
