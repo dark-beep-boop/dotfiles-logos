@@ -16,6 +16,7 @@ dst_background_files := $(addprefix $(dst_background_dir),$(background_files))
 .PHONY:\
 	all,\
 	install,\
+	install-systemd,\
 	uninstall
 
 all:
@@ -38,19 +39,19 @@ $(dst_bin_files): $$(subst $$(dst_bin_dir),$$(src_bin_dir),$$@)
 	install --owner=root --group=root --mode=755 $< $@
 
 .SECONDEXPANSION:
-$(dst_background_files): $$(subst $$(dst_background_dir),$$(src_background_dir),$$@)
+$(dst_background_files):\
+	$$(subst $$(dst_background_dir),$$(src_background_dir),$$@)
 	install --owner=root --group=root --mode=644 $< $@
 
-/usr/lib/systemd/system/greetd.service: systemd/greetd.service
-	install --owner=root --group=root --mode=644\
-		/usr/lib/systemd/system/greetd.service\
+install-systemd: systemd/greetd.service
+	mv /usr/lib/systemd/system/greetd.service\
 		/usr/lib/systemd/system/greetd.service.bak
-	install --owner=root --group=root --mode=644 $< $@
+	install --owner=root --group=root --mode=644\
+		$< /usr/lib/systemd/system/greetd.service
 
 uninstall:
 	rm -rf $(dst_config_dir)
 	rm -rf $(dst_bin_files)
 	rm -rf $(dst_background_files)
-	install --owner=root --group=root --mode=644\
-		/usr/lib/systemd/system/greetd.service.bak\
+	mv /usr/lib/systemd/system/greetd.service.bak\
 		/usr/lib/systemd/system/greetd.service
