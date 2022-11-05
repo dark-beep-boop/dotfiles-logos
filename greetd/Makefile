@@ -39,7 +39,7 @@ $(dst_bin_files): $$(subst $$(dst_bin_dir),$$(src_bin_dir),$$@)
 
 .SECONDEXPANSION:
 $(dst_background_files): $$(subst $$(dst_background_dir),$$(src_background_dir),$$@)
-	install --owner=root --group=root --mode=755 $< $@
+	install --owner=root --group=root --mode=644 $< $@
 
 /usr/lib/systemd/system/greetd.service: systemd/greetd.service
 	install --owner=root --group=root --mode=644\
