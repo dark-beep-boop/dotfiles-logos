@@ -1,6 +1,7 @@
 dots :=\
-			 greetd\
-			 bpytop
+			 bpytop\
+			 dunst\
+			 greetd
 
 .PHONY:\
 	all\
