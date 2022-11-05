@@ -1,0 +1,24 @@
+### Output configuration
+
+# Office display configuration
+profile office {
+    output eDP-1 disable
+    output "Goldstar Company Ltd LG ULTRAWIDE 0x00001BB2" enable mode 2560x1080@60Hz position 0,0 scale 1 transform 270 
+    output "Lenovo Group Limited C24-25 U760GXCK" enable mode 1920x1080@60Hz position 1080,1060 scale 1 transform normal
+    output "Lenovo Group Limited C24-25 U7607KYT" enable mode 1920x1080@60Hz position 3000,1060 scale 1 transform normal 
+
+    exec swaymsg output '"Goldstar Company Ltd LG ULTRAWIDE 0x00001BB2"' background /home/zus/.local/share/backgrounds/voodoo-vertical.png fill
+    exec swaymsg output '"Lenovo Group Limited C24-25 U760GXCK"' background /home/zus/.local/share/backgrounds/voodoo-horizontal-main.png fill
+    exec swaymsg output '"Lenovo Group Limited C24-25 U7607KYT"' background /home/zus/.local/share/backgrounds/voodoo-horizontal-secondary.png fill
+
+    exec swaymsg workspace 2, move workspace to '"Goldstar Company Ltd LG ULTRAWIDE 0x00001BB2"'
+    exec swaymsg workspace 1, move workspace to '"Lenovo Group Limited C24-25 U760GXCK"'
+    exec swaymsg workspace 4, move workspace to '"Lenovo Group Limited C24-25 U7607KYT"'
+}
+
+# Single display configuration
+profile single {
+    output eDP-1 enable mode 3120x2080@90Hz position 0,0 scale 2 transform normal
+    exec swaymsg output eDP-1 background /home/zus/.local/share/backgrounds/voodoo-main.png fill
+}
+
