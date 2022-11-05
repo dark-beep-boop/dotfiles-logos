@@ -1,7 +1,8 @@
 dots :=\
 			 bpytop\
 			 dunst\
-			 greetd
+			 greetd\
+			 kanshi
 
 .PHONY:\
 	all\
