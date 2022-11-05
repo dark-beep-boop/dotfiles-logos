@@ -54,4 +54,3 @@ uninstall:
 	install --owner=root --group=root --mode=644\
 		/usr/lib/systemd/system/greetd.service.bak\
 		/usr/lib/systemd/system/greetd.service
-	rm -rf /usr/lib/systemd/system/greetd.service.bak
