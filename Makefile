@@ -3,7 +3,8 @@ dots :=\
 			 dunst\
 			 greetd\
 			 kanshi\
-			 kitty
+			 kitty\
+			 neofetch
 
 .PHONY:\
 	all\
