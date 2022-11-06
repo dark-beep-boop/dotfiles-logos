@@ -5,7 +5,8 @@ dots :=\
 			 kanshi\
 			 kitty\
 			 neofetch\
-			 neovim
+			 neovim\
+			 swaylock
 
 .PHONY:\
 	all\
