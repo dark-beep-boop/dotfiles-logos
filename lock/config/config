@@ -1,6 +1,9 @@
 clock
 
 ### begin base16 scheme
+## Base16 painted
+# Author: dark-beep-boop
+
 color=011837
 
 bs-hl-color=0450b4
@@ -15,21 +18,20 @@ inside-caps-lock-color=011837
 inside-ver-color=4b97fb
 inside-wrong-color=011837
 
-
 layout-bg-color=011837
 layout-border-color=011837
 layout-text-color=4b97fb
 
-line-color=378cfb
-line-clear-color=378cfb
+line-color=4b97fb
+line-clear-color=4b97fb
 line-caps-lock-color=f3b73d
-line-ver-color=378cfb
+line-ver-color=4b97fb
 line-wrong-color=ff1f1f
 
 ring-color=011837
 ring-clear-color=011837
 ring-caps-lock-color=011837
-ring-ver-color=022c64
+ring-ver-color=011837
 ring-wrong-color=011837
 
 separator-color=011837
