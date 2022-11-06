@@ -1,6 +1,7 @@
 dots :=\
 			 bpytop\
 			 dunst\
+			 flavours\
 			 greetd\
 			 kanshi\
 			 kitty\
@@ -8,7 +9,9 @@ dots :=\
 			 logout-menu\
 			 menu\
 			 neofetch\
-			 neovim
+			 neovim\
+			 sway\
+			 waybar
 
 .PHONY:\
 	all\
