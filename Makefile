@@ -4,11 +4,11 @@ dots :=\
 			 greetd\
 			 kanshi\
 			 kitty\
+			 lock\
 			 logout-menu\
 			 menu\
 			 neofetch\
-			 neovim\
-			 swaylock
+			 neovim
 
 .PHONY:\
 	all\
