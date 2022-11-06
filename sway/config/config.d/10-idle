@@ -1,0 +1,7 @@
+### Idle configuration
+
+# Example configuration:
+exec swayidle -w \
+  timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+  timeout 330 'systemctl suspend' \
+  before-sleep $lock

@@ -1,0 +1,24 @@
+### Basic key bindings
+
+# Start a terminal
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec $scratch_term
+
+# Kill focused window
+bindsym $mod+w kill
+
+# Start your launcher
+bindsym $mod+r exec $menu
+
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+floating_modifier $mod normal
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Exit sway (logs you out of your Wayland session)
+bindsym $mod+Shift+s exec $logout_menu

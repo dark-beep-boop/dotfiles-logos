@@ -1,0 +1,19 @@
+## Base16 painted
+# Author: dark-beep-boop
+
+set $base00 #011837
+set $base01 #022c64
+set $base02 #033e8c
+set $base03 #0450b4
+set $base04 #378cfb
+set $base05 #4b97fb
+set $base06 #5fa3fc
+set $base07 #9bc5fd
+set $base08 #ff1f1f
+set $base09 #fd3d25
+set $base0A #fa5c2b
+set $base0B #f87a31
+set $base0C #f59937
+set $base0D #f3b73d
+set $base0E #ae327a
+set $base0F #ae327a

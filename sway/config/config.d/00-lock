@@ -1,0 +1,3 @@
+### Lock command variable
+
+set $lock ~/.local/bin/lock

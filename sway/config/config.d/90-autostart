@@ -1,0 +1,4 @@
+### Start applications on init
+
+# Notifications
+exec dunst

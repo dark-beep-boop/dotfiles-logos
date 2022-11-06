@@ -1,0 +1,5 @@
+### Last tasks to execute
+
+# Focus on new tiling windows
+# Must be done after startup apps
+for_window [workspace=.*] focus
