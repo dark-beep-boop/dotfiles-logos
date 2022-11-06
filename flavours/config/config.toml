@@ -1,0 +1,73 @@
+### Flavours configuration
+
+shell = "bash -c '{}'"
+
+[[items]]
+file = "~/.config/bpytop/themes/base16-flavours.theme"
+template = "bpytop"
+rewrite = true
+light = true
+
+[[items]]
+file = "~/.config/dunst/dunstrc"
+template = "dunst"
+start = "### begin base16 scheme"
+end = "### end base16 scheme"
+rewrite = false
+light = false
+hook = "killall dunst; swaymsg exec dunst"
+
+[[items]]
+file = "~/.config/kitty/current-theme.conf"
+template = "kitty"
+rewrite = true
+hook = "swaymsg reload"
+light = false
+
+[[items]]
+file = "~/.config/swaylock/config"
+template = "swaylock"
+start = "### begin base16 scheme"
+end = "### end base16 scheme"
+rewrite = false
+light = false
+
+[[items]]
+file = "~/.config/logout-menu/color-scheme.css"
+template = "wofi"
+rewrite = true
+light = true
+
+[[items]]
+file = "~/.config/wofi/color-scheme.css"
+template = "wofi"
+rewrite = true
+light = true
+
+[[items]]
+file = "~/.config/nvim/lua/colors.lua"
+template = "neovim"
+rewrite = true
+light = true
+
+[[items]]
+file = "~/.config/sway/config.d/00-color-scheme"
+template = "sway"
+subtemplate = "colors"
+rewrite = true
+hook = "swaymsg reload"
+light = false
+
+[[items]]
+file = "~/.config/waybar/color-scheme.css"
+template = "waybar"
+rewrite = true
+hook = "killall waybar; swaymsg exec waybar"
+light = false
+
+[[items]]
+file = "~/.Xdefaults"
+template = "xresources"
+rewrite = true
+hook = "xrdb -merge ~/.Xdefaults"
+light = false

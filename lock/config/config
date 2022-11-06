@@ -1,7 +1,6 @@
 clock
-show-keyboard-layout
 
-# Begin Base16 scheme
+### begin base16 scheme
 color=011837
 
 bs-hl-color=0450b4
@@ -40,4 +39,4 @@ text-clear-color=4b97fb
 text-caps-lock-color=f3b73d
 text-ver-color=011837
 text-wrong-color=ff1f1f
-# End Base16 scheme
+### end base16 scheme
