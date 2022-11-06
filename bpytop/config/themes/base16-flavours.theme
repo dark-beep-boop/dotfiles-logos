@@ -1,5 +1,5 @@
-#painted theme
-#by dark-beep-boop
+## painted theme
+## by dark-beep-boop
 
 # Main background, empty for terminal default, need to be empty if you want transparent background
 theme[main_bg]=""
