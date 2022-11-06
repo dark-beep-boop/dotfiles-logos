@@ -21,37 +21,31 @@ dst_systemd_dir := /usr/lib/systemd/system/
 dst_systemd_file := $(dst_systemd_dir)$(systemd_file)
 dst_bak_systemd_file := $(dst_systemd_file)$(backup_extension)
 
-.PHONY:\
-	all,\
-	install,\
-	uninstall
+.PHONY: all, install, uninstall
 
 all:
 
 install:\
-	$(dst_config_dir) $(dst_config_files)\
+	$(dst_config_files)\
 	$(dst_bin_files)\
 	$(dst_background_files)\
 	$(dst_systemd_file)
 
-$(dst_config_dir):
-	install --owner=greeter --group=greeter --directory $(dst_config_dir)
-
 .SECONDEXPANSION:
 $(dst_config_files): $$(subst $$(dst_config_dir),$$(src_config_dir),$$@)
-	install --owner=greeter --group=greeter --mode=644 $< $@
+	install --owner=greeter --group=greeter --mode=644 -D $< $@
 
 .SECONDEXPANSION:
 $(dst_bin_files): $$(subst $$(dst_bin_dir),$$(src_bin_dir),$$@)
-	install --owner=root --group=root --mode=755 $< $@
+	install --owner=root --group=root --mode=755 -D $< $@
 
 .SECONDEXPANSION:
 $(dst_background_files):\
 	$$(subst $$(dst_background_dir),$$(src_background_dir),$$@)
-	install --owner=root --group=root --mode=644 $< $@
+	install --owner=root --group=root --mode=644 -D $< $@
 
 $(dst_systemd_file): $(dst_bak_systemd_file) $(src_systemd_file)
-	install --owner=root --group=root --mode=644 $(src_systemd_file) $@
+	install --owner=root --group=root --mode=644 -D $(src_systemd_file) $@
 
 $(dst_bak_systemd_file):
 	mv $(dst_systemd_file) $(dst_bak_systemd_file)

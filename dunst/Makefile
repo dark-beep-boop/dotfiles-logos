@@ -13,14 +13,11 @@ dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
 
 all:
 
-install: $(dst_config_dir) $(dst_config_files)
-
-$(dst_config_dir):
-	install --owner=$(username) --group=$(username) --directory $(dst_config_dir)
+install: $(dst_config_files)
 
 .SECONDEXPANSION:
 $(dst_config_files): $$(subst $$(dst_config_dir),$$(src_config_dir),$$@)
-	install --owner=$(username) --group=$(username) --mode=644 $< $@
+	install --owner=$(username) --group=$(username) --mode=644 -D $< $@
 
 uninstall:
 	rm -rf $(dst_config_dir)

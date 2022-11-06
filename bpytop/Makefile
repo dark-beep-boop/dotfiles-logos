@@ -6,15 +6,11 @@ src_config_dir := config/
 dst_config_dir := $(userhome).config/bpytop/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
 
-.PHONY:\
-	all,\
-	install,\
-	uninstall
+.PHONY: all, install, uninstall
 
 all:
 
-install:\
-	$(dst_config_files)
+install: $(dst_config_files)
 
 .SECONDEXPANSION:
 $(dst_config_files): $$(subst $$(dst_config_dir),$$(src_config_dir),$$@)
