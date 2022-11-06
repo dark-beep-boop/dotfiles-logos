@@ -3,6 +3,15 @@
 * {
   font-family: FontAwesome, DejaVu Sans Mono, monospace, sans-serif;
   font-size: 13px;
+  border: none;
+}
+
+button:hover {
+  background: inherit;
+  color: inherit;
+  border: inherit;
+  box-shadow: inherit;
+  text-shadow: inherit;
 }
 
 window#waybar {
@@ -47,8 +56,8 @@ window#waybar.hidden {
   color: @base05;
 }
 
+#network,
 #clock,
-#battery,
 #cpu,
 #memory,
 #disk,
@@ -109,6 +118,10 @@ window#waybar.hidden {
   to {
     color: @base08;
   }
+}
+
+#battery {
+  padding: 0 7px;
 }
 
 #battery.critical:not(.charging) {
