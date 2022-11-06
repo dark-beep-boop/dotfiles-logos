@@ -1,18 +1,10 @@
 username := $(SUDO_USER)
 userhome := $(shell echo ~$(username))/
 
-config_files := bpytop.conf
+config_files := bpytop.conf themes/base16-flavours.theme
 src_config_dir := config/
 dst_config_dir := $(userhome).config/bpytop/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
-
-theme_config_files := base16-flavours.theme
-src_theme_config_dir := $(src_config_dir)themes/
-dst_theme_config_dir := $(dst_config_dir)themes/
-dst_theme_config_files :=\
-			 $(addprefix\
-			 $(dst_theme_config_dir),\
-			 $(theme_config_files))
 
 .PHONY:\
 	all,\
@@ -22,25 +14,11 @@ dst_theme_config_files :=\
 all:
 
 install:\
-	$(dst_config_dir)\
-	$(dst_config_files)\
-	$(dst_theme_config_dir)\
-	$(dst_theme_config_files)
-
-$(dst_config_dir):
-	install --owner=$(username) --group=$(username) --directory $@
+	$(dst_config_files)
 
 .SECONDEXPANSION:
 $(dst_config_files): $$(subst $$(dst_config_dir),$$(src_config_dir),$$@)
-	install --owner=$(username) --group=$(username) --mode=644 $< $@
-
-$(dst_theme_config_dir):
-	install --owner=$(username) --group=$(username) --directory $@
-
-.SECONDEXPANSION:
-$(dst_theme_config_files):\
-	$$(subst $$(dst_theme_config_dir),$$(src_theme_config_dir),$$@)
-	install --owner=$(username) --group=$(username) --mode=644 $< $@
+	install --owner=$(username) --group=$(username) --mode=644 -D $< $@
 
 uninstall:
 	rm -rf $(dst_config_dir)
