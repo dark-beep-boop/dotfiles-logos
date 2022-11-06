@@ -1,7 +1,7 @@
 username := $(SUDO_USER)
 userhome := $(shell echo ~$(username))/
 
-config_files := config style.css color-scheme.css
+config_files := fuzzel.ini
 src_config_dir := config/
 dst_config_dir := $(userhome).config/logout-menu/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))

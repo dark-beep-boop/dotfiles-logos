@@ -1,9 +1,9 @@
 #!/bin/sh
 
-config_file="$HOME/.config/logout-menu/config"
+config_file="$HOME/.config/logout-menu/fuzzel.ini"
 
 #input option
-option=$(echo -e "\n\n\n" | wofi --conf $config_file)
+option=$(echo -e "\n\n\n" | fuzzel --dmenu --config=$config_file)
 
 #command execution
 case $option in
