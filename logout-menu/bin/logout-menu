@@ -1,0 +1,23 @@
+#!/bin/sh
+
+config_file="$HOME/.config/wofi/logout-menu/config"
+
+#input option
+option=$(echo -e "\n\n\n" | wofi --conf $config_file)
+
+#command execution
+case $option in
+  )
+    swaymsg exit
+    ;;
+  )
+    lock
+    ;;
+  )
+    systemctl poweroff
+    ;;
+  )
+    systemctl reboot
+    ;;
+  *)
+esac
