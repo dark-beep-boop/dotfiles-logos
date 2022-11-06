@@ -118,6 +118,7 @@ window#waybar.hidden {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  border-radius: 15px;
 }
 
 label:focus {
