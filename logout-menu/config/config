@@ -1,6 +1,6 @@
 mode = dmenu
 term = kitty
-style = /home/zus/.config/wofi/logout-menu/style.css
+style = /home/zus/.config/logout-menu/style.css
 columns = 4
 width = 250
 lines = 1

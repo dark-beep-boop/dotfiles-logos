@@ -4,6 +4,8 @@ dots :=\
 			 greetd\
 			 kanshi\
 			 kitty\
+			 logout-menu\
+			 menu\
 			 neofetch\
 			 neovim\
 			 swaylock

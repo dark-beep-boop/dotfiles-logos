@@ -1,6 +1,6 @@
 #!/bin/sh
 
-config_file="$HOME/.config/wofi/logout-menu/config"
+config_file="$HOME/.config/logout-menu/config"
 
 #input option
 option=$(echo -e "\n\n\n" | wofi --conf $config_file)

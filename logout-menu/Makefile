@@ -3,7 +3,7 @@ userhome := $(shell echo ~$(username))/
 
 config_files := config style.css color-scheme.css
 src_config_dir := config/
-dst_config_dir := $(userhome).config/wofi/logout-menu/
+dst_config_dir := $(userhome).config/logout-menu/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
 
 bin_files := logout-menu
