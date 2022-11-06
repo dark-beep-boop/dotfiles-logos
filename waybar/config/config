@@ -1,0 +1,162 @@
+[
+  {
+    // Bar dimensions
+    "height": 30,
+    "spacing": 4,
+    "margin-top": 10,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-bottom": 0,
+
+    // Where to show the bar
+    "output": ["eDP-1", "DP-7"],
+
+    // Choose the order of the modules
+    "modules-left": ["clock"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["tray", "pulseaudio", "network", "battery"],
+
+    // Modules configuration
+    "sway/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": true,
+      "persistent_workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": []
+      },
+      "format": "{icon}",
+      "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "urgent": "",
+        "focused": "",
+        "default": ""
+      }
+    },
+    "clock": {
+      "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%a %d %B %Y}",
+      "format": "{:%R}"
+    },
+    "network": {
+      "format-wifi": "",
+      "tooltip-format-wifi": "connected to {essid} ({signalStrength}%) with {ifname} via {gwaddr} ",
+      "format-ethernet": "",
+      "tooltip-format-ethernet": "connected as {ipaddr}/{cidr} with {ifname} via {gwaddr} ",
+      "format-linked": "",
+      "tooltip-format-linked": "connected (No IP) with {ifname} via {gwaddr} ",
+      "format-disconnected": "",
+      "tooltip-format-disconnected": "disconnected",
+      "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "battery": {
+      "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{icon}",
+      "format-alt": "{capacity}% ({time}) {icon}",
+      "tooltip-format": "{capacity}% (remaining time: {time})",
+      "format-charging": "",
+      "tooltip-format-charging": "{capacity}% (time to full charge: {time})",
+      "format-not-charging": "",
+      "tooltip-format-not-charging": "{capacity}% (not charging)",
+      "format-plugged": "",
+      "tooltip-format-plugged": "{capacity}% (charge)",
+      "format-icons": ["", "", "", "", ""]
+    },
+    "tray": {
+      "spacing": 10
+    },
+    "pulseaudio": {
+      "format": "{volume}% {icon} {format_source}",
+      "format-bluetooth": "{volume}% {icon} {format_source}",
+      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-muted": " {format_source}",
+      "format-source": "{volume}% ",
+      "format-source-muted": "",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+      },
+      "on-click": "pavucontrol"
+    },
+  },
+  {
+    // Bar dimensions and position
+    "position": "bottom",
+    "height": 30,
+    "spacing": 4,
+    "margin-top": 0,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-bottom": 10,
+
+    // Where to show the bar
+    "output": ["eDP-1", "DP-7"],
+
+    // Choose the order of the modules
+    "modules-left": ["sway/mode", "custom/media"],
+    "modules-center": ["idle_inhibitor"],
+    "modules-right": ["cpu", "memory", "temperature", "backlight", "keyboard-state"],
+
+    "keyboard-state": {
+      "numlock": true,
+      "capslock": true,
+      "format": "{name} {icon}",
+      "format-icons": {
+        "locked": "",
+        "unlocked": ""
+      }
+    },
+    "sway/mode": {
+      "format": "<span style=\"italic\">{}</span>"
+    },
+    "idle_inhibitor": {
+      "format": "{icon}",
+      "format-icons": {
+        "activated": "",
+        "deactivated": ""
+      }
+    },
+    "cpu": {
+      "format": "{usage}% ",
+      "tooltip": false
+    },
+    "memory": {
+      "format": "{}% "
+    },
+    "temperature": {
+      "critical-threshold": 80,
+      "format": "{temperatureC}°C {icon}",
+      "format-icons": ["", "", ""]
+    },
+    "backlight": {
+      "format": "{percent}% {icon}",
+      "format-icons": ["", ""]
+    },
+    "custom/media": {
+      "format": "{icon} {}",
+      "return-type": "json",
+      "max-length": 40,
+      "format-icons": {
+          "spotify": "",
+          "default": ""
+      },
+      "escape": true,
+      "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    }
+  }
+]

@@ -1,0 +1,193 @@
+@import "/home/zus/.config/waybar/color-scheme.css";
+
+* {
+  font-family: FontAwesome, DejaVu Sans Mono, monospace, sans-serif;
+  font-size: 13px;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: @base05;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces button {
+  padding: 0 7px;
+  background-color: transparent;
+  color: @base05;
+  border: none;
+  border-radius: 15px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+  background: @base02;
+  color: @base05;
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+#workspaces button.focused {
+  background-color: @base05;
+  color: @base00;
+}
+
+#workspaces button.urgent {
+  background-color: @base02;
+  color: @base06;
+}
+
+#mode {
+  background-color: @base00;
+  color: @base05;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#mpd {
+  padding: 0 9px;
+}
+
+#network,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+  color: @base05;
+}
+
+#battery.warning {
+  color: @base0A;
+}
+
+#idle_inhibitor {
+  padding: 0 8px;
+  border-radius: 15px;
+}
+
+#window,
+#workspaces {
+  margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+@keyframes blink {
+  to {
+    color: @base08;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: @base08;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: @base00;
+}
+
+#network.disconnected {
+  color: @base0A;
+}
+
+#custom-media {
+  color: @base00;
+  min-width: 100px;
+  border-radius: 15px;
+}
+
+#custom-media.custom-spotify {
+  background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+  background-color: #ffa000;
+}
+
+#temperature.critical {
+  color: @base08;
+}
+
+#tray {
+  border-radius: 15px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: @base0A;
+}
+
+#idle_inhibitor {
+  background-color: @base00;
+}
+
+#idle_inhibitor.activated {
+  background-color: @base0D;
+  color: @base00;
+}
+
+#mpd.disconnected {
+  color: @base0A;
+}
+
+#language {
+  padding: 0 7px;
+  margin: 0 5px;
+  min-width: 16px;
+}
+
+#keyboard-state {
+  padding: 0 0px;
+  margin: 0 5px;
+  min-width: 16px;
+}
+
+#keyboard-state > label {
+  padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+  background: rgba(0, 0, 0, 0.2);
+}
