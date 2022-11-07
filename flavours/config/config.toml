@@ -34,7 +34,7 @@ light = true
 
 [[items]]
 file = "~/.config/logout-menu/fuzzel.ini"
-template = "wofi"
+template = "fuzzel"
 start = "### begin base16 scheme"
 end = "### end base16 scheme"
 rewrite = false
@@ -42,7 +42,7 @@ light = true
 
 [[items]]
 file = "~/.config/fuzzel/fuzzel.ini"
-template = "wofi"
+template = "fuzzel"
 start = "### begin base16 scheme"
 end = "### end base16 scheme"
 rewrite = false
