@@ -2,7 +2,6 @@ dots :=\
 			 bpytop\
 			 dunst\
 			 flavours\
-			 greetd\
 			 kanshi\
 			 kitty\
 			 lock\
@@ -16,7 +15,9 @@ dots :=\
 .PHONY:\
 	all\
 	install\
-	uninstall
+	uninstall\
+	install-greetd\
+	uninstall-greetd
 
 all:
 
@@ -35,3 +36,13 @@ uninstall:
 		make uninstall;\
 		cd ..;\
 	done
+
+install-greetd:
+	@cd greetd;\
+		make install;\
+		cd ..
+
+uninstall-greetd:
+	@cd greetd;\
+		make uninstall;\
+		cd ..
