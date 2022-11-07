@@ -26,10 +26,14 @@ dst_bak_systemd_file := $(dst_systemd_file)$(backup_extension)
 all:
 
 install:\
+	$(dst_config_dir)\
 	$(dst_config_files)\
 	$(dst_bin_files)\
 	$(dst_background_files)\
 	$(dst_systemd_file)
+
+$(dst_config_dir):
+	install --owner=greeter --group=greeter --directory $@
 
 .SECONDEXPANSION:
 $(dst_config_files): $$(subst $$(dst_config_dir),$$(src_config_dir),$$@)
