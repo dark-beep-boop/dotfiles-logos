@@ -30,18 +30,22 @@ template = "swaylock"
 start = "### begin base16 scheme"
 end = "### end base16 scheme"
 rewrite = false
-light = false
-
-[[items]]
-file = "~/.config/logout-menu/color-scheme.css"
-template = "wofi"
-rewrite = true
 light = true
 
 [[items]]
-file = "~/.config/wofi/color-scheme.css"
+file = "~/.config/logout-menu/fuzzel.ini"
 template = "wofi"
-rewrite = true
+start = "### begin base16 scheme"
+end = "### end base16 scheme"
+rewrite = false
+light = true
+
+[[items]]
+file = "~/.config/fuzzel/fuzzel.ini"
+template = "wofi"
+start = "### begin base16 scheme"
+end = "### end base16 scheme"
+rewrite = false
 light = true
 
 [[items]]
