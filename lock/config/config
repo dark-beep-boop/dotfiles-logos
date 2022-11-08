@@ -1,4 +1,6 @@
 clock
+image=/home/zus/.local/share/backgrounds/.default
+effect-vignette=0.4:0.4
 
 ### begin base16 scheme
 ## Base16 painted
@@ -22,11 +24,16 @@ layout-bg-color=011837
 layout-border-color=011837
 layout-text-color=4b97fb
 
-line-color=4b97fb
-line-clear-color=4b97fb
-line-caps-lock-color=f3b73d
-line-ver-color=4b97fb
-line-wrong-color=ff1f1f
+#line-color=4b97fb
+#line-clear-color=4b97fb
+#line-caps-lock-color=f3b73d
+#line-ver-color=4b97fb
+#line-wrong-color=ff1f1f
+line-color=011837
+line-clear-color=011837
+line-caps-lock-color=011837
+line-ver-color=011837
+line-wrong-color=011837
 
 ring-color=011837
 ring-clear-color=011837
