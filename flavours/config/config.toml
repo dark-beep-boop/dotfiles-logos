@@ -46,7 +46,7 @@ light = true
 [[items]]
 file = "~/.config/fuzzel/fuzzel.ini"
 template = "fuzzel"
-template = "smooth"
+subtemplate = "smooth"
 start = "### begin base16 scheme"
 end = "### end base16 scheme"
 rewrite = false
