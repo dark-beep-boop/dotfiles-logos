@@ -35,7 +35,7 @@ rewrite = false
 light = true
 
 [[items]]
-file = "~/.config/logout-menu/fuzzel.ini"
+file = "~/.config/power-menu/fuzzel.ini"
 template = "fuzzel"
 subtemplate = "smooth"
 start = "### begin base16 scheme"
