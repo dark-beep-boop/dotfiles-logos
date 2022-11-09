@@ -19,11 +19,13 @@ install: $(dst_config_files) $(dst_bin_files)
 
 .SECONDEXPANSION:
 $(dst_config_files): $$(subst $$(dst_config_dir),$$(src_config_dir),$$@)
-	install --owner=$(username) --group=$(username) --mode=644 -D $< $@
+	su $(username) --command="\
+		install --owner=$(username) --group=$(username) --mode=644 -D $< $@"
 
 .SECONDEXPANSION:
 $(dst_bin_files): $$(subst $$(dst_bin_dir),$$(src_bin_dir),$$@)
-	install --owner=$(username) --group=$(username) --mode=755 -D $< $@
+	su $(username) --command="\
+		install --owner=$(username) --group=$(username) --mode=755 -D $< $@"
 
 uninstall:
 	rm -rf $(dst_config_dir)
