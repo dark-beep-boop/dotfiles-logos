@@ -53,7 +53,7 @@
       "tooltip-format-linked": "connected (No IP) with {ifname} via {gwaddr} ",
       "format-disconnected": "",
       "tooltip-format-disconnected": "disconnected",
-      "format-alt": "{ifname}: {ipaddr}/{cidr}"
+      "on-click": "kitty --class scratch nmtui"
     },
     "battery": {
       "states": {
@@ -62,7 +62,6 @@
         "critical": 15
       },
       "format": "{icon}",
-      "format-alt": "{capacity}% ({time}) {icon}",
       "tooltip-format": "{capacity}% (remaining time: {time})",
       "format-charging": "",
       "tooltip-format-charging": "{capacity}% (time to full charge: {time})",
@@ -91,7 +90,7 @@
         "car": "",
         "default": ["", "", ""]
       },
-      "on-click": "pavucontrol"
+      "on-click": "kitty --class scratch pulsemixer"
     },
   },
   {
