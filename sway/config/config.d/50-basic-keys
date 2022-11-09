@@ -21,4 +21,4 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+s exec $logout_menu
+bindsym $mod+Shift+s exec $power_menu

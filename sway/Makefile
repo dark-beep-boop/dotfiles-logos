@@ -5,8 +5,8 @@ config_files :=\
 							 config\
 							 config.d/00-color-scheme\
 							 config.d/00-lock\
-							 config.d/00-logout-menu\
 							 config.d/00-menu\
+							 config.d/00-power-menu\
 							 config.d/00-variables\
 							 config.d/10-bar\
 							 config.d/10-idle\
