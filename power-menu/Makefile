@@ -3,10 +3,10 @@ userhome := $(shell echo ~$(username))/
 
 config_files := fuzzel.ini
 src_config_dir := config/
-dst_config_dir := $(userhome).config/logout-menu/
+dst_config_dir := $(userhome).config/power-menu/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
 
-bin_files := logout-menu
+bin_files := power-menu
 src_bin_dir := bin/
 dst_bin_dir := $(userhome).local/bin/
 dst_bin_files := $(addprefix $(dst_bin_dir),$(bin_files))

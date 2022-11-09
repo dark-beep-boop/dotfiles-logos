@@ -1,22 +1,22 @@
 #!/bin/sh
 
-config_file="$HOME/.config/logout-menu/fuzzel.ini"
+config_file="$HOME/.config/power-menu/fuzzel.ini"
 
 #input option
 option=$(echo -e "\n\n\n" | fuzzel --dmenu --config=$config_file)
 
 #command execution
 case $option in
-  )
+  0)
     swaymsg exit
     ;;
-  )
+  1)
     $HOME/.local/bin/lock
     ;;
-  )
+  2)
     systemctl poweroff
     ;;
-  )
+  3)
     systemctl reboot
     ;;
   *)

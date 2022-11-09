@@ -5,7 +5,7 @@ dots :=\
 			 kanshi\
 			 kitty\
 			 lock\
-			 logout-menu\
+			 power-menu\
 			 menu\
 			 neofetch\
 			 neovim\
