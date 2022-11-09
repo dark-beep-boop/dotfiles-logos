@@ -87,7 +87,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 1
+    frame_width = 0
 
     # Defines color of the frame around the notification window.
     #frame_color = "#aaaaaa"
@@ -118,7 +118,7 @@
 
     ### Text ###
 
-    font = DejaVu Sans Mono 8
+    font = DejaVu Sans Mono 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -245,7 +245,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 10
+    corner_radius = 15
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -458,17 +458,17 @@ separator_color = "#4b97fb"
 
 [base16_low]
     msg_urgency = low
-    background = "#022c64"
+    background = "#022c64f2"
     foreground = "#0450b4"
 
 [base16_normal]
     msg_urgency = normal
-    background = "#033e8c"
+    background = "#022c64f2"
     foreground = "#4b97fb"
 
 [base16_critical]
     msg_urgency = critical
-    background = "#ff1f1f"
+    background = "#ff1f1ff2"
     foreground = "#5fa3fc"
 ### end base16 scheme
 
