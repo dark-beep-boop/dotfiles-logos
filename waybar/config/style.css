@@ -1,5 +1,8 @@
 @import "/home/zus/.config/waybar/color-scheme.css";
 
+/* 
+ * Common configuration
+ */
 * {
   font-family: FontAwesome, DejaVu Sans Mono, monospace, sans-serif;
   font-size: 13px;
@@ -7,13 +10,41 @@
 }
 
 button:hover {
-  background: inherit;
-  color: inherit;
+  background: @base01;
+  color: @base06;
   border: inherit;
   box-shadow: inherit;
   text-shadow: inherit;
 }
 
+label:focus {
+  background-color: @base00;
+}
+
+@keyframes blink {
+  to {
+    color: @base08;
+  }
+}
+
+/*
+ * Waybar tooltips
+ */
+tooltip {
+  color: @base05;
+  background-color: @base01;
+  text-shadow: none;
+  border-radius: 10px;
+  opacity: 0.95;
+}
+
+tooltip * {
+  color: @base05;
+}
+
+/*
+ * Waybar window
+ */
 window#waybar {
   background-color: transparent;
   color: @base05;
@@ -25,127 +56,97 @@ window#waybar.hidden {
   opacity: 0.2;
 }
 
-#workspaces button {
-  padding: 0 7px;
-  background-color: transparent;
-  color: @base05;
-  border: none;
-  border-radius: 15px;
+#window {
+  margin: 0 4px;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
-  background: @base02;
-  color: @base05;
-  box-shadow: inherit;
-  text-shadow: inherit;
-}
-
-#workspaces button.focused {
-  background-color: @base05;
-  color: @base00;
-}
-
-#workspaces button.urgent {
-  background-color: @base02;
-  color: @base06;
-}
-
-#mode {
-  background-color: @base00;
-  color: @base05;
-}
-
-#network,
+/*
+ * Common widget configuration
+ */
+#backlight,
 #clock,
 #cpu,
-#memory,
+#custom-media,
 #disk,
-#temperature,
-#backlight,
+#memory,
+#mode,
+#mpd,
 #network,
 #pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#mpd {
+#temperature,
+#tray {
   padding: 0 9px;
 }
 
-#network,
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
 #backlight,
+#battery,
+#clock,
+#cpu,
+#custom-media,
+#disk,
+#memory,
+#mode,
+#mpd,
 #network,
 #pulseaudio,
-#custom-media,
-#tray,
-#mode,
+#temperature,
+#tray {
+  border-radius: 15px;
+}
+
+#backlight,
+#battery,
+#cpu,
+#disk,
 #idle_inhibitor,
-#mpd {
+#memory,
+#mode,
+#mpd,
+#network,
+#pulseaudio,
+#temperature,
+#tray {
   color: @base05;
+}
+
+/*
+ * Battery
+ */
+#battery {
+  padding: 0 7px;
 }
 
 #battery.warning {
   color: @base0A;
 }
 
-#idle_inhibitor {
-  padding: 0 8px;
-  border-radius: 15px;
-}
-
-#window,
-#workspaces {
-  margin: 0 4px;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-  margin-right: 0;
-}
-
-@keyframes blink {
-  to {
-    color: @base08;
-  }
-}
-
-#battery {
-  padding: 0 7px;
+#battery.critical {
+  color: @base08;
 }
 
 #battery.critical:not(.charging) {
+  color: @base0A;
   background-color: @base08;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  border-radius: 15px;
 }
 
-label:focus {
-  background-color: @base00;
+/*
+ * Clock
+ */
+#clock {
+  color: @base0D;
 }
 
-#network.disconnected {
-  color: @base0A;
-}
-
+/*
+ * Custom
+ */
 #custom-media {
   color: @base00;
   min-width: 100px;
-  border-radius: 15px;
 }
 
 #custom-media.custom-spotify {
@@ -156,10 +157,81 @@ label:focus {
   background-color: #ffa000;
 }
 
+/*
+ * Inhibitor
+ */
+#idle_inhibitor {
+  padding: 0 7px;
+  border-radius: 15px;
+}
+
+#idle_inhibitor.activated {
+  color: @base00;
+  background-color: @base0D;
+}
+
+/*
+ * Keyboard state
+ */
+#keyboard-state {
+  padding: 0 0px;
+  margin: 0 5px;
+  min-width: 16px;
+}
+
+#keyboard-state > label {
+  padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/*
+ * Language
+ */
+#language {
+  padding: 0 7px;
+  margin: 0 5px;
+  min-width: 16px;
+}
+
+/*
+ * Mode
+ */
+#mode {
+  background-color: @base00;
+  color: @base05;
+}
+
+/*
+ * MPD
+ */
+#mpd.disconnected {
+  color: @base0A;
+}
+
+/*
+ * Network
+ */
+#network {
+  padding: 0 7px;
+}
+
+#network.disconnected {
+  color: @base08;
+}
+
+/*
+ * Temperature
+ */
 #temperature.critical {
   color: @base08;
 }
 
+/*
+ * Tray
+ */
 #tray {
   border-radius: 15px;
 }
@@ -173,35 +245,44 @@ label:focus {
   background-color: @base0A;
 }
 
-#idle_inhibitor {
-  background-color: @base00;
+/*
+ * Workspaces
+ */
+#workspaces {
+  margin: 0 4px;
 }
 
-#idle_inhibitor.activated {
+#workspaces button {
+  padding: 0 7px;
+  background-color: transparent;
+  color: @base05;
+  border: none;
+  border-radius: 15px;
+}
+
+#workspaces button:hover {
+  background: @base01;
+  color: @base06;
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+#workspaces button.focused {
   background-color: @base0D;
   color: @base00;
 }
 
-#mpd.disconnected {
-  color: @base0A;
+#workspaces button.urgent {
+  background-color: @base0A;
+  color: @base00;
 }
 
-#language {
-  padding: 0 7px;
-  margin: 0 5px;
-  min-width: 16px;
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
 }
 
-#keyboard-state {
-  padding: 0 0px;
-  margin: 0 5px;
-  min-width: 16px;
-}
-
-#keyboard-state > label {
-  padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-  background: rgba(0, 0, 0, 0.2);
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
 }
