@@ -8,19 +8,18 @@ for_window [tiling] splitt
 # Terminal workspace windows
 
 # Internet workspace windows
+assign [app_id=firefox] 2
+for_window [app_id=firefox] move window to workspace 2
 
 # Code workspace windows
-assign [class=code-oss] 3
 
 # Media workspace windows
 assign [class=Spotify] 4
 for_window [class=Spotify] move window to workspace 4
-assign [class=vlc] 4
 assign [app_id=mpv] 4
 
 # Chat workspace windows
 assign [app_id=telegramdesktop] 5
-assign [app_id=thunderbird] 5
 
 # Scratchpad windows
 for_window [app_id=scratch] move window to scratchpad
