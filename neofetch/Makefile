@@ -6,7 +6,7 @@ src_config_dir := config/
 dst_config_dir := $(userhome).config/neofetch/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
 
-ascii_files := knife.ascii
+ascii_files := knife.ascii knife-horizontal.ascii
 src_ascii_dir := ascii/
 dst_ascii_dir := $(userhome).config/neofetch/ascii/
 dst_ascii_files := $(addprefix $(dst_ascii_dir),$(ascii_files))
