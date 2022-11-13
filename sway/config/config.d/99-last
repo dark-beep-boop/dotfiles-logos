@@ -5,4 +5,4 @@
 for_window [workspace=.*] focus
 
 # Set import gtk settings
-exec-always import-gsettings
+exec_always import-gsettings
