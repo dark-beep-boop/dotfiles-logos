@@ -22,3 +22,6 @@ bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+s exec $power_menu
+
+# Take a screenshot of the current output
+bindsym $mod+Shift+g exec $screenshot ~/Pictures/screenshot

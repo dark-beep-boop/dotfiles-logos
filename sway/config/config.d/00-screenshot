@@ -1,0 +1,3 @@
+## Screenshot command
+
+set $screenshot ~/.local/bin/screenshot

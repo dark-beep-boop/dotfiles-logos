@@ -9,6 +9,7 @@ dots :=\
 			 menu\
 			 neofetch\
 			 neovim\
+			 screenshot\
 			 sway\
 			 waybar
 

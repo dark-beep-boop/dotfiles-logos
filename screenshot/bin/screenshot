@@ -1,0 +1,11 @@
+#!/bin/sh
+
+output_file=$1
+
+function get_current_output {
+  current_output=$(swaymsg -t get_outputs | jq -r 'map(select(.focused == true)) | .[].name')
+  echo $current_output
+}
+
+grim -o $(get_current_output) $output_file
+
