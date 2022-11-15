@@ -109,17 +109,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/mode", "custom/media"],
     "modules-center": ["idle_inhibitor"],
-    "modules-right": ["cpu", "memory", "temperature", "backlight", "keyboard-state"],
-
-    "keyboard-state": {
-      "numlock": true,
-      "capslock": true,
-      "format": "{name} {icon}",
-      "format-icons": {
-        "locked": "",
-        "unlocked": ""
-      }
-    },
+    "modules-right": ["cpu", "memory", "temperature", "backlight"],
     "sway/mode": {
       "format": "<span style=\"italic\">{}</span>"
     },
