@@ -2,6 +2,7 @@ dots :=\
 			 bpytop\
 			 dunst\
 			 flavours\
+			 gtk\
 			 kanshi\
 			 kitty\
 			 lock\
