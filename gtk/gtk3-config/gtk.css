@@ -1,7 +1,6 @@
 /** Some apps use titlebar class and some window */
 .titlebar,
 window {
-	border-radius: 0;
 	box-shadow: none;
 }
 
