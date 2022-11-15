@@ -1,4 +1,4 @@
 ### Status bar configuration
 
 # Start top waybar
-exec waybar
+exec GTK_THEME=Adwaita waybar
