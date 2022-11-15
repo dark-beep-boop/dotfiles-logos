@@ -74,6 +74,21 @@ hook = "killall waybar; swaymsg exec waybar"
 light = false
 
 [[items]]
+file = "~/.themes/FlatColor/colors2"
+template = "gtk-flatcolor"
+subtemplate = "gtk-2"
+rewrite = true
+hook = "import-gsettings"
+light = false
+
+[[items]]
+file = "~/.themes/FlatColor/colors3"
+template = "gtk-flatcolor"
+subtemplate = "gtk-3"
+rewrite = true
+hook = "import-gsettings"
+
+[[items]]
 file = "~/.Xdefaults"
 template = "xresources"
 rewrite = true
