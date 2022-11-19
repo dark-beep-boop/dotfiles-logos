@@ -12,7 +12,8 @@ dots :=\
 			 neovim\
 			 screenshot\
 			 sway\
-			 waybar
+			 waybar\
+			 zsh
 
 .PHONY:\
 	all\
