@@ -13,10 +13,10 @@ dst_gtk3_config_dir := $(userhome).config/gtk-3.0/
 dst_gtk3_config_files :=\
 	$(addprefix $(dst_gtk3_config_dir),$(gtk3_config_files))
 
-rc_files := .gtkrc-2.0
+rc_files := gtkrc-2.0
 src_rc_dir := rc/
 dst_rc_dir := $(userhome)
-dst_rc_files := $(addprefix $(dst_rc_dir),$(rc_files))
+dst_rc_files := $(addprefix $(dst_rc_dir).,$(rc_files))
 
 theme_files := FlatColor Raleigh
 src_themes_dir := themes/
@@ -61,7 +61,7 @@ $(dst_gtk3_config_files):\
 		install --owner=$(username) --group=$(username) --mode=644 -D $< $@"
 
 .SECONDEXPANSION:
-$(dst_rc_files): $$(subst $$(dst_rc_dir),$$(src_rc_dir),$$@)
+$(dst_rc_files): $$(subst $$(dst_rc_dir).,$$(src_rc_dir),$$@)
 	su $(username) --command="\
 		install --owner=$(username) --group=$(username) --mode=644 -D $< $@"
 
