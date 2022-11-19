@@ -24,4 +24,4 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+s exec $power_menu
 
 # Take a screenshot of the current output
-bindsym $mod+Shift+g exec $screenshot ~/Pictures/screenshot
+bindsym $mod+Shift+g exec $fullscreenshot

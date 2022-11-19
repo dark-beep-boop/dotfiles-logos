@@ -2,3 +2,6 @@
 
 # Notifications
 exec dunst
+
+# Screenshots
+exec flameshot
