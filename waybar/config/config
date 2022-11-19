@@ -14,7 +14,7 @@
     // Choose the order of the modules
     "modules-left": ["clock"],
     "modules-center": ["sway/workspaces"],
-    "modules-right": ["tray", "pulseaudio", "network", "battery"],
+    "modules-right": ["pulseaudio", "network", "battery"],
 
     // Modules configuration
     "sway/workspaces": {
@@ -107,7 +107,7 @@
     "output": ["eDP-1", "DP-7"],
 
     // Choose the order of the modules
-    "modules-left": ["sway/mode", "custom/media"],
+    "modules-left": ["tray", "sway/mode", "custom/media"],
     "modules-center": ["idle_inhibitor"],
     "modules-right": ["cpu", "memory", "temperature", "backlight"],
     "sway/mode": {
