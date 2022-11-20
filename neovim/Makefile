@@ -16,6 +16,7 @@ dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
 all:
 
 install: $(dst_config_files)
+	su $(username) --command="nvim -es PackerSync"
 
 .SECONDEXPANSION:
 $(dst_config_files): $$(subst $$(dst_config_dir),$$(src_config_dir),$$@)
@@ -24,3 +25,4 @@ $(dst_config_files): $$(subst $$(dst_config_dir),$$(src_config_dir),$$@)
 
 uninstall:
 	rm -rf $(dst_config_dir)
+	su $(username) --command="nvim -es PackerSync"
