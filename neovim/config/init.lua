@@ -3,3 +3,6 @@ require("settings")
 require("plugins")
 require("keybinds")
 require("colors")
+
+-- Plugin setup
+require("nvim-tree").setup{}

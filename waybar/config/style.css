@@ -5,7 +5,7 @@
  */
 * {
   font-family: FontAwesome, DejaVu Sans Mono, monospace, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   border: none;
 }
 
@@ -145,7 +145,8 @@ window#waybar.hidden {
  * Custom
  */
 #custom-media {
-  color: @base00;
+  color: @base05;
+  background-color: @base00;
   min-width: 100px;
 }
 
@@ -161,13 +162,17 @@ window#waybar.hidden {
  * Inhibitor
  */
 #idle_inhibitor {
-  padding: 0 7px;
+  padding: 0 6px;
   border-radius: 15px;
 }
 
 #idle_inhibitor.activated {
   color: @base00;
   background-color: @base0D;
+}
+
+#idle_inhibitor label {
+  font-size: 17px;
 }
 
 /*
@@ -275,6 +280,18 @@ window#waybar.hidden {
 #workspaces button.urgent {
   background-color: @base0A;
   color: @base00;
+}
+
+#workspaces button:nth-child(3) {
+  padding: 0 6px;
+}
+
+#workspaces button label {
+  font-size: 17px;
+}
+
+#workspaces button:nth-child(1) label {
+  font-weight: bold;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
