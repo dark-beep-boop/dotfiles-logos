@@ -121,11 +121,11 @@
       }
     },
     "cpu": {
-      "format": "{usage}% ",
+      "format": "{usage}% CPU",
       "tooltip": false
     },
     "memory": {
-      "format": "{}% ﬙"
+      "format": "{}% MEM"
     },
     "temperature": {
       "critical-threshold": 80,
