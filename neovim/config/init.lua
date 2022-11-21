@@ -1,8 +1,8 @@
 -- Import config files
-require("settings")
+require("variables")
+require("options")
+require("keybindings")
 require("plugins")
-require("keybinds")
-require("colors")
 
 -- Plugin setup
 require("nvim-tree").setup {}

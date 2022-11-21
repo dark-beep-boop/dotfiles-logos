@@ -22,3 +22,4 @@ vim.opt.clipboard = "unnamedplus" -- using system clipboard
 vim.opt.ttyfast = true            -- Speed up scrolling in Vim
 vim.opt.splitright = true         -- open new split panes right
 vim.opt.splitbelow = true         -- open new split panes below
+vim.cmd('colorscheme base16-cupertino')
