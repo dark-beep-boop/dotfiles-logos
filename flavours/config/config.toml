@@ -70,7 +70,7 @@ light = false
 file = "~/.config/waybar/color-scheme.css"
 template = "waybar"
 rewrite = true
-hook = "killall waybar; swaymsg exec waybar"
+hook = "killall waybar; swaymsg exec GTK_THEME=Adwaita waybar"
 light = false
 
 [[items]]

@@ -15,7 +15,8 @@ vim.opt.number = true             -- add line numbers
 vim.opt.wildmode = "longest,list" -- get bash-like tab completions
 vim.opt.cc = "80"                 -- set an 80 column border for good coding
                                   -- style
-vim.cmd("syntax on")              -- syntax highlighting
+vim.opt.syntax = "ON"             -- syntax highlighting
+vim.opt.termguicolors = true      -- terminal colors
 vim.opt.mouse = "a"               -- enable mouse click
 vim.opt.clipboard = "unnamedplus" -- using system clipboard
 vim.opt.ttyfast = true            -- Speed up scrolling in Vim
