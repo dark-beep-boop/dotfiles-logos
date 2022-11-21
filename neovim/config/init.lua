@@ -17,3 +17,4 @@ require('lualine').setup {
     theme = 'dracula-nvim'
   }
 }
+require('nvim-autopairs').setup {}
