@@ -1,25 +1,49 @@
-vim.opt.compatible = false        -- disable compatibility to old-time vi
-vim.opt.showmatch = true          -- show matching 
-vim.opt.ignorecase = true         -- case insensitive
-vim.opt.mouse = "v"               -- middle-click paste with
-vim.opt.hlsearch = true           -- highlight search
-vim.opt.incsearch = true          -- incremental search
-vim.opt.tabstop = 2               -- number of columns occupied by a tab
-vim.opt.softtabstop = 2           -- see multiple spaces as tabstops so <BS>
-                                  -- does the right thing
-vim.opt.expandtab = true					-- converts tabs to white space
-vim.opt.shiftwidth = 2            -- width for autoindents
-vim.opt.autoindent = true         -- indent a new line same aumont as the line
-                                  -- just typed
-vim.opt.number = true             -- add line numbers
-vim.opt.wildmode = "longest,list" -- get bash-like tab completions
-vim.opt.cc = "80"                 -- set an 80 column border for good coding
-                                  -- style
-vim.opt.syntax = "ON"             -- syntax highlighting
-vim.opt.termguicolors = true      -- terminal colors
-vim.opt.mouse = "a"               -- enable mouse click
-vim.opt.clipboard = "unnamedplus" -- using system clipboard
-vim.opt.ttyfast = true            -- Speed up scrolling in Vim
-vim.opt.splitright = true         -- open new split panes right
-vim.opt.splitbelow = true         -- open new split panes below
-vim.cmd('colorscheme base16-cupertino')
+-- [[ options.lua ]]
+
+-- [[ Clipboard ]]
+vim.opt.mouse = 'v'
+vim.opt.clipboard = 'unnamedplus'
+
+-- [[ Colors ]]
+vim.opt.syntax = 'ON'
+vim.opt.termguicolors = true
+vim.api.nvim_command('colorscheme dracula')
+
+-- [[ Context ]]
+vim.opt.colorcolumn = '80'
+vim.opt.number = true
+vim.opt.relativenumber = false
+vim.opt.signcolumn = 'yes'
+
+-- [[ Compatibility ]]
+vim.opt.compatible = false
+
+-- [[ Completion ]]
+vim.opt.wildmode = 'longest,list'
+
+-- [[ Encoding ]]
+vim.opt.encoding = 'utf8'
+vim.opt.fileencoding = 'utf8'
+
+-- [[ Format ]]
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.tabstop = 2
+vim.opt.autoindent = true
+
+-- [[ Movement ]]
+vim.opt.mouse = 'a'
+vim.opt.ttyfast = true
+vim.opt.scrolloff = 4
+
+-- [[ Search ]]
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.incsearch = true
+vim.opt.hlsearch = true
+vim.opt.showmatch = true
+
+-- [[ Window ]]
+vim.opt.splitright = true
+vim.opt.splitbelow = true

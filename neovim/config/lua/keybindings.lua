@@ -1,3 +1,6 @@
+-- [[ keybindings.lua ]]
+
+-- [[ Movement ]]
 -- Move line or visually selected block - alt+j/k
 vim.api.nvim_set_keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", {noremap = true})
 vim.api.nvim_set_keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", {noremap = true})
@@ -16,5 +19,6 @@ vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", {noremap = true})
 
+-- [[ Plugins ]]
 -- Toggle nvim-tree
 vim.api.nvim_set_keymap("n", "<C-n>", [[:NvimTreeToggle<Enter>]], {})

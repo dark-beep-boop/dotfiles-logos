@@ -1,9 +1,19 @@
--- Import config files
-require("variables")
-require("options")
-require("keybindings")
-require("plugins")
+-- [[ init.lua ]]
 
--- Plugin setup
-require("nvim-tree").setup {}
-require("lualine").setup {}
+-- [[ Leaders ]]
+vim.g.mapleader = ','
+vim.g.localleaders = '\\'
+
+-- [[ Modules ]]
+require('variables')
+require('options')
+require('keybindings')
+require('plugins')
+
+-- [[ Plugins ]]
+require('nvim-tree').setup {}
+require('lualine').setup {
+  options = {
+    theme = 'dracula-nvim'
+  }
+}
