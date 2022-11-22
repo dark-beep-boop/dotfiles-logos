@@ -1,4 +1,5 @@
 -- [[ init.lua ]]
+require('impatient')
 
 -- [[ Leaders ]]
 vim.g.mapleader = ','

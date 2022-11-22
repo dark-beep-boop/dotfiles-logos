@@ -7,7 +7,7 @@ vim.opt.clipboard = 'unnamedplus'
 -- [[ Colors ]]
 vim.opt.syntax = 'ON'
 vim.opt.termguicolors = true
-vim.api.nvim_command('colorscheme dracula')
+vim.api.nvim_command('colorscheme base16-current')
 
 -- [[ Context ]]
 vim.opt.colorcolumn = '80'
