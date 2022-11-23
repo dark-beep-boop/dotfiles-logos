@@ -15,7 +15,7 @@ return require('packer').startup(
         opt = true
       }
     }
-    use { 'bradcush/base16-nvim' }
+    use { 'dark-beep-boop/base16-nvim' }
     use { 'Mofiqul/dracula.nvim' }
 
     -- [[ Development ]]
