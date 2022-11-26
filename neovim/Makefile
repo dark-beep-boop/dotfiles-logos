@@ -11,7 +11,7 @@ config_files :=\
 							 lua/nvim-autopairs/base.lua\
 							 lua/lualine/base.lua\
 							 lua/lualine/themes/base16.lua\
-							 lua/lualine/styles/evil.lua
+							 lua/lualine/styles/evilline.lua
 src_config_dir := config/
 dst_config_dir := $(userhome).config/nvim/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
