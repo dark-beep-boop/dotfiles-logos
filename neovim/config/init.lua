@@ -12,6 +12,7 @@ require('keybindings')
 require('plugins')
 
 -- [[ Plugins ]]
-require('nvim-tree').setup {}
-require('lualine').setup {}
-require('nvim-autopairs').setup {}
+require('nvim-tree.base')
+require('lualine.base')
+require('lualine.bubbles')
+require('nvim-autopairs.base')
