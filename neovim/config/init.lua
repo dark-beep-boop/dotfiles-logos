@@ -14,5 +14,4 @@ require('plugins')
 -- [[ Plugins ]]
 require('nvim-tree.base')
 require('lualine.base')
-require('lualine.bubbles')
 require('nvim-autopairs.base')
