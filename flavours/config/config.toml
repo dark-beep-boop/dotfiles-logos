@@ -101,3 +101,9 @@ template = "xresources"
 rewrite = true
 hook = "xrdb -merge ~/.Xdefaults"
 light = false
+
+[[items]]
+file = "~/.config/zathura/color-scheme"
+template = "zathura"
+rewrite = true
+light = true

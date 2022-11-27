@@ -14,6 +14,7 @@ dots :=\
 			 screenshot\
 			 sway\
 			 waybar\
+			 zathura\
 			 zsh
 
 .PHONY:\
