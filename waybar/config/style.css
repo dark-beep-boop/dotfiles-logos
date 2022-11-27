@@ -162,17 +162,14 @@ window#waybar.hidden {
  * Inhibitor
  */
 #idle_inhibitor {
-  padding: 0 7px;
+  padding: 0 6px;
   border-radius: 15px;
+  font-size: 17px;
 }
 
 #idle_inhibitor.activated {
   color: @base00;
   background-color: @base0D;
-}
-
-#idle_inhibitor label {
-  font-size: 17px;
 }
 
 /*
