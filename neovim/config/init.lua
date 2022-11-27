@@ -12,8 +12,9 @@ require('keybindings')
 require('plugins')
 
 -- [[ Plugins ]]
-require('nvim-lspconfig.base')
-require('nvim-cmp.base')
-require('nvim-tree.base')
+require('hop.base')
 require('lualine.base')
 require('nvim-autopairs.base')
+require('nvim-cmp.base')
+require('nvim-lspconfig.base')
+require('nvim-tree.base')
