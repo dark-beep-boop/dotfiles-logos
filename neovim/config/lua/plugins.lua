@@ -31,5 +31,9 @@ return require('packer').startup(
     use { 'voldikss/vim-floaterm'}
     use { 'lewis6991/impatient.nvim' }
     use { 'sheerun/vim-polyglot' }
-    use { 'Shougo/deoplete.nvim' }
+    use { 'neovim/nvim-lspconfig'}
+    use { 'hrsh7th/nvim-cmp' }
+    use { 'hrsh7th/cmp-nvim-lsp' }
+    use { 'saadparwaiz1/cmp_luasnip' }
+    use { 'L3MON4D3/LuaSnip' }
   end)

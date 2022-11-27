@@ -7,6 +7,8 @@ config_files :=\
 							 lua/options.lua\
 							 lua/keybindings.lua\
 							 lua/plugins.lua\
+							 lua/nvim-lspconfig/base.lua\
+							 lua/nvim-cmp/base.lua\
 							 lua/nvim-tree/base.lua\
 							 lua/nvim-autopairs/base.lua\
 							 lua/lualine/base.lua\
