@@ -10,6 +10,7 @@ dots :=\
 			 menu\
 			 neofetch\
 			 neovim\
+			 ranger\
 			 screenshot\
 			 sway\
 			 waybar\
