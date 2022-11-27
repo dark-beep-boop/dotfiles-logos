@@ -9,6 +9,7 @@ dots :=\
 			 power-menu\
 			 menu\
 			 neofetch\
+			 neomutt\
 			 neovim\
 			 ranger\
 			 screenshot\
