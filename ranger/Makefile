@@ -1,10 +1,15 @@
 username := $(SUDO_USER)
 userhome := $(shell echo ~$(username))/
 
-config_files := commands_full.py commands.py rc.conf rifle.conf scope.sh
+config_files := rc.conf rifle.conf
 src_config_dir := config/
 dst_config_dir := $(userhome).config/ranger/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
+
+bin_files := commands_full.py commands.py scope.sh
+src_bin_dir := bin/
+dst_bin_dir := $(userhome).config/ranger/
+dst_bin_files := $(addprefix $(dst_bin_dir),$(bin_files))
 
 .PHONY:\
 	all,\
@@ -20,5 +25,11 @@ $(dst_config_files): $$(subst $$(dst_config_dir),$$(src_config_dir),$$@)
 	su $(username) --command="\
 		install --owner=$(username) --group=$(username) --mode=644 -D $< $@"
 
+.SECONDEXPANSION:
+$(dst_bin_files): $$(subst $$(dst_bin_dir),$$(src_bin_dir),$$@)
+	su $(username) --command="\
+		install --owner=$(username) --group=$(username) --mode=755 -D $< $@"
+
 uninstall:
 	rm -rf $(dst_config_dir)
+	rm -rf $(dst_bin_dir)
