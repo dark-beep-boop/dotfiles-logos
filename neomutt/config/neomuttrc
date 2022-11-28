@@ -1,7 +1,7 @@
 #
 # System configuration file for NeoMutt
 #
-source "gpg -dq $HOME/.neomutt-pwd.gpg |"
+source "gpg -dq $HOME/.neomuttpass.gpg |"
 source ~/.config/neomutt/gpg.rc
 
 
