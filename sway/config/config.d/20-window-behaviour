@@ -20,13 +20,16 @@ assign [app_id=mpv] 4
 # Chat workspace windows
 assign [app_id=telegramdesktop] 5
 assign [class=discord] 5
-#for_window [app_id=discord] move window to workspace 5
+assign [app_id=thunderbird] 5
 
 # Scratchpad windows
 for_window [app_id=scratch] move window to scratchpad
 for_window [class=Bitwarden] move window to scratchpad
+for_window [app_id=ch.proton.proton-bridge] move window to scratchpad
 
 
 ## Window default mode
 # Floating windows
+for_window [app_id=float] floating enable
 for_window [app_id=firefox title=".*Password Required.*"] floating enable
+for_window [app_id=zoom] floating enable
