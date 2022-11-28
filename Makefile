@@ -6,6 +6,7 @@ dots :=\
 			 kanshi\
 			 kitty\
 			 lock\
+			 offlineimap\
 			 power-menu\
 			 menu\
 			 neofetch\
