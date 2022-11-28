@@ -2,6 +2,3 @@
 
 # Notifications
 exec dunst
-
-# Protonmail bridge
-exec protonmail-bridge
