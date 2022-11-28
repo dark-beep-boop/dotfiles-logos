@@ -3,5 +3,5 @@
 # Notifications
 exec dunst
 
-# Screenshots
-exec flameshot
+# Protonmail bridge
+exec protonmail-bridge
