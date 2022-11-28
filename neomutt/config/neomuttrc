@@ -1,6 +1,9 @@
 #
 # System configuration file for NeoMutt
 #
+source "gpg -dq $HOME/.neomutt-pwd.gpg |"
+source ~/.config/neomutt/gpg.rc
+
 
 # Default list of header fields to weed when displaying.
 # Ignore all lines by default...
@@ -110,7 +113,6 @@ attachments   -I message/external-body
 ##
 ## More settings
 ##
-
 
 # set abort_backspace=yes
 #
@@ -1690,7 +1692,7 @@ attachments   -I message/external-body
 # If set, flagged messages can't be deleted.
 # 
 # 
-# set folder="~/Mail"
+set folder="imaps://imap.gmail.com/"
 #
 # Name: folder
 # Type: mailbox
@@ -1912,7 +1914,7 @@ attachments   -I message/external-body
 # a new one.
 # 
 # 
-# set from=""
+set from="je.ov.999@gmail.com"
 #
 # Name: from
 # Type: e-mail address
@@ -2039,7 +2041,7 @@ attachments   -I message/external-body
 # The $weed setting applies.
 # 
 # 
-# set header_cache=""
+set header_cache="~/.cache/neomutt"
 #
 # Name: header_cache
 # Type: path
@@ -2354,7 +2356,7 @@ attachments   -I message/external-body
 # authentication fails, NeoMutt will not connect to the IMAP server.
 # 
 # 
-# set imap_check_subscribed=no
+set imap_check_subscribed=yes
 #
 # Name: imap_check_subscribed
 # Type: boolean
@@ -2511,7 +2513,7 @@ attachments   -I message/external-body
 # authentication mechanisms.  See "oauth" for details.
 # 
 # 
-# set imap_pass=""
+set imap_pass="$my_pass"
 #
 # Name: imap_pass
 # Type: string
@@ -2527,7 +2529,7 @@ attachments   -I message/external-body
 # if you are the only one who can read the file.
 # 
 # 
-# set imap_passive=yes
+unset imap_passive
 #
 # Name: imap_passive
 # Type: boolean
@@ -2627,7 +2629,7 @@ attachments   -I message/external-body
 # them at some point.
 # 
 # 
-# set imap_user=""
+set imap_user="$my_user"
 #
 # Name: imap_user
 # Type: string
@@ -3150,7 +3152,7 @@ attachments   -I message/external-body
 # (especially for large folders).
 # 
 # 
-# set message_cachedir=""
+set message_cachedir="~/.cache/neomutt"
 #
 # Name: message_cachedir
 # Type: path
@@ -4653,7 +4655,7 @@ attachments   -I message/external-body
 # (Crypto only)
 # 
 # 
-# set postponed="~/postponed"
+set postponed = "+[Gmail]/Drafts"
 #
 # Name: postponed
 # Type: mailbox
@@ -4889,7 +4891,7 @@ attachments   -I message/external-body
 # If set, all folders are opened in read-only mode.
 # 
 # 
-# set real_name=""
+set real_name="Jesús María Gómez Moreno"
 #
 # Name: real_name
 # Type: string
@@ -4920,7 +4922,7 @@ attachments   -I message/external-body
 # Also see $postponed variable.
 # 
 # 
-# set record="~/sent"
+unset record
 #
 # Name: record
 # Type: mailbox
@@ -6146,7 +6148,7 @@ attachments   -I message/external-body
 # authentication mechanisms.  See "oauth" for details.
 # 
 # 
-# set smtp_pass=""
+set smtp_pass="$my_pass"
 #
 # Name: smtp_pass
 # Type: string
@@ -6162,7 +6164,7 @@ attachments   -I message/external-body
 # if you are the only one who can read the file.
 # 
 # 
-# set smtp_url=""
+set smtp_url="smtps://$smtp_user@smtp.gmail.com"
 #
 # Name: smtp_url
 # Type: string
@@ -6180,7 +6182,7 @@ attachments   -I message/external-body
 # Also see $write_bcc.
 # 
 # 
-# set smtp_user=""
+set smtp_user="$my_user"
 #
 # Name: smtp_user
 # Type: string
@@ -6343,7 +6345,7 @@ attachments   -I message/external-body
 # separator.
 # 
 # 
-# set spool_file=""
+set spool_file="+INBOX"
 #
 # Name: spool_file
 # Type: mailbox
