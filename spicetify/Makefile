@@ -1,7 +1,10 @@
 username := $(SUDO_USER)
 userhome := $(shell echo ~$(username))/
 
-config_files := config-xpui.ini
+config_files := config-xpui.ini\
+								Themes/Default/color.ini\
+								Themes/Sleek/color.ini\
+								Themes/Sleek/user.css
 src_config_dir := config/
 dst_config_dir := $(userhome).config/spicetify/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
