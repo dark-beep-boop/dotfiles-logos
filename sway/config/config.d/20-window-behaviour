@@ -1,8 +1,7 @@
 ### Window behaviour configuration
-## Splitting behaviour
-# Change split orientation after every new split
-for_window [tiling] splitt
 
+## Tiling behaviour
+default_orientation horizontal
 
 ## Workspace assignation
 # Terminal workspace windows
@@ -23,10 +22,9 @@ assign [class=discord] 5
 assign [app_id=thunderbird] 5
 
 # Scratchpad windows
-for_window [app_id=scratch] move window to scratchpad
-for_window [class=Bitwarden] move window to scratchpad
-for_window [app_id=ch.proton.proton-bridge] move window to scratchpad
-
+for_window [app_id=scratch] move window to scratchpad, resize set 875 525, move position center
+for_window [class=Bitwarden] move window to scratchpad, resize set 1000 600, move position center
+for_window [app_id=ch.proton.proton-bridge] move window to scratchpad, resize set 900 540, move position center
 
 ## Window default mode
 # Floating windows

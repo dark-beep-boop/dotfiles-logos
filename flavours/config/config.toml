@@ -66,6 +66,16 @@ rewrite = true
 light = true
 
 [[items]]
+file = "~/.config/spicetify/Themes/Sleek/color.ini"
+template = "spotify"
+subtemplate = "sleek"
+start = "; begin base16 scheme"
+end = "; end base16 scheme"
+rewrite = false
+hook = "spicetify apply"
+light = false
+
+[[items]]
 file = "~/.config/sway/config.d/00-color-scheme"
 template = "sway"
 subtemplate = "colors"

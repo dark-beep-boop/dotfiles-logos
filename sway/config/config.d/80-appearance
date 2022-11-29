@@ -1,8 +1,8 @@
 ### Appearance configuration
 
 # Borders
-default_border none
-default_floating_border none
+default_border pixel 1
+default_floating_border pixel 1
 gaps inner 10
 gaps outer 15
 
