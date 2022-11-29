@@ -12,6 +12,7 @@ dots :=\
 			 neovim\
 			 ranger\
 			 screenshot\
+			 spicetify\
 			 sway\
 			 waybar\
 			 zathura\
