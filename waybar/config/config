@@ -145,7 +145,7 @@
           "default": "契"
       },
       "escape": true,
-      "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+      "exec": "$HOME/.local/bin/mediaplayer.py 2> /dev/null"
     }
   }
 ]
