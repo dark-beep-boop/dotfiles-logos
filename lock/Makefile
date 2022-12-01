@@ -20,7 +20,7 @@ dst_background_files := $(addprefix $(dst_bin_dir),$(bin_files))
 
 all:
 
-install: $(dst_config_files) $(dst_bin_files)
+install: $(dst_config_files) $(dst_bin_files) $(dst_background_files)
 
 .SECONDEXPANSION:
 $(dst_config_files): $$(subst $$(dst_config_dir),$$(src_config_dir),$$@)
