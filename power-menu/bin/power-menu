@@ -1,7 +1,7 @@
 #!/bin/sh
 
 config_file="$HOME/.config/power-menu/fuzzel.ini"
-option=$(echo -e " \n \n \n " | fuzzel --dmenu --config=$config_file)
+option=$(echo -e " \n \n \n \n 鈴\n " | fuzzel --dmenu --config=$config_file)
 
 #command execution
 case $option in
@@ -16,6 +16,12 @@ case $option in
     ;;
   3)
     systemctl reboot
+    ;;
+  4)
+    systemctl suspend
+    ;;
+  5)
+    systemctl hibernate
     ;;
   *)
 esac
