@@ -113,7 +113,7 @@ window#waybar.hidden {
  * Battery
  */
 #battery {
-  padding: 0 7px;
+  padding: 0 6px;
 }
 
 #battery.warning {
