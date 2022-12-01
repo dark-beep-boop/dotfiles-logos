@@ -14,7 +14,7 @@ dst_bin_files := $(addprefix $(dst_bin_dir),$(bin_files))
 background_files := lock
 src_background_dir := backgrounds/
 dst_background_dir := $(userhome).local/share/backgrounds/
-dst_background_files := $(addprefix $(dst_bin_dir),$(bin_files))
+dst_background_files := $(addprefix $(dst_background_dir),$(background_files))
 
 .PHONY: all, install, uninstall
 
@@ -33,7 +33,8 @@ $(dst_bin_files): $$(subst $$(dst_bin_dir),$$(src_bin_dir),$$@)
 		install --owner=$(username) --group=$(username) --mode=755 -D $< $@"
 
 .SECONDEXPANSION:
-$(dst_bin_files): $$(subst $$(dst_bin_dir),$$(src_bin_dir),$$@)
+$(dst_background_files):\
+	$$(subst $$(dst_background_dir),$$(src_background_dir),$$@)
 	su $(username) --command="\
 		install --owner=$(username) --group=$(username) --mode=644 -D $< $@"
 
