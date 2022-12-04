@@ -16,7 +16,14 @@ return require('packer').startup(
       }
     }
     use { 'dark-beep-boop/base16-nvim' }
-    use { 'Mofiqul/dracula.nvim' }
+
+    -- [[ Utilities ]]
+    use {
+      "folke/which-key.nvim",
+      config = function()
+        require("which-key").setup {}
+      end
+    }
 
     -- [[ Development ]]
     use {
@@ -28,16 +35,10 @@ return require('packer').startup(
     use { 'tpope/vim-fugitive' }
     use { 'junegunn/gv.vim' }
     use { 'windwp/nvim-autopairs' }
-    use { 'voldikss/vim-floaterm'}
+    use { 'voldikss/vim-floaterm' }
     use { 'lewis6991/impatient.nvim' }
     use { 'sheerun/vim-polyglot' }
-    use { 'neovim/nvim-lspconfig'}
-    use { 'hrsh7th/nvim-cmp' }
-    use { 'hrsh7th/cmp-nvim-lsp' }
-    use { 'saadparwaiz1/cmp_luasnip' }
-    use { 'L3MON4D3/LuaSnip' }
-    use {
-      'phaazon/hop.nvim',
-      branch = 'v2'
-    }
+    use { 'phaazon/hop.nvim', branch = 'v2' }
+    use { 'dense-analysis/ale' }
+    use { 'neoclide/coc.nvim', branch = 'release' }
   end)

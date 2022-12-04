@@ -41,9 +41,50 @@ vim.api.nvim_set_keymap(
   'n',
   '<F7>',
   [[:FloatermNew --height=0.2 --wintype=split<CR>]],
-  {})
+  {noremap = true})
+vim.api.nvim_set_keymap(
+  't',
+  '<F7>',
+  [[<C-\><C-n>:FloatermNew --height=0.2 --wintype=split<CR>]],
+  {noremap = true})
 -- Move between terminals
-vim.api.nvim_set_keymap('n', '<F8>', [[:FloatermPrev<CR>]], {})
-vim.api.nvim_set_keymap('n', '<F9>', [[:FloatermNext<CR>]], {})
-vim.api.nvim_set_keymap('n', '<F10>', [[:FloatermToggle<CR>]], {})
-vim.api.nvim_set_keymap('n', '<F12>', [[:FloatermKill<CR>]], {})
+vim.api.nvim_set_keymap(
+  'n', 
+  '<F8>', 
+  [[:FloatermPrev<CR>]], 
+  {noremap = true})
+vim.api.nvim_set_keymap(
+  't',
+  '<F8>',
+  [[<C-\><C-n>:FloatermPrev<CR>]],
+  {noremap = true})
+vim.api.nvim_set_keymap(
+  'n', 
+  '<F9>', 
+  [[:FloatermNext<CR>]], 
+  {noremap = true})
+vim.api.nvim_set_keymap(
+  't', 
+  '<F9>', 
+  [[<C-\><C-n>:FloatermNext<CR>]], 
+  {noremap = true})
+vim.api.nvim_set_keymap(
+  'n', 
+  '<F10>', 
+  [[:FloatermToggle<CR>]], 
+  {noremap = true})
+vim.api.nvim_set_keymap(
+  't', 
+  '<F10>', 
+  [[<C-\><C-n>:FloatermToggle<CR>]], 
+  {noremap = true})
+vim.api.nvim_set_keymap(
+  'n', 
+  '<F12>', 
+  [[:FloatermKill<CR>]], 
+  {noremap = true})
+vim.api.nvim_set_keymap(
+  't', 
+  '<F12>', 
+  [[<C-\><C-n>:FloatermKill<CR>]], 
+  {noremap = true})
