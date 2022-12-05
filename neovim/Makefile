@@ -8,6 +8,7 @@ config_files :=\
 							 lua/options.lua\
 							 lua/keybindings.lua\
 							 lua/plugins.lua\
+							 lua/coc/base.lua\
 							 lua/hop/base.lua\
 							 lua/lualine/base.lua\
 							 lua/lualine/themes/base16.lua\

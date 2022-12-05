@@ -12,7 +12,7 @@ require('keybindings')
 require('plugins')
 
 -- [[ Plugins ]]
-require('hop.base')
 require('lualine.base')
 require('nvim-autopairs.base')
 require('nvim-tree.base')
+require('coc.base')

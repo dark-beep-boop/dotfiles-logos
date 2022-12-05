@@ -38,7 +38,6 @@ return require('packer').startup(
     use { 'voldikss/vim-floaterm' }
     use { 'lewis6991/impatient.nvim' }
     use { 'sheerun/vim-polyglot' }
-    use { 'phaazon/hop.nvim', branch = 'v2' }
     use { 'dense-analysis/ale' }
     use { 'neoclide/coc.nvim', branch = 'release' }
   end)
