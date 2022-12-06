@@ -111,99 +111,129 @@ keymap('t', '<C-M-Right>', [[<C-\><C-n>:vertical resize +1.5<CR>]], {noremap = t
 -- NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 -- other plugin before putting this into your config.
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
-keymap("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
-keymap("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
+keymap('i', '<TAB>', [[coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()]], opts)
+keymap('i', '<S-TAB>', [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
 -- Make <CR> to accept selected completion item or notify coc.nvim to format
 -- <C-g>u breaks current undo, please make your own choice.
-keymap("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+keymap('i', '<cr>', [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
 -- Use <c-j> to trigger snippets
-keymap("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
+keymap('i', '<c-j>', [[<Plug>(coc-snippets-expand-jump)]])
 -- Use <c-space> to trigger completion.
-keymap("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
+keymap('i', '<c-space>', [[coc#refresh()]], {silent = true, expr = true})
 
 -- Use `[g` and `]g` to navigate diagnostics
 -- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-keymap("n", "[g", "<Plug>(coc-diagnostic-prev)", {silent = true})
-keymap("n", "]g", "<Plug>(coc-diagnostic-next)", {silent = true})
+keymap('n', '[g', [[<Plug>(coc-diagnostic-prev)]], {silent = true})
+keymap('n', ']g', [[<Plug>(coc-diagnostic-next)]], {silent = true})
 
 -- GoTo code navigation.
-keymap("n", "gd", "<Plug>(coc-definition)", {silent = true})
-keymap("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
-keymap("n", "gi", "<Plug>(coc-implementation)", {silent = true})
-keymap("n", "gr", "<Plug>(coc-references)", {silent = true})
+keymap('n', 'gd', [[<Plug>(coc-definition)]], {silent = true})
+keymap('n', 'gy', [[<Plug>(coc-type-definition)]], {silent = true})
+keymap('n', 'gi', [[<Plug>(coc-implementation)]], {silent = true})
+keymap('n', 'gr', [[<Plug>(coc-references)]], {silent = true})
 
 -- Use K to show documentation in preview window.
-keymap("n", "K", '<CMD>lua _G.show_docs()<CR>', {silent = true})
+keymap('n', 'K', [[<CMD>lua _G.show_docs()<CR>]], {silent = true})
 
 -- Symbol renaming.
-keymap("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true})
+keymap('n', '<leader>rn', [[<Plug>(coc-rename)]], {silent = true})
 
 -- Formatting selected code.
-keymap("x", "<leader>f", "<Plug>(coc-format-selected)", {silent = true})
-keymap("n", "<leader>f", "<Plug>(coc-format-selected)", {silent = true})
+keymap('x', '<leader>f', [[<Plug>(coc-format-selected)]], {silent = true})
+keymap('n', '<leader>f', [[<Plug>(coc-format-selected)]], {silent = true})
 
 -- Applying codeAction to the selected region.
 -- Example: `<leader>aap` for current paragraph
 local opts = {silent = true, nowait = true}
-keymap("x", "<leader>as", "<Plug>(coc-codeaction-selected)", opts)
-keymap("n", "<leader>as", "<Plug>(coc-codeaction-selected)", opts)
+keymap('x', '<leader>as', [[<Plug>(coc-codeaction-selected)]], opts)
+keymap('n', '<leader>as', [[<Plug>(coc-codeaction-selected)]], opts)
 
 -- Remap keys for applying codeAction to the current buffer.
-keymap("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)
+keymap('n', '<leader>ac', [[<Plug>(coc-codeaction)]], opts)
 
 -- Apply AutoFix to problem on the current line.
-keymap("n", "<leader>qf", "<Plug>(coc-fix-current)", opts)
+keymap('n', '<leader>qf', [[<Plug>(coc-fix-current)]], opts)
 
 -- Run the Code Lens action on the current line.
-keymap("n", "<leader>cl", "<Plug>(coc-codelens-action)", opts)
+keymap('n', '<leader>cl', [[<Plug>(coc-codelens-action)]], opts)
 
 -- Map function and class text objects
 -- NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-keymap("x", "if", "<Plug>(coc-funcobj-i)", opts)
-keymap("o", "if", "<Plug>(coc-funcobj-i)", opts)
-keymap("x", "af", "<Plug>(coc-funcobj-a)", opts)
-keymap("o", "af", "<Plug>(coc-funcobj-a)", opts)
-keymap("x", "ic", "<Plug>(coc-classobj-i)", opts)
-keymap("o", "ic", "<Plug>(coc-classobj-i)", opts)
-keymap("x", "ac", "<Plug>(coc-classobj-a)", opts)
-keymap("o", "ac", "<Plug>(coc-classobj-a)", opts)
+keymap('x', 'if', [[<Plug>(coc-funcobj-i)]], opts)
+keymap('o', 'if', [[<Plug>(coc-funcobj-i)]], opts)
+keymap('x', 'af', [[<Plug>(coc-funcobj-a)]], opts)
+keymap('o', 'af', [[<Plug>(coc-funcobj-a)]], opts)
+keymap('x', 'ic', [[<Plug>(coc-classobj-i)]], opts)
+keymap('o', 'ic', [[<Plug>(coc-classobj-i)]], opts)
+keymap('x', 'ac', [[<Plug>(coc-classobj-a)]], opts)
+keymap('o', 'ac', [[<Plug>(coc-classobj-a)]], opts)
 
 -- Remap <C-f> and <C-b> for scroll float windows/popups.
 ---@diagnostic disable-next-line: redefined-local
 local opts = {silent = true, nowait = true, expr = true}
-keymap("n", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
-keymap("n", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
-keymap("i", "<C-f>",
-       'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1)<cr>" : "<Right>"', opts)
-keymap("i", "<C-b>",
-       'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0)<cr>" : "<Left>"', opts)
-keymap("v", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
-keymap("v", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
+keymap('n', '<C-f>', [[coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"]], opts)
+keymap('n', '<C-b>', [[coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"]], opts)
+keymap('i', '<C-f>',
+       [[coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1)<cr>" : "<Right>"]], opts)
+keymap('i', '<C-b>',
+       [[coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0)<cr>" : "<Left>"]], opts)
+keymap('v', '<C-f>', [[coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"]], opts)
+keymap('v', '<C-b>', [[coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"]], opts)
 
 -- Use CTRL-S for selections ranges.
 -- Requires 'textDocument/selectionRange' support of language server.
-keymap("n", "<C-s>", "<Plug>(coc-range-select)", {silent = true})
-keymap("x", "<C-s>", "<Plug>(coc-range-select)", {silent = true})
+keymap('n', '<C-s>', [[<Plug>(coc-range-select)]], {silent = true})
+keymap('x', '<C-s>', [[<Plug>(coc-range-select)]], {silent = true})
 
 -- Mappings for CoCList
 -- code actions and coc stuff
 ---@diagnostic disable-next-line: redefined-local
 local opts = {silent = true, nowait = true}
 -- Show all diagnostics.
-keymap("n", "<space>a", ":<C-u>CocList diagnostics<cr>", opts)
+keymap('n', '<space>a', [[:<C-u>CocList diagnostics<cr>]], opts)
 -- Manage extensions.
-keymap("n", "<space>e", ":<C-u>CocList extensions<cr>", opts)
+keymap('n', '<space>e', [[:<C-u>CocList extensions<cr>]], opts)
 -- Show commands.
-keymap("n", "<space>c", ":<C-u>CocList commands<cr>", opts)
+keymap('n', '<space>c', [[:<C-u>CocList commands<cr>]], opts)
 -- Find symbol of current document.
-keymap("n", "<space>o", ":<C-u>CocList outline<cr>", opts)
+keymap('n', '<space>o', [[:<C-u>CocList outline<cr>]], opts)
 -- Search workspace symbols.
-keymap("n", "<space>s", ":<C-u>CocList -I symbols<cr>", opts)
+keymap('n', '<space>s', [[:<C-u>CocList -I symbols<cr>]], opts)
 -- Do default action for next item.
-keymap("n", "<space>j", ":<C-u>CocNext<cr>", opts)
+keymap('n', '<space>j', [[:<C-u>CocNext<cr>]], opts)
 -- Do default action for previous item.
-keymap("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
+keymap('n', '<space>k', [[:<C-u>CocPrev<cr>]], opts)
 -- Resume latest coc list.
-keymap("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
+keymap('n', '<space>p', [[:<C-u>CocListResume<cr>]], opts)
+
+-- [[ DAP ]]
+keymap('n', '<F4>', [[:lua require('dapui').toggle()<CR>]], {noremap = true})
+keymap('n', '<F5>', [[:lua require('dap').toggle_breakpoint()<CR>']], {noremap = true})
+keymap('n', '<F9>', [[:lua require('dap').continue()<CR>]], {noremap = true})
+
+keymap('n', '<F1>', [[:lua require('dap').step_over()<CR>]], {noremap = true})
+keymap('n', '<F2>', [[:lua require('dap').step_into()<CR>]], {noremap = true})
+keymap('n', '<F3>', [[:lua require('dap').step_out()<CR>]], {noremap = true})
+
+keymap('n', '<Leader>dsc', [[:lua require('dap').continue()<CR>]], {noremap = true})
+keymap('n', '<Leader>dsv', [[:lua require('dap').step_over()<CR>]], {noremap = true})
+keymap('n', '<Leader>dsi', [[:lua require('dap').step_into()<CR>]], {noremap = true})
+keymap('n', '<Leader>dso', [[:lua require('dap').step_out()<CR>]], {noremap = true})
+
+keymap('n', '<Leader>dhh', [[:lua require('dap.ui.variables').hover()<CR>]], {noremap = true})
+keymap('v', '<Leader>dhv', [[:lua require('dap.ui.variables').visual_hover()<CR>]], {noremap = true})
+
+keymap('n', '<Leader>duh', [[:lua require('dap.ui.widgets').hover()<CR>]], {noremap = true})
+keymap('n', '<Leader>duf', [[:lua local widgets=require('dap.ui.widgets');widgets.centered_float(widgets.scopes)<CR>]], {noremap = true})
+
+keymap('n', '<Leader>dro', [[:lua require('dap').repl.open()<CR>]], {noremap = true})
+keymap('n', '<Leader>drl', [[:lua require('dap').repl.run_last()<CR>]], {noremap = true})
+
+keymap('n', '<Leader>dbc', [[:lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>]], {noremap = true})
+keymap('n', '<Leader>dbm', [[:lua require('dap').set_breakpoint({ nil, nil, vim.fn.input('Log point message: ') })<CR>]], {noremap = true})
+keymap('n', '<Leader>dbt', [[:lua require('dap').toggle_breakpoint()<CR>]], {noremap = true})
+
+keymap('n', '<Leader>dc', [[:lua require('dap.ui.variables').scopes()<CR>]], {noremap = true})
+keymap('n', '<Leader>di', [[:lua require('dapui').toggle()<CR>]], {noremap = true})
