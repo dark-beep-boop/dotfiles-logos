@@ -40,4 +40,11 @@ return require('packer').startup(
     use { 'sheerun/vim-polyglot' }
     use { 'dense-analysis/ale' }
     use { 'neoclide/coc.nvim', branch = 'release' }
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
   end)
