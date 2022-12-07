@@ -1,5 +1,5 @@
 clock
-image=/home/zus/.local/share/backgrounds/.default
+image=/home/zus/.local/share/backgrounds/lock
 effect-vignette=0.4:0.4
 
 ### begin base16 scheme

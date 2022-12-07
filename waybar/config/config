@@ -53,7 +53,7 @@
       "tooltip-format-linked": "connected (No IP) with {ifname} via {gwaddr} ",
       "format-disconnected": "",
       "tooltip-format-disconnected": "disconnected",
-      "on-click": "kitty --class scratch nmtui"
+      "on-click": "kitty --class network nmtui"
     },
     "battery": {
       "states": {
@@ -145,7 +145,7 @@
           "default": "契"
       },
       "escape": true,
-      "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+      "exec": "$HOME/.local/bin/mediaplayer.py 2> /dev/null"
     }
   }
 ]

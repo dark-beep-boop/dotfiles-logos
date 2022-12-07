@@ -113,7 +113,7 @@ window#waybar.hidden {
  * Battery
  */
 #battery {
-  padding: 0 7px;
+  padding: 0 6px;
 }
 
 #battery.warning {
@@ -145,17 +145,14 @@ window#waybar.hidden {
  * Custom
  */
 #custom-media {
-  color: @base05;
-  background-color: @base00;
+  color: @base00;
+  background-color: @base0D;
   min-width: 100px;
 }
 
 #custom-media.custom-spotify {
+  color: @base00;
   background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-  background-color: #ffa000;
 }
 
 /*
