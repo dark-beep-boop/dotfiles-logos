@@ -5,7 +5,13 @@ Configuration files for my personal laptop, with a custom color scheme based on 
 ### Simple setup
 This is my usual setup, without external screens:
 
-<img alt="Empty main simple setup display" src="assets/screenshots/captures-simple.png">
+<img alt="Empty main simple setup display" src="assets/screenshots/simple-main.png">
+
+<img alt="Empty main simple setup display" src="assets/screenshots/showoff.png">
+<img alt="Empty main simple setup display" src="assets/screenshots/spotify.png">
+<img alt="Empty main simple setup display" src="assets/screenshots/neovim.png">
+<img alt="Empty main simple setup display" src="assets/screenshots/ranger-zathura.png">
+<img alt="Empty main simple setup display" src="assets/screenshots/power-menu.png">
 
 ### Office setup
 This setup has three displays with different orientations:
