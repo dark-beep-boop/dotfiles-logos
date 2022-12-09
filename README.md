@@ -11,6 +11,7 @@ This is my usual setup, without external screens:
 <img alt="Main simple setup display with spotify" src="assets/screenshots/spotify">
 <img alt="Main simple setup display with neovim" src="assets/screenshots/neovim">
 <img alt="Main simple setup display with ranger and zathura" src="assets/screenshots/ranger-zathura">
+<img alt="Main simple setup display with the power menu" src="assets/screenshots/power-menu">
 
 ### Office setup
 This setup has three displays with different orientations:
