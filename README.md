@@ -5,7 +5,7 @@ Configuration files for my personal laptop, with a custom color scheme based on 
 ### Simple setup
 This is my usual setup, without external screens:
 
-<img alt="Empty main simple setup display" src="assets/screenshots/captures-simple">
+<img alt="Empty main simple setup display" src="assets/screenshots/captures-simple.png">
 
 ### Office setup
 This setup has three displays with different orientations:
