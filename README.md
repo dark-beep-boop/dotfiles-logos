@@ -77,3 +77,7 @@ CoC extensions:
 - coc-cmake
 - coc-css
 - coc-pyright
+
+## Attributions
+Credit for the background abstract paintings:
+ - [Dids](https://www.pexels.com/@didsss/)
