@@ -5,20 +5,12 @@ Configuration files for my personal laptop, with a custom color scheme based on 
 ### Simple setup
 This is my usual setup, without external screens:
 
-<img alt="Empty main simple setup display" src="assets/screenshots/simple-main">
-
-<img alt="Main simple setup display with simple tools" src="assets/screenshots/showoff">
-<img alt="Main simple setup display with spotify" src="assets/screenshots/spotify">
-<img alt="Main simple setup display with neovim" src="assets/screenshots/neovim">
-<img alt="Main simple setup display with ranger and zathura" src="assets/screenshots/ranger-zathura">
-<img alt="Main simple setup display with the power menu" src="assets/screenshots/power-menu">
+<img alt="Empty main simple setup display" src="assets/screenshots/captures-simple">
 
 ### Office setup
 This setup has three displays with different orientations:
 
-<img alt="Empty vertical office setup display" src="assets/screenshots/vertical">
-<img alt="Empty main office setup display" src="assets/screenshots/horizontal-main">
-<img alt="Empty secondary office setup display" src="assets/screenshots/horizontal-secondary">
+<img alt="Empty vertical office setup display" src="assets/screenshots/captures-office.png">
 
 ## Dependencies
 This rice has been developed for Arch linux, but should be easy to adapt to some other distro. Here are some of the programs and packages I use and that the rice is created for and with. This list might not be updated, so be careful when using the rice as a reference.
