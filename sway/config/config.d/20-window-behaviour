@@ -33,7 +33,7 @@ for_window [class=Todoist] move window to scratchpad, resize set 1000 600, move 
 # Floating windows
 for_window [app_id=float] floating enable
 for_window [app_id=firefox title=".*Password Required.*"] floating enable
-for_window [app_id=firefox title="Firefox - Sharing Indicator"] floating enable
+for_window [app_id=firefox title=".*Firefox . Sharing Indicator.*"] floating enable, move position top
 for_window [app_id=zoom] floating enable
 
 ## Window focus
