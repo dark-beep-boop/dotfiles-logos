@@ -32,7 +32,6 @@ vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
 vim.opt.autoindent = true
 vim.opt.textwidth = 80
-vim.opt.formatoptions:append('a')
 
 -- [[ Movement ]]
 vim.opt.mouse = 'a'
