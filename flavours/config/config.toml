@@ -60,7 +60,7 @@ rewrite = true
 light = true
 
 [[items]]
-file = "~/.config/nvim/lua/lualine/themes/base16.lua"
+file = "~/.config/nvim/lua/lualine-config/themes/base16.lua"
 template = "lualine"
 rewrite = true
 light = true

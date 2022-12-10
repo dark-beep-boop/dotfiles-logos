@@ -8,17 +8,17 @@ config_files :=\
 							 lua/options.lua\
 							 lua/plugins.lua\
 							 lua/variables.lua\
-							 lua/coc/base.lua\
-							 lua/lualine/base.lua\
-							 lua/lualine/themes/base16.lua\
-							 lua/lualine/styles/simple.lua\
-							 lua/neotest/base.lua\
-							 lua/nvim-autopairs/base.lua\
-							 lua/nvim-dap/base.lua\
-							 lua/nvim-dap-ui/base.lua\
-							 lua/nvim-dap-virtual-text/base.lua\
-							 lua/nvim-tree/base.lua\
-							 lua/nvim-treesitter/base.lua
+							 lua/coc-config/init.lua\
+							 lua/lualine-config/init.lua\
+							 lua/lualine-config/themes/base16.lua\
+							 lua/lualine-config/styles/simple.lua\
+							 lua/neotest-config/init.lua\
+							 lua/autopairs-config/init.lua\
+							 lua/dap-config/init.lua\
+							 lua/dap-ui-config/init.lua\
+							 lua/dap-virtual-text-config/init.lua\
+							 lua/tree-config/init.lua\
+							 lua/treesitter-config/init.lua
 src_config_dir := config/
 dst_config_dir := $(userhome).config/nvim/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))

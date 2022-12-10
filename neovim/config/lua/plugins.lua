@@ -5,7 +5,8 @@ return require('packer').startup(
     -- [[ Appearance ]]
     use {
       'kyazdani42/nvim-tree.lua',
-      requires = 'kyazdani42/nvim-web-devicons'
+      requires = 'kyazdani42/nvim-web-devicons',
+      config = require('tree-config')
     }
     use 'mhinz/vim-startify'
     use {
@@ -13,7 +14,8 @@ return require('packer').startup(
       requires = {
         'kyazdani42/nvim-web-devicons',
         opt = true
-      }
+      },
+      config = require('lualine-config')
     }
     use 'dark-beep-boop/base16-nvim'
 
@@ -21,25 +23,32 @@ return require('packer').startup(
     use {
       'folke/which-key.nvim',
       config = function()
-        require("which-key").setup {}
+        require('which-key').setup {}
       end
     }
 
     -- [[ Development ]]
     use {
       'nvim-telescope/telescope.nvim',
-      requires = {'nvim-lua/plenary.nvim'}
+      requires = { 'nvim-lua/plenary.nvim' }
     }
     use 'majutsushi/tagbar'
     use 'Yggdroot/indentLine'
     use 'tpope/vim-fugitive'
     use 'junegunn/gv.vim'
-    use 'windwp/nvim-autopairs'
+    use {
+      'windwp/nvim-autopairs',
+      config = require('autopairs-config')
+    }
     use 'voldikss/vim-floaterm'
     use 'lewis6991/impatient.nvim'
     use 'sheerun/vim-polyglot'
     use 'dense-analysis/ale'
-    use {'neoclide/coc.nvim', branch = 'release'}
+    use {
+      'neoclide/coc.nvim',
+      branch = 'release',
+      config = require('coc-config')
+    }
     use {
       'nvim-treesitter/nvim-treesitter',
       run = function()
@@ -48,13 +57,27 @@ return require('packer').startup(
         })
         ts_update()
       end,
+      config = require('treesitter-config')
     }
 
     -- [[ Debugging ]]
-    use 'mfussenegger/nvim-dap'
-    use {'mfussenegger/nvim-dap-python', requires = {'mfussenegger/nvim-dap'}}
-    use {'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'}}
-    use 'theHamsta/nvim-dap-virtual-text'
+    use {
+      'mfussenegger/nvim-dap',
+      config = require('dap-config')
+    }
+    use {
+      'mfussenegger/nvim-dap-python',
+      requires = { 'mfussenegger/nvim-dap' }
+    }
+    use {
+      'rcarriga/nvim-dap-ui',
+      requires = { 'mfussenegger/nvim-dap' },
+      config = require('dap-ui-config')
+    }
+    use {
+      'theHamsta/nvim-dap-virtual-text',
+      config = require('dap-virtual-text-config')
+    }
     use {
       'nvim-neotest/neotest',
       requires = {
@@ -64,6 +87,7 @@ return require('packer').startup(
         'nvim-lua/plenary.nvim',
         'nvim-treesitter/nvim-treesitter',
         'antoinemadec/FixCursorHold.nvim'
-      }
+      },
+      config = require('neotest-config')
     }
   end)
