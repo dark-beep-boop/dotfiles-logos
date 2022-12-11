@@ -59,6 +59,10 @@ return require('packer').startup(
       end,
       config = require('treesitter-config')
     }
+    use {
+      'jbyuki/instant.nvim',
+      config = require('instant-config')
+    }
 
     -- [[ Debugging ]]
     use {

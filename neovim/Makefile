@@ -9,6 +9,7 @@ config_files :=\
 							 lua/plugins.lua\
 							 lua/variables.lua\
 							 lua/coc-config/init.lua\
+							 lua/instant-config/init.lua\
 							 lua/lualine-config/init.lua\
 							 lua/lualine-config/themes/base16.lua\
 							 lua/lualine-config/styles/simple.lua\
