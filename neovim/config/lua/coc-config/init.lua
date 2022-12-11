@@ -29,9 +29,45 @@ vim.api.nvim_create_autocmd("CursorHold", {
 -- Setup formatexpr specified filetype(s).
 vim.api.nvim_create_autocmd("FileType", {
     group = "CocGroup",
-    pattern = "*",
+    pattern = {
+        "javascript",
+        "typescript",
+        "json",
+        "css",
+        "html",
+        "markdown",
+        "yaml",
+        "lua",
+        "tex",
+        "c",
+        "cpp",
+        "cmake",
+        "python"
+    },
     command = "setl formatexpr=CocAction('formatSelected')",
     desc = "Setup formatexpr specified filetype(s)."
+})
+
+-- Format on write
+vim.api.nvim_create_autocmd("BufWritePre", {
+    group = "CocGroup",
+    pattern = {
+        "javascript",
+        "typescript",
+        "json",
+        "css",
+        "html",
+        "markdown",
+        "yaml",
+        "lua",
+        "tex",
+        "c",
+        "cpp",
+        "cmake",
+        "python"
+    },
+    command = "call CocAction('format')",
+    desc = "Format buffer on write"
 })
 
 
@@ -41,14 +77,6 @@ vim.api.nvim_create_autocmd("User", {
     pattern = "CocJumpPlaceholder",
     command = "call CocActionAsync('showSignatureHelp')",
     desc = "Update signature help on jump placeholder"
-})
-
--- Format on write
-vim.api.nvim_create_autocmd("BufWritePre", {
-    group = "CocGroup",
-    pattern = "*",
-    command = "call CocAction('format')",
-    desc = "Format buffer on write"
 })
 
 
