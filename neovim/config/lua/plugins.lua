@@ -63,6 +63,7 @@ return require('packer').startup(
       'jbyuki/instant.nvim',
       config = require('instant-config')
     }
+    use 'honza/vim-snippets'
 
     -- [[ Debugging ]]
     use {
