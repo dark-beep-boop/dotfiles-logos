@@ -64,6 +64,11 @@ return require('packer').startup(
       config = require('instant-config')
     }
     use 'honza/vim-snippets'
+    use {
+      'iamcco/markdown-preview.nvim',
+      run = 'cd app && yarn install'
+    }
+    use 'xuhdev/vim-latex-live-preview'
 
     -- [[ Debugging ]]
     use {
