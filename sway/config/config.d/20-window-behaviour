@@ -35,6 +35,7 @@ for_window [app_id=float] floating enable
 for_window [app_id=firefox title=".*Password Required.*"] floating enable
 for_window [app_id=firefox title=".*Firefox . Sharing Indicator.*"] floating enable, move position top
 for_window [app_id=zoom] floating enable
+for_window [app_id=veracrypt] floating enable
 
 ## Window focus
 for_window [class=".*"] focus
