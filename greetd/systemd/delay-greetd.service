@@ -2,11 +2,11 @@
 Description=Greeter daemon
 After=systemd-user-sessions.service plymouth-quit-wait.service
 After=getty@tty1.service
-Conflicts=getty@tty1.service
+Conflicts=getty@tty1.service greetd.service
 
 [Service]
 Type=simple
-ExecStartPre=greetd-oneshot-delay 6
+ExecStartPre=greetd-oneshot-delay $TIMES
 ExecStart=greetd
 IgnoreSIGPIPE=no
 SendSIGHUP=yes

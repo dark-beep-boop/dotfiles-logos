@@ -13,13 +13,15 @@ src_background_dir := backgrounds/
 dst_background_dir := /usr/local/share/backgrounds/
 dst_background_files := $(addprefix $(dst_background_dir),$(background_files))
 
-systemd_file := greetd.service
-backup_extension := .bak
+systemd_name := delay-greetd
+systemd_file := $(systemd_name).service
+systemd_config_dir := $(systemd_name).d
 src_systemd_dir := systemd/
 src_systemd_file := $(src_systemd_dir)$(systemd_file)
+src_systemd_config_dir := $(src_systemd_dir)$(systemd_config_dir)
 dst_systemd_dir := /usr/lib/systemd/system/
 dst_systemd_file := $(dst_systemd_dir)$(systemd_file)
-dst_bak_systemd_file := $(dst_systemd_file)$(backup_extension)
+dst_systemd_config_dir := $(dst_systemd_dir)$(systemd_config_dir)
 
 .PHONY: all, install, uninstall
 
@@ -48,14 +50,15 @@ $(dst_background_files):\
 	$$(subst $$(dst_background_dir),$$(src_background_dir),$$@)
 	install --owner=root --group=root --mode=644 -D $< $@
 
-$(dst_systemd_file): $(dst_bak_systemd_file) $(src_systemd_file)
-	install --owner=root --group=root --mode=644 -D $(src_systemd_file) $@
+$(dst_systemd_file): $(src_systemd_file)
+	install --owner=root --group=root --mode=644 -D $< $@
 
-$(dst_bak_systemd_file):
-	mv $(dst_systemd_file) $(dst_bak_systemd_file)
+$(dst_systemd_config_dir): $(src_systemd_config_dir)
+	install --owner=root --group=root --mode=644 -D $< $@
 
 uninstall:
 	rm -rf $(dst_config_dir)
 	rm -rf $(dst_bin_files)
 	rm -rf $(dst_background_files)
-	mv $(dst_bak_systemd_file) $(dst_systemd_file)
+	rm -rf $(dst_systemd_file)
+	rm -rf $(dst_systemd_config_dir)
