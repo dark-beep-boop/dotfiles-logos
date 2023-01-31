@@ -16,12 +16,18 @@ dst_background_files := $(addprefix $(dst_background_dir),$(background_files))
 systemd_name := delay-greetd
 systemd_file := $(systemd_name).service
 systemd_config_dir := $(systemd_name).d
+systemd_config_files := environment.conf
 src_systemd_dir := systemd/
 src_systemd_file := $(src_systemd_dir)$(systemd_file)
-src_systemd_config_dir := $(src_systemd_dir)$(systemd_config_dir)
+src_systemd_config_dir := $(src_systemd_dir)$(systemd_config_dir)/
+src_systemd_config_files := \
+	$(addprefix $(src_systemd_config_dir),$(systemd_config_files))
 dst_systemd_dir := /usr/lib/systemd/system/
 dst_systemd_file := $(dst_systemd_dir)$(systemd_file)
-dst_systemd_config_dir := $(dst_systemd_dir)$(systemd_config_dir)
+dst_systemd_config_dir := $(dst_systemd_dir)$(systemd_config_dir)/
+dst_systemd_config_files := \
+	$(addprefix $(dst_systemd_config_dir),$(systemd_config_files))
+
 
 .PHONY: all, install, uninstall
 
@@ -32,7 +38,8 @@ install:\
 	$(dst_config_files)\
 	$(dst_bin_files)\
 	$(dst_background_files)\
-	$(dst_systemd_file)
+	$(dst_systemd_file)\
+	$(dst_systemd_config_files)
 
 $(dst_config_dir):
 	install --owner=greeter --group=greeter --directory $@
@@ -53,7 +60,9 @@ $(dst_background_files):\
 $(dst_systemd_file): $(src_systemd_file)
 	install --owner=root --group=root --mode=644 -D $< $@
 
-$(dst_systemd_config_dir): $(src_systemd_config_dir)
+.SECONDEXPANSION:
+$(dst_systemd_config_files):\
+	$$(subst $$(dst_systemd_config_dir),$$(src_systemd_config_dir),$$@)
 	install --owner=root --group=root --mode=644 -D $< $@
 
 uninstall:
