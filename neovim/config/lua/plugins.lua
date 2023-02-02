@@ -2,102 +2,115 @@
 -- Use Packer as package manager
 return require('packer').startup(
   function(use)
+    -- Package manager
+    use 'wbthomason/packer.nvim'
+
     -- [[ Appearance ]]
-    use {
-      'kyazdani42/nvim-tree.lua',
-      requires = 'kyazdani42/nvim-web-devicons',
-      config = require('tree-config')
-    }
+    -- Start page
     use 'mhinz/vim-startify'
+    -- Status line
     use {
       'nvim-lualine/lualine.nvim',
       requires = {
-        'kyazdani42/nvim-web-devicons',
+        'nvim-tree/nvim-web-devicons',
         opt = true
       },
       config = require('lualine-config')
     }
+    -- Colortheme for base16 themes
     use 'dark-beep-boop/base16-nvim'
 
     -- [[ Utilities ]]
+    -- Fast plugin load
+    use 'lewis6991/impatient.nvim'
+    -- File explorer
+    use {
+      'nvim-tree/nvim-tree.lua',
+      requires = 'nvim-tree/nvim-web-devicons',
+      tag = 'nightly',
+      config = require('nvim-tree-config')
+    }
+    -- Keybinding finder
     use {
       'folke/which-key.nvim',
-      config = function()
-        require('which-key').setup {}
-      end
+      config = require('which-key-config')
+    }
+    -- Fuzzy finder
+    use {
+      'nvim-telescope/telescope.nvim',
+      branch = '0.1.x',
+      requires = 'nvim-lua/plenary.nvim'
+    }
+    -- Fuzzy finder algorithm
+    use {
+      'nvim-telescope/telescope-fzf-native.nvim',
+      run = 'make',
+      cond = vim.fn.executable 'make' == 1
     }
 
     -- [[ Development ]]
-    use {
-      'nvim-telescope/telescope.nvim',
-      requires = { 'nvim-lua/plenary.nvim' }
-    }
+    -- ctag code information
     use 'majutsushi/tagbar'
-    use 'Yggdroot/indentLine'
+    -- Git management
     use 'tpope/vim-fugitive'
+    use 'tpope/vim-rhubarb'
+    use 'lewis6991/gitsigns.nvim'
     use 'junegunn/gv.vim'
+    -- Add indentation guides
+    use 'lukas-reineke/indent-blankline.nvim'
+    -- Comment visual regions and lines
+    use 'numToStr/Comment.nvim'
+    -- Detect tabstop and shiftwidth automatically
+    use 'tpope/vim-sleuth'
+    -- Automatically match symbol pairs
     use {
       'windwp/nvim-autopairs',
       config = require('autopairs-config')
     }
+    -- Floating terminals
     use 'voldikss/vim-floaterm'
-    use 'lewis6991/impatient.nvim'
-    use 'sheerun/vim-polyglot'
-    use 'dense-analysis/ale'
-    use {
-      'neoclide/coc.nvim',
-      branch = 'release',
-      config = require('coc-config')
-    }
+    -- Highlight, edit, and navigate code
     use {
       'nvim-treesitter/nvim-treesitter',
       run = function()
-        local ts_update = require('nvim-treesitter.install').update({
-          with_sync = true
-        })
-        ts_update()
+        pcall(require('nvim-treesitter.install').update { with_sync = true })
       end,
       config = require('treesitter-config')
     }
+    -- Additional text objects via treesitter
     use {
-      'jbyuki/instant.nvim',
-      config = require('instant-config')
+      'nvim-treesitter/nvim-treesitter-textobjects',
+      after = 'nvim-treesitter'
     }
+    -- Code snippets
     use 'honza/vim-snippets'
+    -- Preview markdown docs
     use {
       'iamcco/markdown-preview.nvim',
       run = 'cd app && yarn install'
     }
+    -- Preview latex docs
     use 'xuhdev/vim-latex-live-preview'
-
-    -- [[ Debugging ]]
+    -- LSP configuration & plugins
     use {
-      'mfussenegger/nvim-dap',
-      config = require('dap-config')
-    }
-    use {
-      'mfussenegger/nvim-dap-python',
-      requires = { 'mfussenegger/nvim-dap' }
-    }
-    use {
-      'rcarriga/nvim-dap-ui',
-      requires = { 'mfussenegger/nvim-dap' },
-      config = require('dap-ui-config')
-    }
-    use {
-      'theHamsta/nvim-dap-virtual-text',
-      config = require('dap-virtual-text-config')
-    }
-    use {
-      'nvim-neotest/neotest',
+      'neovim/nvim-lspconfig',
       requires = {
-        'nvim-neotest/neotest-python',
-        'nvim-neotest/neotest-plenary',
-        'nvim-neotest/neotest-vim-test',
-        'nvim-lua/plenary.nvim',
-        'nvim-treesitter/nvim-treesitter',
-        'antoinemadec/FixCursorHold.nvim'
-      },
-      config = require('neotest-config')
+        -- Automatically instal LSPs to stdpath for neovim
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
+        -- Useful status updates for LSP
+        'j-hui/fidget.nvim',
+        -- Additional lua confiiguration
+        'folke/neovdev.nvim'
+      }
+    }
+    -- Autocompletion
+    use {
+      'hrsh7th/nvim-cmp',
+      requires = {
+        'hrsh7th/cmp-nvim-lsp',
+        'L3MON4D3/LuaSnip',
+        'saadparwaiz1/cmp_luasnip'
+      }
     }
   end)
