@@ -39,7 +39,8 @@ return require('packer').startup(
     use {
       'nvim-telescope/telescope.nvim',
       branch = '0.1.x',
-      requires = 'nvim-lua/plenary.nvim'
+      requires = 'nvim-lua/plenary.nvim',
+      config = require('telescope-config')
     }
     -- Fuzzy finder algorithm
     use {
@@ -54,12 +55,21 @@ return require('packer').startup(
     -- Git management
     use 'tpope/vim-fugitive'
     use 'tpope/vim-rhubarb'
-    use 'lewis6991/gitsigns.nvim'
+    use {
+      'lewis6991/gitsigns.nvim',
+      config = require('gitsigns-config')
+    }
     use 'junegunn/gv.vim'
     -- Add indentation guides
-    use 'lukas-reineke/indent-blankline.nvim'
+    use {
+      'lukas-reineke/indent-blankline.nvim',
+      config = require('indent-blankline-config')
+    }
     -- Comment visual regions and lines
-    use 'numToStr/Comment.nvim'
+    use {
+      'numToStr/Comment.nvim',
+      config = require('comment-config')
+    }
     -- Detect tabstop and shiftwidth automatically
     use 'tpope/vim-sleuth'
     -- Automatically match symbol pairs
@@ -101,9 +111,15 @@ return require('packer').startup(
         -- Useful status updates for LSP
         'j-hui/fidget.nvim',
         -- Additional lua confiiguration
-        'folke/neovdev.nvim'
-      }
+        'folke/neodev.nvim'
+      },
+      config = require('nvim-lspconfig-config')
     }
+    use {
+      'folke/neodev.nvim',
+      config = require('neodev-config')
+    }
+
     -- Autocompletion
     use {
       'hrsh7th/nvim-cmp',
@@ -111,6 +127,7 @@ return require('packer').startup(
         'hrsh7th/cmp-nvim-lsp',
         'L3MON4D3/LuaSnip',
         'saadparwaiz1/cmp_luasnip'
-      }
+      },
+      config = require('nvim-cmp-config')
     }
   end)

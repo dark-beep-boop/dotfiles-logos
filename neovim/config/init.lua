@@ -9,4 +9,5 @@ vim.g.localleaders = '\\'
 require('variables')
 require('options')
 require('plugins')
+require('config')
 require('keybindings')
