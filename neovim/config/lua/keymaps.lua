@@ -108,3 +108,6 @@ keymap('t', '<leader>tp', [[<c-\><c-n>:FloatermPrev<cr>]], {noremap = true})
 keymap('t', '<leader>tn', [[<c-\><c-n>:FloatermNext<cr>]], {noremap = true})
 keymap('t', '<leader>tt', [[<c-\><c-n>:FloatermToggle<cr>]], {noremap = true})
 keymap('t', '<leader>tk', [[<c-\><c-n>:FloatermKill<cr>]], {noremap = true})
+
+-- The line beneath this is called `modeline`. See `:help modeline`
+-- vim: ts=2 sts=2 sw=2 et

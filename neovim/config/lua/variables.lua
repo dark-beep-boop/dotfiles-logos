@@ -9,18 +9,17 @@ vim.g.background = "dark"
 local packer_path = vim.fn.stdpath("config") .. "/site"
 vim.o.packpath = vim.o.packpath .. "," .. packer_path
 
--- [[ Deoplete ]]
-vim.api.nvim_command('let g:deoplete#enable_at_startup = 1')
-
--- [[ Polyglot ]]
+-- [[ Markdown ]]
 vim.g.vim_markdown_folding_disabled = 1
 vim.g.vim_markdown_conceal = 0
 vim.g.vim_markdown_math = 1
 vim.g.vim_markdown_frontmatter = 1
 vim.g.vim_markdown_toml_frontmatter = 1
 vim.g.vim_markdown_json_frontmatter = 1
+
+-- [[ Latex ]]
 vim.g.tex_conceal = ''
 vim.g.livepreview_previewer = 'zathura'
 
--- [[ ALE ]]
-vim.g.ale_disable_lsp = 1
+-- The line beneath this is called `modeline`. See `:help modeline`
+-- vim: ts=2 sts=2 sw=2 et
