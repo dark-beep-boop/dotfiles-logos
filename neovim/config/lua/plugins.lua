@@ -172,7 +172,10 @@ return require('packer').startup(function(use)
   use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
 
   -- Preview latex docs
-  use 'xuhdev/vim-latex-live-preview'
+  use {
+    'xuhdev/vim-latex-live-preview',
+    config = pcall(require 'vim-latex-live-preview-config')
+  }
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')

@@ -30,6 +30,8 @@ config_files :=\
 							 lua/telescope-config/keymaps.lua\
 							 lua/toggleterm-config/init.lua\
 							 lua/toggleterm-config/keymaps.lua\
+							 lua/vim-latex-live-preview-config/init.lua\
+							 lua/vim-latex-live-preview-config/variables.lua\
 							 lua/which-key-config/init.lua\
 							 lua/which-key-config/options.lua
 src_config_dir := config/
