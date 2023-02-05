@@ -1,4 +1,8 @@
-require('nvim-tree').setup {}
+-- [[ NvimTree configuration ]]
+-- [[ Modules ]]
+require 'nvim-tree-config.keymaps'
 
--- The line beneath this is called `modeline`. See `:help modeline`
+-- [[ Setup ]]
+require('nvim-tree').setup()
+
 -- vim: ts=2 sts=2 sw=2 et

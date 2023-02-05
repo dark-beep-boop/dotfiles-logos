@@ -1,7 +1,7 @@
 -- painted theme
 -- by dark-beep-boop
 
-local colors= {
+local colors = {
   base00 = '#011837',
   base01 = '#022c64',
   base02 = '#033e8c',
@@ -16,8 +16,8 @@ local colors= {
   base0B = '#f87a31',
   base0C = '#f59937',
   base0D = '#f3b73d',
-  base0E = '#7e2559',
-  base0F = '#7e2559',
+  base0E = '#e28fbb',
+  base0F = '#e28fbb',
 }
 
 return {
@@ -52,6 +52,3 @@ return {
     c = {bg = colors.base01, fg = colors.base06}
   }
 }
-
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et

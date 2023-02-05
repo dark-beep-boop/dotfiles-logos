@@ -1,59 +1,57 @@
--- [[ options.lua ]]
-
+-- [[ Neovim options ]]
 -- [[ Clipboard ]]
-vim.opt.clipboard = 'unnamedplus'
+vim.o.clipboard = 'unnamedplus'
 
 -- [[ Colors ]]
-vim.opt.syntax = 'ON'
-vim.opt.termguicolors = true
-vim.api.nvim_command('colorscheme base16-current')
+vim.o.syntax = 'ON'
+vim.o.termguicolors = true
+vim.api.nvim_command 'colorscheme base16-current'
 
 -- [[ Update ]]
-vim.opt.updatetime = 250
+vim.o.updatetime = 250
 
 -- [[ Context ]]
-vim.opt.colorcolumn = '80'
-vim.opt.number = true
-vim.opt.relativenumber = false
-vim.opt.signcolumn = 'yes'
+vim.o.colorcolumn = '80'
+vim.wo.number = true
+vim.o.relativenumber = false
+vim.wo.signcolumn = 'yes'
 
 -- [[ Compatibility ]]
-vim.opt.compatible = false
+vim.o.compatible = false
 
 -- [[ Completion ]]
-vim.opt.wildmode = 'longest,list'
-vim.opt.completeopt = 'menuone,noselect'
+vim.o.wildmode = 'longest,list'
+vim.o.completeopt = 'menuone,noselect'
 
 -- [[ Encoding ]]
-vim.opt.encoding = 'utf8'
-vim.opt.fileencoding = 'utf8'
+vim.o.encoding = 'utf8'
+vim.o.fileencoding = 'utf8'
 
 -- [[ Format ]]
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
-vim.opt.tabstop = 2
-vim.opt.autoindent = true
-vim.opt.breakindent = true
+vim.o.expandtab = true
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 2
+vim.o.tabstop = 2
+vim.o.autoindent = true
+vim.o.breakindent = true
 
 -- [[ Movement ]]
-vim.opt.mouse = 'a'
-vim.opt.ttyfast = true
-vim.opt.scrolloff = 4
+vim.o.mouse = 'a'
+vim.o.ttyfast = true
+vim.o.scrolloff = 4
 
 -- [[ Search ]]
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.incsearch = true
-vim.opt.hlsearch = false
-vim.opt.showmatch = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.incsearch = true
+vim.o.hlsearch = false
+vim.o.showmatch = true
 
 -- [[ Window ]]
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+vim.o.splitright = true
+vim.o.splitbelow = true
 
 -- [[ History ]]
-vim.opt.undofile = true
+vim.o.undofile = true
 
--- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

@@ -1,4 +1,5 @@
-local lualine = require('lualine')
+-- [[ Lualine style: Simple ]]
+local lualine = require 'lualine'
 local M = {}
 
 function M.setup_style(current_theme)
@@ -50,5 +51,4 @@ end
 
 return M
 
--- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
