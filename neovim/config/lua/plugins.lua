@@ -134,6 +134,22 @@ return require('packer').startup(function(use)
     config = require 'nvim-cmp-config'
   }
 
+  -- Debug Adapter Protocol
+  use {
+    'mfussenegger/nvim-dap',
+    config = require 'dap-config'
+  }
+  use {
+    'rcarriga/nvim-dap-ui',
+    requires = 'mfussenegger/nvim-dap',
+    config = require 'dapui-config'
+  }
+  use {
+    'theHamsta/nvim-dap-virtual-text',
+    config = require 'nvim-dap-virtual-text-config'
+  }
+  use 'nvim-telescope/telescope-dap'
+
   -- Preview markdown docs
   use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
 

@@ -9,6 +9,10 @@ config_files :=\
 							 lua/variables.lua\
 							 lua/autopairs-config/init.lua\
 							 lua/comment-config/init.lua\
+							 lua/dap-config/init.lua\
+							 lua/dap-config/keymaps.lua\
+							 lua/dapui-config/init.lua\
+							 lua/dapui-config/keymaps.lua\
 							 lua/gitsigns-config/init.lua\
 							 lua/indent-blankline-config/init.lua\
 							 lua/lspconfig-config/init.lua\
@@ -16,6 +20,7 @@ config_files :=\
 							 lua/lualine-config/styles/simple.lua\
 							 lua/lualine-config/themes/base16.lua\
 							 lua/nvim-cmp-config/init.lua\
+							 lua/nvim-dap-virtual-text/init.lua\
 							 lua/nvim-tree-config/init.lua\
 							 lua/nvim-tree-config/keymaps.lua\
 							 lua/nvim-treesitter-config/init.lua\
