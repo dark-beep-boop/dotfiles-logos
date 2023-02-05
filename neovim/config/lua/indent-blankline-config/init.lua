@@ -1,6 +1,6 @@
 -- [[ Indent Blankline configuration ]]
 -- [[ Setup ]]
-require('indent_blankline').setup {
+require 'indent_blankline'.setup {
   char = '┊',
   show_trailing_blankline_indent = false
 }

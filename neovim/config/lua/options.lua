@@ -5,7 +5,7 @@ vim.o.clipboard = 'unnamedplus'
 -- [[ Colors ]]
 vim.o.syntax = 'ON'
 vim.o.termguicolors = true
-vim.api.nvim_command 'colorscheme base16-current'
+pcall(vim.api.nvim_command, 'colorscheme base16-current')
 
 -- [[ Update ]]
 vim.o.updatetime = 250

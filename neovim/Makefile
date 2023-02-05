@@ -20,7 +20,7 @@ config_files :=\
 							 lua/lualine-config/styles/simple.lua\
 							 lua/lualine-config/themes/base16.lua\
 							 lua/nvim-cmp-config/init.lua\
-							 lua/nvim-dap-virtual-text/init.lua\
+							 lua/nvim-dap-virtual-text-config/init.lua\
 							 lua/nvim-tree-config/init.lua\
 							 lua/nvim-tree-config/keymaps.lua\
 							 lua/nvim-treesitter-config/init.lua\

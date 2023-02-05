@@ -91,10 +91,12 @@ local servers = {
 }
 
 -- Setup neodev
-require('neodev').setup()
+require 'neodev'.setup {
+  library = { plugins = { 'nvim-dap-ui' }, types = true }
+}
 
 -- Setup mason
-require('mason').setup()
+require 'mason'.setup()
 
 -- Ensure the servers above are installed
 local mason_lspconfig = require 'mason-lspconfig'
@@ -105,7 +107,7 @@ mason_lspconfig.setup {
 
 mason_lspconfig.setup_handlers {
   function(server_name)
-    require('lspconfig')[server_name].setup {
+    require 'lspconfig'[server_name].setup {
       capabilities = capabilities,
       on_attach = on_attach,
       settings = servers[server_name]
@@ -114,6 +116,6 @@ mason_lspconfig.setup_handlers {
 }
 
 -- Turn on lsp status information
-require('fidget').setup()
+require 'fidget'.setup()
 
 -- vim: ts=2 sts=2 sw=2 et
