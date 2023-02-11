@@ -2,4 +2,4 @@
 
 # Notifications
 exec dunst
-exec polkit-dumb-agent
+exec lxpolkit
