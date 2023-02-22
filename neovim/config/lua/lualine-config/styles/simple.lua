@@ -28,7 +28,7 @@ function M.setup_style(current_theme)
       lualine_c = {'filename'},
       lualine_x = {
         'encoding',
-        {'fileformat', symbols = {unix = ''}}, 
+        {'fileformat', symbols = {unix = '󰣇'}}, 
         'filetype'
       },
       lualine_y = {'progress'},
