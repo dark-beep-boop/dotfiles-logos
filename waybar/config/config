@@ -142,7 +142,7 @@
       "max-length": 40,
       "format-icons": {
           "spotify": "",
-          "default": "契"
+          "default": ""
       },
       "escape": true,
       "exec": "$HOME/.local/bin/mediaplayer.py 2> /dev/null"
