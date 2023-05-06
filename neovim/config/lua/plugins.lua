@@ -143,8 +143,7 @@ return require('packer').startup(function(use)
     requires = {
       'hrsh7th/cmp-nvim-lsp',
       'L3MON4D3/LuaSnip',
-      'saadparwaiz1/cmp_luasnip',
-      'honza/vim-snippets'
+      'saadparwaiz1/cmp_luasnip'
     },
     config = pcall(require 'nvim-cmp-config')
   }
