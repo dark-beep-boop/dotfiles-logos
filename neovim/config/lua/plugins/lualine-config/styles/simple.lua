@@ -1,6 +1,6 @@
 -- [[ Lualine style: Simple ]]
-local lualine = require 'lualine'
 local M = {}
+local lualine = require('lualine')
 
 function M.setup_style(current_theme)
   lualine.setup {

@@ -1,30 +1,42 @@
+require('utils')
+
 -- [[ Neovim config ]]
 -- [[ Initial setup ]]
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-pcall(require 'impatient')
+
+if isModuleAvailable('impatient') then
+  require('impatient')
+end
 
 -- [[ Leaders ]]
 vim.g.mapleader = ' '
 vim.g.localleader = ' '
 
--- [[ Modules ]]
-require 'plugins'
-require 'variables'
-require 'options'
-require 'keymaps'
+-- [[ Plugins ]]
+-- Install lazy
+local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system {
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable',
+    lazypath
+  }
+end
+vim.opt.rtp:prepend(lazypath)
 
--- [[ Setup ]]
--- Highlight on yank
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', {
-  clear = true
-})
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*'
-})
+require('lazy').setup({
+  -- Fast plugin load
+  'lewis6991/impatient.nvim',
 
--- vim: ts=2 sts=2 sw=2 et
+  -- Import every other plugin from "plugins" directory
+  {import = 'plugins'}
+}, {})
+
+require('variables')
+require('options')
+require('keymaps')
+require('commands')

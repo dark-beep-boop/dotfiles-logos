@@ -3,37 +3,16 @@ userhome := $(shell echo ~$(username))/
 
 config_files :=\
 							 init.lua\
+							 lua/utils.lua\
 							 lua/keymaps.lua\
 							 lua/options.lua\
-							 lua/plugins.lua\
 							 lua/variables.lua\
-							 lua/autopairs-config/init.lua\
-							 lua/comment-config/init.lua\
-							 lua/dap-config/init.lua\
-							 lua/dap-config/keymaps.lua\
-							 lua/dapui-config/init.lua\
-							 lua/dapui-config/keymaps.lua\
-							 lua/gitsigns-config/init.lua\
-							 lua/indent-blankline-config/init.lua\
-							 lua/lspconfig-config/init.lua\
-							 lua/lualine-config/init.lua\
-							 lua/lualine-config/styles/simple.lua\
-							 lua/lualine-config/themes/base16.lua\
-							 lua/nvim-cmp-config/init.lua\
-							 lua/nvim-dap-virtual-text-config/init.lua\
-							 lua/nvim-tree-config/init.lua\
-							 lua/nvim-tree-config/keymaps.lua\
-							 lua/nvim-treesitter-config/init.lua\
-							 lua/tagbar-config/init.lua\
-							 lua/tagbar-config/keymaps.lua\
-							 lua/telescope-config/init.lua\
-							 lua/telescope-config/keymaps.lua\
-							 lua/toggleterm-config/init.lua\
-							 lua/toggleterm-config/keymaps.lua\
-							 lua/vim-latex-live-preview-config/init.lua\
-							 lua/vim-latex-live-preview-config/variables.lua\
-							 lua/which-key-config/init.lua\
-							 lua/which-key-config/options.lua
+							 lua/commands.lua\
+							 lua/plugins/vim-startify.lua\
+							 lua/plugins/base16-nvim.lua\
+							 lua/plugins/lualine.lua\
+							 lua/plugins/lualine-config/styles/simple.lua\
+							 lua/plugins/lualine-config/themes/base16.lua
 src_config_dir := config/
 dst_config_dir := $(userhome).config/nvim/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))

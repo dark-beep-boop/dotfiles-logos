@@ -52,5 +52,3 @@ keymap('n', '[d', vim.diagnostic.goto_prev)
 keymap('n', ']d', vim.diagnostic.goto_next)
 keymap('n', '<leader>e', vim.diagnostic.open_float)
 keymap('n', '<leader>q', vim.diagnostic.setloclist)
-
--- vim: ts=2 sts=2 sw=2 et
