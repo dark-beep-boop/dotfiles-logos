@@ -1,7 +1,6 @@
 ### Window behaviour configuration
 
 ## Tiling behaviour
-default_orientation horizontal
 
 ## Workspace assignation
 # Terminal workspace windows
