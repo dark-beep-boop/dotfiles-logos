@@ -2,9 +2,6 @@
 
 ## Tiling behaviour
 default_orientation horizontal
-for_window [workspace=3] layout tabbed
-for_window [workspace=4] layout tabbed
-for_window [workspace=5] layout tabbed
 
 ## Workspace assignation
 # Terminal workspace windows
