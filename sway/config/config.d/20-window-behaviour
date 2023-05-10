@@ -2,14 +2,17 @@
 
 ## Tiling behaviour
 default_orientation horizontal
+for_window [workspace=3] layout tabbed
+for_window [workspace=4] layout tabbed
+for_window [workspace=5] layout tabbed
 
 ## Workspace assignation
 # Terminal workspace windows
 
-# Internet workspace windows
-for_window [app_id=firefox] move window to workspace 2
-
 # Code workspace windows
+
+# Internet workspace windows
+for_window [app_id=firefox] move window to workspace 3
 
 # Media workspace windows
 #assign [class=Spotify] 4

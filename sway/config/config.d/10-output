@@ -6,6 +6,3 @@ output * background /home/zus/.local/share/backgrounds/default fill
 # Display configuration
 exec kanshi
 exec_always kanshictl reload
-
-# Workspace configuration
-default_orientation vertical

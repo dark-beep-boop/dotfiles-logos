@@ -30,8 +30,8 @@
       "format": "{icon}",
       "format-icons": {
         "1": "",
-        "2": "",
-        "3": "",
+        "2": "",
+        "3": "",
         "4": "",
         "5": "",
         "urgent": "",
@@ -47,11 +47,11 @@
     "network": {
       "format-wifi": "",
       "tooltip-format-wifi": "connected to {essid} ({signalStrength}%) with {ifname} via {gwaddr} ",
-      "format-ethernet": "",
-      "tooltip-format-ethernet": "connected as {ipaddr}/{cidr} with {ifname} via {gwaddr} ",
-      "format-linked": "",
-      "tooltip-format-linked": "connected (No IP) with {ifname} via {gwaddr} ",
-      "format-disconnected": "",
+      "format-ethernet": "󰈀",
+      "tooltip-format-ethernet": "connected as {ipaddr}/{cidr} with {ifname} via {gwaddr} 󰈀",
+      "format-linked": "󰈀",
+      "tooltip-format-linked": "connected (No IP) with {ifname} via {gwaddr} 󰈀",
+      "format-disconnected": "󰈂",
       "tooltip-format-disconnected": "disconnected",
       "on-click": "kitty --class network nmtui"
     },
@@ -82,11 +82,11 @@
       "format-source": "{volume}% ",
       "format-source-muted": "",
       "format-icons": {
-        "headphone": "",
-        "hands-free": "",
-        "headset": "",
+        "headphone": "󰋋",
+        "hands-free": "󰋋",
+        "headset": "󰋎",
         "phone": "",
-        "portable": "",
+        "portable": "",
         "car": "",
         "default": ["", "", ""]
       },
@@ -130,11 +130,11 @@
     "temperature": {
       "critical-threshold": 80,
       "format": "{temperatureC}°C {icon}",
-      "format-icons": ["", "", ""]
+      "format-icons": ["", "", "", "", ""]
     },
     "backlight": {
       "format": "{percent}% {icon}",
-      "format-icons": ["", "盛"]
+      "format-icons": ["󰛩", "󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"]
     },
     "custom/media": {
       "format": "{icon} {}",

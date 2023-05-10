@@ -1,27 +1,27 @@
 #!/bin/sh
 
 config_file="$HOME/.config/power-menu/fuzzel.ini"
-option=$(echo -e " \n \n \n \n 󰒲\n " | fuzzel --dmenu --config=$config_file)
+option=$(echo -e " \n 󰩈\n 󰒲\n \n \n " | fuzzel --dmenu --config=$config_file)
 
 #command execution
 case $option in
   0)
-    swaymsg exit
-    ;;
-  1)
     $HOME/.local/bin/lock
     ;;
+  1)
+    swaymsg exit
+    ;;
   2)
-    systemctl poweroff
-    ;;
-  3)
-    systemctl reboot
-    ;;
-  4)
     systemctl suspend
     ;;
-  5)
+  3)
     systemctl hibernate
+    ;;
+  4)
+    systemctl poweroff
+    ;;
+  5)
+    systemctl reboot
     ;;
   *)
 esac
