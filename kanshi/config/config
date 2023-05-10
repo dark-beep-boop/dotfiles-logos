@@ -19,5 +19,4 @@ profile office {
 # Single display configuration
 profile single {
     output eDP-1 enable mode 3120x2080@90Hz position 0,0 scale 2 transform normal
-    exec swaymsg output eDP-1 background /home/zus/.local/share/backgrounds/painted-main.png fill
 }
