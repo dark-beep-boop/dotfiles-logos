@@ -1,7 +1,7 @@
 -- [[ Useful functions ]]
 
 -- Checks the availability of a module
-function isModuleAvailable(name)
+function is_module_available(name)
   if package.loaded[name] then
     return true
   else

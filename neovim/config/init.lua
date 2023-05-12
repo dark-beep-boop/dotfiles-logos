@@ -1,14 +1,4 @@
-require('utils')
-
 -- [[ Neovim config ]]
--- [[ Initial setup ]]
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
-if isModuleAvailable('impatient') then
-  require('impatient')
-end
-
 -- [[ Leaders ]]
 vim.g.mapleader = ' '
 vim.g.localleader = ' '
@@ -28,14 +18,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
-  -- Fast plugin load
-  'lewis6991/impatient.nvim',
+-- Setup plugins in plugins directory
+require('lazy').setup('plugins')
 
-  -- Import every other plugin from "plugins" directory
-  {import = 'plugins'}
-}, {})
-
+-- [[ Modules ]]
 require('variables')
 require('options')
 require('keymaps')

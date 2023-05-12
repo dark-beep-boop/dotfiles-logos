@@ -12,7 +12,22 @@ config_files :=\
 							 lua/plugins/base16-nvim.lua\
 							 lua/plugins/lualine.lua\
 							 lua/plugins/lualine-config/styles/simple.lua\
-							 lua/plugins/lualine-config/themes/base16.lua
+							 lua/plugins/lualine-config/themes/base16.lua\
+							 lua/plugins/indent-blankline.lua\
+							 lua/plugins/comment.lua\
+							 lua/plugins/which-key.lua\
+							 lua/plugins/telescope.lua\
+							 lua/plugins/tagbar.lua\
+							 lua/plugins/git.lua\
+							 lua/plugins/vim-sleuth.lua\
+							 lua/plugins/nvim-autopairs.lua\
+							 lua/plugins/toggleterm.lua\
+							 lua/plugins/neo-tree.lua\
+							 lua/plugins/nvim-treesitter.lua\
+							 lua/plugins/markdown-preview.lua\
+							 lua/plugins/vim-latex-live-preview.lua\
+							 lua/plugins/lsp.lua\
+							 lua/plugins/dap.lua
 src_config_dir := config/
 dst_config_dir := $(userhome).config/nvim/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))

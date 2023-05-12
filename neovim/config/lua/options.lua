@@ -22,10 +22,6 @@ vim.o.compatible = false
 vim.o.wildmode = 'longest,list'
 vim.o.completeopt = 'menuone,noselect'
 
--- [[ Encoding ]]
-vim.o.encoding = 'utf8'
-vim.o.fileencoding = 'utf8'
-
 -- [[ Format ]]
 vim.o.expandtab = true
 vim.o.shiftwidth = 2
@@ -52,5 +48,3 @@ vim.o.splitbelow = true
 
 -- [[ History ]]
 vim.o.undofile = true
-
--- vim: ts=2 sts=2 sw=2 et

@@ -1,7 +1,7 @@
 -- [[ vim-startify ]]
--- Start page
 
 return {
+  -- Start page
   'mhinz/vim-startify'
 }
 
