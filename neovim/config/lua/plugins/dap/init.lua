@@ -1,5 +1,10 @@
 -- [[ nvim-dap ]]
 
+require('plugins.dap.scan-adapters')
+DapAdaptersParameters = ScanDAPAdapterParametersInDirectory(
+	'/home/zus/.config/nvim/lua/plugins/dap/dap-adapters',
+	'plugins.dap.dap-adapters')
+
 return {
 	{
 		'mfussenegger/nvim-dap',
@@ -12,15 +17,16 @@ return {
 			'jay-babu/mason-nvim-dap.nvim',
 			-- DAP integration with telescope
 			'nvim-telescope/telescope-dap.nvim',
+			DapAdaptersParameters.dependencies,
 		},
-		config = function()
+		config = function(_, opts)
 			local dap = require('dap')
 			local dapui = require('dapui')
 
 			require('mason-nvim-dap').setup {
 				automatic_setup = true,
 				handlers = {},
-				ensure_installed = {},
+				ensure_installed = DapAdaptersParameters.adapters,
 			}
 
 			vim.keymap.set('n', '<F5>', dap.continue)
@@ -61,6 +67,12 @@ return {
 			dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
 			require('nvim-dap-virtual-text').setup()
+
+			for _, adapter_config in ipairs(DapAdaptersParameters.configs) do
+				adapter_config(_, opts)
+			end
 		end,
 	}
 }
+
+-- vim: ts=2 sts=2 sw=2 et

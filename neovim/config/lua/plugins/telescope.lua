@@ -7,7 +7,7 @@ return {
     version = '*',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'},
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
     config = function()
       -- Setup
@@ -28,7 +28,7 @@ return {
       local keymap = vim.keymap.set
       -- Start telescope
       keymap('n', '<a-f>', require('telescope.builtin').find_files, {
-	noremap = true
+        noremap = true
       })
       -- See `:help telescope.builtin`
       keymap('n', '<leader>?', require('telescope.builtin').oldfiles, {
@@ -62,3 +62,5 @@ return {
     end,
   },
 }
+
+-- vim: ts=2 sts=2 sw=2 et
