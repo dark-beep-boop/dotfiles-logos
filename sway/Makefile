@@ -4,6 +4,7 @@ userhome := $(shell echo ~$(username))/
 config_files :=\
 							 config\
 							 config.d/00-color-scheme\
+							 config.d/00-file-explorer\
 							 config.d/00-lock\
 							 config.d/00-menu\
 							 config.d/00-power-menu\
