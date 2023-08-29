@@ -12,17 +12,30 @@ return {
     },
     keys = {
       {
-        '<leader>n',
+        '<leader>nt',
         [[:Neotree toggle<cr>]],
         noremap = true,
-        desc = 'Toggle NvimTree',
+        desc = 'Toggle Neotree',
       },
       {
-        '<leader>n',
+        '<leader>nt',
         [[:Neotree toggle<cr>]],
         't',
         noremap = true,
         desc = 'Toggle Neotree',
+      },
+      {
+        '<leader>nf',
+        [[:Neotree focus<cr>]],
+        noremap = true,
+        desc = 'Focus Neotree',
+      },
+      {
+        '<leader>nf',
+        [[:Neotree focus<cr>]],
+        't',
+        noremap = true,
+        desc = 'Focus Neotree',
       },
     },
     config = function()
