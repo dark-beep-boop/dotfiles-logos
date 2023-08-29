@@ -15,6 +15,7 @@ config_files :=\
 							 lua/plugins/indent-blankline.lua\
 							 lua/plugins/comment.lua\
 							 lua/plugins/which-key.lua\
+							 lua/plugins/nvim-window-picker.lua\
 							 lua/plugins/telescope.lua\
 							 lua/plugins/tagbar.lua\
 							 lua/plugins/git.lua\
