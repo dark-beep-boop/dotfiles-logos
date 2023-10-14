@@ -3,4 +3,3 @@
 # Notifications
 exec dunst
 exec lxpolkit
-exec syncthing
