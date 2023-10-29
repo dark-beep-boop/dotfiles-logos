@@ -4,10 +4,14 @@ return {
   {
     -- Add indentation guides
     'lukas-reineke/indent-blankline.nvim',
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-    },
+    main = 'ibl',
+    config = function()
+      require('ibl').setup {
+        indent = { char = '┊', },
+        whitespace = { remove_blankline_trail = false, },
+        scope = { enabled = false, },
+      }
+    end
   }
 }
 
