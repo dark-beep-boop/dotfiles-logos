@@ -74,6 +74,15 @@ return {
       'folke/neodev.nvim',
     },
     config = function()
+      -- Disable inline text
+      vim.diagnostic.config({
+        virtual_text = false
+      })
+
+      -- Show line diagnostics automatically in hover window
+      vim.o.updatetime = 250
+      vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
       -- Define keymaps depending on the open buffer
       local on_attach = function(_, bufnr)
         local nmap = function(keys, func, desc)
