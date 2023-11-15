@@ -39,9 +39,7 @@ This rice has been developed for Arch linux, but should be easy to adapt to some
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [spotify](https://open.spotify.com/)
 - [spicetify](https://spicetify.app/docs/advanced-usage/installation/)
-- [grim](https://github.com/emersion/grim)
 - [cava](https://github.com/karlstav/cava)
-- [lxappearance](https://github.com/lxde/lxappearance)
 
 ## Attributions
 Credit for the background abstract paintings:
