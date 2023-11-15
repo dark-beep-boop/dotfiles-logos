@@ -1,4 +1,4 @@
-# dotfiles-purple
+# dotfiles-logos
 Configuration files for my personal laptop, with a custom color scheme based on the [base16](https://github.com/chriskempson/base16) themes.
 
 ## Some screenshots for showoff
