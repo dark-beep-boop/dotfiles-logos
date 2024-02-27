@@ -18,7 +18,7 @@ src_rc_dir := rc/
 dst_rc_dir := $(userhome)
 dst_rc_files := $(addprefix $(dst_rc_dir).,$(rc_files))
 
-theme_files := FlatColor Raleigh
+theme_files := Nordic FlatColor Raleigh
 src_themes_dir := themes/
 dst_themes_dir := $(userhome).themes/
 dst_theme_files := $(addprefix $(dst_themes_dir),$(theme_files))
