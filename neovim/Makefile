@@ -23,6 +23,7 @@ config_files :=\
 							 lua/plugins/toggleterm.lua\
 							 lua/plugins/neo-tree.lua\
 							 lua/plugins/nvim-treesitter.lua\
+							 lua/plugins/nvim-treesitter-cpp-tools.lua\
 							 lua/plugins/markdown-preview.lua\
 							 lua/plugins/vim-latex-live-preview.lua\
 							 lua/plugins/lsp/init.lua\
