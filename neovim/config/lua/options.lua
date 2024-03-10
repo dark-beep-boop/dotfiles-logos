@@ -24,7 +24,7 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- [[ Format ]]
 vim.o.expandtab = true
-vim.o.shiftwidth = 2
+vim.o.shiftwidth = 1
 vim.o.softtabstop = 2
 vim.o.tabstop = 2
 vim.o.autoindent = true
