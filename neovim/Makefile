@@ -19,7 +19,6 @@ config_files :=\
 							 lua/plugins/telescope.lua\
 							 lua/plugins/tagbar.lua\
 							 lua/plugins/git.lua\
-							 lua/plugins/vim-sleuth.lua\
 							 lua/plugins/nvim-autopairs.lua\
 							 lua/plugins/toggleterm.lua\
 							 lua/plugins/neo-tree.lua\
