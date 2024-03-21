@@ -6,17 +6,7 @@ return {
     'nathom/filetype.nvim',
     opts = {},
     config = function()
-      require('filetype').setup({
-        overrides = {
-          function_extensions = {
-            ["cppm"] = function()
-              vim.bo.filetype = "cpp"
-              -- Remove annoying indent jumping
-              vim.bo.cinoptions = vim.bo.cinoptions .. "L0"
-            end,
-          }
-        }
-      })
+      require('filetype').setup()
     end,
   }
 }
