@@ -14,7 +14,6 @@ config_files :=\
 							 lua/plugins/lualine/themes/base16.lua\
 							 lua/plugins/indent-blankline.lua\
 							 lua/plugins/comment.lua\
-							 lua/plugins/filetype.lua\
 							 lua/plugins/which-key.lua\
 							 lua/plugins/nvim-window-picker.lua\
 							 lua/plugins/telescope.lua\

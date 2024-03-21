@@ -4,7 +4,6 @@ return {
   {
     -- Filetype extensions
     'nathom/filetype.nvim',
-    opts = {},
     config = function()
       require('filetype').setup()
     end,
