@@ -22,6 +22,14 @@ return {
         program = function()
           return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
         end,
+        args = function()
+          line = vim.fn.input('Arguments: ')
+          chunks = {}
+          for substring in line:gmatch("%S+") do
+            table.insert(chunks, substring)
+          end
+          return chunks
+        end,
         cwd = '${workspaceFolder}',
         stopOnEntry = false,
       },
