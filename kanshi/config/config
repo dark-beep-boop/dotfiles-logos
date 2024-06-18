@@ -4,8 +4,8 @@
 profile office {
     output eDP-1 disable
     output "LG Electronics LG ULTRAWIDE 0x00021BB2" enable mode 2560x1080@60Hz position 0,0 scale 1 transform 270 
-    output "Lenovo Group Limited C24-25 U760GXCK" enable mode 1920x1080@60Hz position 1080,415 scale 1 transform normal
-    output "Lenovo Group Limited C24-25 U7607KYT" enable mode 1920x1080@60Hz position 3000,415 scale 1 transform normal 
+    output "Lenovo Group Limited C24-25 U760GXCK" enable mode 1920x1080@60Hz position 1080,600 scale 1 transform normal
+    output "Lenovo Group Limited C24-25 U7607KYT" enable mode 1920x1080@60Hz position 3000,600 scale 1 transform normal 
 
     exec swaymsg output '"LG Electronics LG ULTRAWIDE 0x00021BB2"' background /home/zus/.local/share/backgrounds/painted-vertical.png fill
     exec swaymsg output '"Lenovo Group Limited C24-25 U760GXCK"' background /home/zus/.local/share/backgrounds/painted-horizontal-main.png fill
