@@ -1,7 +1,18 @@
 ### Output configuration
 
-# Office display configuration
-profile office {
+# TU Delft office display configuration
+profile tudelftoffice {
+    output "Philips Consumer Electronics Company PHL 346B1C UK02308041391" enable mode 2560x1080@60Hz position 0,0 scale 1 transform normal 
+    output eDP-1 enable mode 3120x2080@90Hz position 500,1080 scale 2 transform normal
+
+    exec swaymsg output '"Philips Consumer Electronics Company PHL 346B1C UK02308041391"' background /home/zus/.local/share/backgrounds/painted-vertical.png fill
+
+    exec swaymsg workspace 3, move workspace to '"Philips Consumer Electronics Company PHL 346B1C UK02308041391"'
+    exec swaymsg workspace 1, move workspace to 'eDP-1'
+}
+
+# Home office display configuration
+profile homeoffice {
     output eDP-1 disable
     output "LG Electronics LG ULTRAWIDE 0x00021BB2" enable mode 2560x1080@60Hz position 0,0 scale 1 transform 270 
     output "Lenovo Group Limited C24-25 U760GXCK" enable mode 1920x1080@60Hz position 1080,600 scale 1 transform normal
