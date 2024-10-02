@@ -19,8 +19,10 @@ assign [app_id=mpv] 4
 assign [app_id=org.telegram.desktop] 5
 assign [class=discord] 5
 assign [app_id=thunderbird] 5
+assign [app_id=Slack] 5
 assign [app_id=zoom] 5
 assign [class="Proton Mail"] 5
+assign [class="Microsoft Teams - Preview"] 5
 
 # Scratchpad windows
 for_window [app_id=scratch] move window to scratchpad, resize set 900 540, move position center
