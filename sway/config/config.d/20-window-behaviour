@@ -23,6 +23,7 @@ assign [app_id=Slack] 5
 assign [app_id=zoom] 5
 assign [class="Proton Mail"] 5
 assign [class="Microsoft Teams - Preview"] 5
+assign [class="Mattermost"] 5
 
 # Scratchpad windows
 for_window [app_id=scratch] move window to scratchpad, resize set 900 540, move position center
@@ -39,6 +40,7 @@ for_window [app_id=firefox title=".*Firefox . Sharing Indicator.*"] floating ena
 for_window [app_id=zoom] floating enable
 for_window [app_id=veracrypt] floating enable
 for_window [app_id=ch.proton.bridge-gui] floating enable
+for_window [app_id=thunar] floating enable
 
 ## Window focus
 for_window [class=".*"] focus

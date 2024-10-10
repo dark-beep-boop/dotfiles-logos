@@ -25,5 +25,9 @@ bindsym $mod+Shift+0 move container to workspace number 10
 # Move focused workspace to output
 bindsym $mod+Shift+Alt+$left move workspace to left
 bindsym $mod+Shift+Alt+$right move workspace to right
+bindsym $mod+Shift+Alt+$up move workspace to up
+bindsym $mod+Shift+Alt+$down move workspace to down
 bindsym $mod+Shift+Alt+Left move workspace to left
 bindsym $mod+Shift+Alt+Right move workspace to right
+bindsym $mod+Shift+Alt+Up move workspace to up
+bindsym $mod+Shift+Alt+Down move workspace to down

@@ -5,9 +5,10 @@ profile tudelftoffice {
     output "Philips Consumer Electronics Company PHL 346B1C UK02308041391" enable mode 2560x1080@60Hz position 0,0 scale 1 transform normal 
     output eDP-1 enable mode 3120x2080@90Hz position 500,1080 scale 2 transform normal
 
-    exec swaymsg output '"Philips Consumer Electronics Company PHL 346B1C UK02308041391"' background /home/zus/.local/share/backgrounds/painted-vertical.png fill
+    exec swaymsg output '"Philips Consumer Electronics Company PHL 346B1C UK02308041391"' background /home/zus/.local/share/backgrounds/painted-horizontal-secondary-wide.png fill 
 
     exec swaymsg workspace 3, move workspace to '"Philips Consumer Electronics Company PHL 346B1C UK02308041391"'
+    exec swaymsg workspace 5, move workspace to 'eDP-1'
     exec swaymsg workspace 1, move workspace to 'eDP-1'
 }
 

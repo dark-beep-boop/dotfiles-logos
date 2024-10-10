@@ -10,6 +10,7 @@ background_files :=\
 		   painted-main.png\
 		   painted-horizontal-main.png\
 		   painted-horizontal-secondary.png\
+		   painted-horizontal-secondary-wide.png\
 		   painted-vertical.png
 src_background_dir := backgrounds/
 dst_background_dir := $(userhome).local/share/backgrounds/
