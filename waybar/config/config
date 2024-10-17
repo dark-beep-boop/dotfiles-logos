@@ -9,7 +9,8 @@
     "margin-bottom": 0,
 
     // Where to show the bar
-    "output": ["eDP-1", "DP-7"],
+    //"output": ["eDP-1", "DP-7"],
+    "output": ["eDP-1"],
 
     // Choose the order of the modules
     "modules-left": ["clock"],
@@ -103,7 +104,8 @@
     "margin-bottom": 10,
 
     // Where to show the bar
-    "output": ["eDP-1", "DP-7"],
+    //"output": ["eDP-1", "DP-7"],
+    "output": ["eDP-1"],
 
     // Choose the order of the modules
     "modules-left": ["tray", "sway/mode", "custom/media"],
@@ -144,7 +146,7 @@
           "default": ""
       },
       "escape": true,
-      "exec": "$HOME/.local/bin/mediaplayer.py 2> /dev/null"
+      "exec": "$HOME/.local/bin/mediaplayer.py 2> /tmp/media.log"
     }
   }
 ]
