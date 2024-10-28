@@ -146,7 +146,7 @@
           "default": ""
       },
       "escape": true,
-      "exec": "$HOME/.local/bin/mediaplayer.py 2> systemd-cat"
+      "exec": "$HOME/.local/bin/mediaplayer.py"
     }
   }
 ]
