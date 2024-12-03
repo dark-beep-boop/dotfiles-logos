@@ -24,15 +24,15 @@ def write_output(text, player):
 
 def on_play(player, status, manager):
     logger.info('Received new playback status')
-    on_metadata(player, player.props.metadata, manager)
+    on_metadata(player, manager)
 
 
-def on_metadata(player, metadata, manager):
+def on_metadata(player, manager):
     logger.info('Received new metadata')
     track_info = ''
 
     if player.props.player_name == 'spotify' and \
-            'mpris:trackid' in metadata.keys() and \
+            'mpris:trackid' in player.props.metadata.keys() and \
             ':ad:' in player.props.metadata['mpris:trackid']:
         track_info = 'AD PLAYING'
     elif player.get_artist() != '' and player.get_title() != '':
@@ -65,14 +65,13 @@ def init_player(manager, name):
     player.connect('playback-status', on_play, manager)
     player.connect('metadata', on_metadata, manager)
     manager.manage_player(player)
-    on_metadata(player, player.props.metadata, manager)
+    on_metadata(player, manager)
 
 
 def signal_handler(sig, frame):
     logger.debug('Received signal to stop, exiting')
     sys.stdout.write('\n')
     sys.stdout.flush()
-    # loop.quit()
     sys.exit(0)
 
 
