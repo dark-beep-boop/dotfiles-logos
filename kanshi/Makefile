@@ -7,11 +7,12 @@ dst_config_dir := $(userhome).config/kanshi/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
 
 background_files :=\
-		   painted-main.png\
-		   painted-horizontal-main.png\
-		   painted-horizontal-secondary.png\
-		   painted-horizontal-secondary-wide.png\
-		   painted-vertical.png
+		  painted/painted-1080-2560-knife-card.png\
+		  painted/painted-1920-1080-blank.png\
+		  painted/painted-1920-1080-eye.png\
+		  painted/painted-1920-1080-hand.png\
+		  painted/painted-2560-1080-portrait.png\
+		  painted/painted-3120-2080-lick.png
 src_background_dir := backgrounds/
 dst_background_dir := $(userhome).local/share/backgrounds/
 dst_background_files := $(addprefix $(dst_background_dir),$(background_files))
