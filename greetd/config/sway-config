@@ -1,7 +1,7 @@
 ### Sway configuration for wlgreet
 
 # Output background
-output * background /usr/local/share/backgrounds/.default fill
+output * background /usr/local/share/backgrounds/lines.jpg fill
 
 # Configure displays
 exec kanshi -c /etc/greetd/kanshi-config
