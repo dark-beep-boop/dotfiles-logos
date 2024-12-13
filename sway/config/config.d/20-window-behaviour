@@ -13,6 +13,7 @@ for_window [app_id=firefox] move window to workspace 3
 # Media workspace windows
 #assign [class=Spotify] 4
 for_window [class=Spotify] move window to workspace 4
+for_window [app_id=firefox title="Podimo Player — Mozilla Firefox"] move window to workspace 4
 assign [app_id=mpv] 4
 
 # Mail workspace windows
