@@ -15,13 +15,19 @@ for_window [app_id=firefox] move window to workspace 3
 for_window [class=Spotify] move window to workspace 4
 assign [app_id=mpv] 4
 
+# Mail workspace windows
+for_window [app_id=firefox title="Mail - .* - Outlook — Mozilla Firefox"] move window to workspace 5
+assign [class="Proton Mail"] 5
+assign [class="Microsoft Teams - Preview"] 5
+
 # Chat workspace windows
 assign [app_id=org.telegram.desktop] 6
 assign [class=discord] 6
 assign [app_id=Slack] 6
-assign [class="Proton Mail"] 5
-assign [class="Microsoft Teams - Preview"] 5
-assign [class="Mattermost"] 5
+assign [class="Mattermost"] 6
+
+# Organization workspace windows
+for_window [app_id=firefox title="Nirvana — Mozilla Firefox"] move window to workspace 7
 
 # Scratchpad windows
 for_window [app_id=scratch] move window to scratchpad, resize set 900 540, move position center
