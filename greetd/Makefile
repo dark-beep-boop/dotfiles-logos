@@ -8,7 +8,7 @@ src_bin_dir := bin/
 dst_bin_dir := /usr/local/bin/
 dst_bin_files := $(addprefix $(dst_bin_dir),$(bin_files))
 
-background_files := .default painted.jpg lines.jpg
+background_files := .default painted/default lines/default
 src_background_dir := backgrounds/
 dst_background_dir := /usr/local/share/backgrounds/
 dst_background_files := $(addprefix $(dst_background_dir),$(background_files))

@@ -5,24 +5,24 @@ profile tudelftoffice {
     output "Philips Consumer Electronics Company PHL 346B1C UK02308041391" enable mode 2560x1080@60Hz position 0,0 scale 1 transform normal 
     output eDP-1 enable mode 3120x2080@90Hz position 500,1080 scale 2 transform normal
 
-    #exec swaymsg output '"Philips Consumer Electronics Company PHL 346B1C UK02308041391"' background /home/zus/.local/share/backgrounds/painted/painted-2560-1080-portrait.png fill 
-    #exec swaymsg output 'eDP-1' background /home/zus/.local/share/backgrounds/painted/painted-3120-2080-lick.png fill 
+    exec swaymsg output '"Philips Consumer Electronics Company PHL 346B1C UK02308041391"' background /home/zus/.local/share/backgrounds/painted/painted-2560-1080-portrait.png fill 
+    exec swaymsg output 'eDP-1' background /home/zus/.local/share/backgrounds/painted/painted-3120-2080-lick.png fill 
 
     exec swaymsg workspace 3, move workspace to '"Philips Consumer Electronics Company PHL 346B1C UK02308041391"'
     exec swaymsg workspace 5, move workspace to 'eDP-1'
     exec swaymsg workspace 1, move workspace to 'eDP-1'
 }
 
-# Home office display configuration
-profile homeoffice {
+# Los Barrios homeoffice display configuration
+profile lb-homeoffice {
     output eDP-1 disable
     output "LG Electronics LG ULTRAWIDE 0x00021BB2" enable mode 2560x1080@60Hz position 0,0 scale 1 transform 270 
     output "Lenovo Group Limited C24-25 U760GXCK" enable mode 1920x1080@60Hz position 1080,600 scale 1 transform normal
     output "Lenovo Group Limited C24-25 U7607KYT" enable mode 1920x1080@60Hz position 3000,600 scale 1 transform normal 
 
-    #exec swaymsg output '"LG Electronics LG ULTRAWIDE 0x00021BB2"' background /home/zus/.local/share/backgrounds/painted/painted-1080-2560-knife-card.png fill
-    #exec swaymsg output '"Lenovo Group Limited C24-25 U760GXCK"' background /home/zus/.local/share/backgrounds/painted/painted-1920-1080-eye.png fill
-    #exec swaymsg output '"Lenovo Group Limited C24-25 U7607KYT"' background /home/zus/.local/share/backgrounds/painted/painted-1920-1080-hand.png fill
+    exec swaymsg output '"LG Electronics LG ULTRAWIDE 0x00021BB2"' background /home/zus/.local/share/backgrounds/painted/painted-1080-2560-knife-card.png fill
+    exec swaymsg output '"Lenovo Group Limited C24-25 U760GXCK"' background /home/zus/.local/share/backgrounds/painted/painted-1920-1080-eye.png fill
+    exec swaymsg output '"Lenovo Group Limited C24-25 U7607KYT"' background /home/zus/.local/share/backgrounds/painted/painted-1920-1080-hand.png fill
 
     exec swaymsg workspace 1, move workspace to '"Lenovo Group Limited C24-25 U7607KYT"'
     exec swaymsg workspace 5, move workspace to '"LG Electronics LG ULTRAWIDE 0x00021BB2"'
@@ -33,5 +33,5 @@ profile homeoffice {
 profile single {
     output eDP-1 enable mode 3120x2080@90Hz position 0,0 scale 2 transform normal
 
-    #exec swaymsg output 'eDP-1' background /home/zus/.local/share/backgrounds/painted/painted-3120-2080-lick.png fill 
+    exec swaymsg output 'eDP-1' background /home/zus/.local/share/backgrounds/painted/painted-3120-2080-lick.png fill 
 }

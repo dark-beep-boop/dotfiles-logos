@@ -46,7 +46,7 @@ tooltip * {
  * Waybar window
  */
 window#waybar {
-  background-color: @base00;
+  background-color: transparent;
   color: @base05;
   transition-property: background-color;
   transition-duration: .5s;

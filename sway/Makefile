@@ -29,7 +29,7 @@ src_config_dir := config/
 dst_config_dir := $(userhome).config/sway/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
 
-background_files := default
+background_files := default painted/default lines/default
 src_background_dir := backgrounds/
 dst_background_dir := $(userhome).local/share/backgrounds/
 dst_background_files := $(addprefix $(dst_background_dir),$(background_files))

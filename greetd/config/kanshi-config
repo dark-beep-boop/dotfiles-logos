@@ -1,7 +1,13 @@
 ### Output profiles
+#
+# TU Delft office display configuration
+profile tudelftoffice {
+    output "Philips Consumer Electronics Company PHL 346B1C UK02308041391" enable mode 2560x1080@60Hz position 0,0 scale 1 transform normal 
+    output eDP-1 enable mode 3120x2080@90Hz position 500,1080 scale 2 transform normal
+}
 
-# Office display configuration
-profile office {
+# Los Barrios homeoffice display configuration
+profile lb-homeoffice {
     output eDP-1 disable
     output "LG Electronics LG ULTRAWIDE 0x00001BB2" disable
     output "Lenovo Group Limited C24-25 U760GXCK" enable mode 1920x1080@60Hz position 0,0 scale 1 transform normal
