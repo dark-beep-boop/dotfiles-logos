@@ -9,6 +9,7 @@
 
 # Internet workspace windows
 for_window [app_id=firefox] move window to workspace 3
+assign [app_id="Tor Browser"] 3
 
 # Media workspace windows
 #assign [class=Spotify] 4
@@ -19,12 +20,12 @@ assign [app_id=mpv] 4
 # Mail workspace windows
 for_window [app_id=firefox title="Mail - .* - Outlook — Mozilla Firefox"] move window to workspace 5
 assign [class="Proton Mail"] 5
-assign [class="Microsoft Teams - Preview"] 5
 
 # Chat workspace windows
 assign [app_id=org.telegram.desktop] 6
 assign [class=discord] 6
 assign [app_id=Slack] 6
+assign [class="Microsoft Teams - Preview"] 6
 assign [class="Mattermost"] 6
 
 # Organization workspace windows
