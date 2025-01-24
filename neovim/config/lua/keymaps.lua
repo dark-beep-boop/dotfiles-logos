@@ -14,18 +14,23 @@ keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 -- Move lines
 keymap('i', '<a-j>', [[<esc>:m .+1<cr>==gi]], { noremap = true })
 keymap('i', '<a-k>', [[<esc>:m .-2<cr>==gi]], { noremap = true })
+keymap('i', '<a-down>', [[<esc>:m .+1<cr>==gi]], { noremap = true })
+keymap('i', '<a-up>', [[<esc>:m .-2<cr>==gi]], { noremap = true })
+
 keymap('v', '<a-j>', [[:m '>+1<cr>gv=gv]], { noremap = true })
 keymap('v', '<a-k>', [[:m '<-2<cr>gv=gv]], { noremap = true })
+keymap('v', '<a-down>', [[:m '>+1<cr>gv=gv]], { noremap = true })
+keymap('v', '<a-up>', [[:m '<-2<cr>gv=gv]], { noremap = true })
 
 -- Move split panes
 keymap('n', '<a-h>', [[<c-w>H]], { noremap = true })
 keymap('n', '<a-j>', [[<c-w>J]], { noremap = true })
 keymap('n', '<a-k>', [[<c-w>K]], { noremap = true })
 keymap('n', '<a-l>', [[<c-w>L]], { noremap = true })
-keymap('n', '<m-left>', [[<c-w>H]], { noremap = true })
-keymap('n', '<m-down>', [[<c-w>J]], { noremap = true })
-keymap('n', '<m-up>', [[<c-w>K]], { noremap = true })
-keymap('n', '<m-right>', [[<c-w>L]], { noremap = true })
+keymap('n', '<a-left>', [[<c-w>H]], { noremap = true })
+keymap('n', '<a-down>', [[<c-w>J]], { noremap = true })
+keymap('n', '<a-up>', [[<c-w>K]], { noremap = true })
+keymap('n', '<a-right>', [[<c-w>L]], { noremap = true })
 
 -- Move between split panes
 keymap('n', '<c-h>', [[<c-w>h]], { noremap = true })
