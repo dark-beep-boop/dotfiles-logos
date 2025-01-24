@@ -24,7 +24,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+s exec $power_menu
 
 # Take a screenshot of the current output
-bindsym $mod+Shift+g exec $fullscreenshot
+bindsym $mod+Shift+g exec $screenshot
 
 # Open file explorer
 bindsym $mod+Shift+f exec $file_explorer
