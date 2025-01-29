@@ -6,6 +6,7 @@ config_files :=\
 							 config.d/00-color-scheme\
 							 config.d/00-file-explorer\
 							 config.d/00-lock\
+							 config.d/00-mail\
 							 config.d/00-menu\
 							 config.d/00-power-menu\
 							 config.d/00-screenshot\

@@ -13,6 +13,11 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
-# Search control keys
-bindsym XF86Search exec $menu
+# Tools control key
+bindsym XF86Tools exec $menu
 
+# Print screen key
+bindsym Print exec $screenshot
+
+# Mail key
+bindsym XF86Mail exec $mail
