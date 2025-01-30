@@ -8,7 +8,7 @@ bindsym $mod+Shift+Return exec $scratch_term
 bindsym $mod+w kill
 
 # Start your launcher
-bindsym $mod+r exec $menu
+bindsym $mod+h exec $menu
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -21,7 +21,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+s exec $power_menu
+bindsym $mod+Shift+l exec $power_menu
 
 # Open file explorer
 bindsym $mod+Shift+f exec $file_explorer
