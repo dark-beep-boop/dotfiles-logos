@@ -92,6 +92,15 @@ return {
         window = {
           position = 'left',
           width = 30,
+          mappings = {
+            ["s"] = "focus_preview",
+            ["v"] = "open_vsplit",
+            ["j"] = "open_tabnew",
+            ["h"] = "rename",
+            ["r"] = "noop",
+            ["t"] = "noop",
+            ["n"] = "noop",
+          },
         },
       }
     end,

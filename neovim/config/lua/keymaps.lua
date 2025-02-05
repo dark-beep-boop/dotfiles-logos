@@ -6,11 +6,23 @@ local keymap = vim.keymap.set
 -- Keymaps for better default experience
 keymap({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- Spanish dvorak movement keys adjusted
+-- Spanish dvorak movement keys adjustments
 keymap({ 'n', 'v' }, 'h', 'r', { silent = true })
 keymap({ 'n', 'v' }, 'j', 't', { silent = true })
 keymap({ 'n', 'v' }, 'k', 'n', { silent = true })
 keymap({ 'n', 'v' }, 'l', 's', { silent = true })
+keymap({ 'n', 'v' }, '<a-h>', '<a-r>', { silent = true })
+keymap({ 'n', 'v' }, '<a-j>', '<a-t>', { silent = true })
+keymap({ 'n', 'v' }, '<a-k>', '<a-n>', { silent = true })
+keymap({ 'n', 'v' }, '<a-l>', '<a-s>', { silent = true })
+keymap({ 'n', 'v' }, '<c-h>', '<c-r>', { silent = true })
+keymap({ 'n', 'v' }, '<c-j>', '<c-t>', { silent = true })
+keymap({ 'n', 'v' }, '<c-k>', '<c-n>', { silent = true })
+keymap({ 'n', 'v' }, '<c-l>', '<c-s>', { silent = true })
+keymap({ 'n', 'v' }, '<c-m-h>', '<c-m-r>', { silent = true })
+keymap({ 'n', 'v' }, '<c-m-j>', '<c-m-t>', { silent = true })
+keymap({ 'n', 'v' }, '<c-m-k>', '<c-m-n>', { silent = true })
+keymap({ 'n', 'v' }, '<c-m-l>', '<c-m-s>', { silent = true })
 keymap({ 'n', 'v' }, 'gj', 'gt', { silent = true })
 keymap({ 'n', 'v' }, 'gk', 'gn', { silent = true })
 
@@ -20,6 +32,9 @@ keymap({ 'n', 'v' }, 'n', 'k', { silent = true })
 keymap({ 'n', 'v' }, 's', 'l', { silent = true })
 keymap({ 'n', 'v' }, 'gt', 'gj', { silent = true })
 keymap({ 'n', 'v' }, 'gn', 'gk', { silent = true })
+
+keymap({ 'n', 'v' }, 'K', 'N', { silent = true })
+keymap({ 'n', 'v' }, 'N', 'K', { silent = true })
 
 -- Remap for dealing with word wrap
 keymap('n', 't', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
