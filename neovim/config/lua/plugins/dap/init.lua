@@ -18,6 +18,7 @@ return {
       'jay-babu/mason-nvim-dap.nvim',
       -- DAP integration with telescope
       'nvim-telescope/telescope-dap.nvim',
+      'https://github.com/nvim-neotest/nvim-nio',
       DapAdaptersParameters.dependencies,
     },
     config = function(_, opts)
