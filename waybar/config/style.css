@@ -268,15 +268,7 @@ window#waybar.hidden {
 }
 
 #workspaces button#sway-workspace-3 {
-  padding: 0 7px;
-}
-
-#workspaces button#sway-workspace-4 {
-  padding: 0 7px;
-}
-
-#workspaces button#sway-workspace-5 {
-  padding: 0 7px;
+  padding: 0 6px;
 }
 
 #workspaces button:hover {

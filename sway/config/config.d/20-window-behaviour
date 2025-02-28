@@ -8,28 +8,28 @@
 # Code workspace windows
 
 # Internet workspace windows
-for_window [app_id=firefox title="Mozilla Firefox"] move window to workspace 3
-assign [app_id="Tor Browser"] 3
+for_window [app_id=firefox title="Mozilla Firefox"] move window to workspace 4
+assign [app_id="Tor Browser"] 4
 
 # Media workspace windows
-#assign [class=Spotify] 4
-for_window [class=Spotify] move window to workspace 4
-for_window [app_id=firefox title="Podimo Player — Mozilla Firefox"] move window to workspace 4
-assign [app_id=mpv] 4
+#assign [class=Spotify] 5
+for_window [class=Spotify] move window to workspace 5
+for_window [app_id=firefox title="Podimo Player — Mozilla Firefox"] move window to workspace 5
+assign [app_id=mpv] 5
 
 # Mail workspace windows
-for_window [app_id=firefox title="Mail - .* - Outlook — Mozilla Firefox"] move window to workspace 5
-assign [class="Proton Mail"] 5
+for_window [app_id=firefox title="Mail - .* - Outlook — Mozilla Firefox"] move window to workspace 6
+assign [class="Proton Mail"] 6
 
 # Chat workspace windows
-assign [app_id=org.telegram.desktop] 6
-assign [class=discord] 6
-assign [app_id=Slack] 6
-assign [class="Microsoft Teams - Preview"] 6
-assign [class="Mattermost"] 6
+assign [app_id=org.telegram.desktop] 7
+assign [class=discord] 7
+assign [app_id=Slack] 7
+assign [class="Microsoft Teams - Preview"] 7
+assign [class="Mattermost"] 7
 
 # Organization workspace windows
-for_window [app_id=firefox title="Nirvana — Mozilla Firefox"] move window to workspace 7
+for_window [app_id=firefox title="Nirvana — Mozilla Firefox"] move window to workspace 8
 
 # Scratchpad windows
 for_window [app_id=scratch] move window to scratchpad, resize set 900 540, move position center
@@ -37,6 +37,7 @@ for_window [app_id=network] move window to scratchpad, resize set 900 600, move 
 for_window [class=Bitwarden] move window to scratchpad, resize set 1000 600, move position center
 for_window [class=Todoist] move window to scratchpad, resize set 1000 600, move position center
 for_window [class="Authy Desktop"] move window to scratchpad, move position center
+for_window [app_id=protonvpn-app] move window to scratchpad, move position center
 
 ## Window default mode
 # Floating windows
