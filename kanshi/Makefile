@@ -13,6 +13,7 @@ background_files :=\
 		  painted/painted-1920-1080-blank.png\
 		  painted/painted-1920-1080-eye.png\
 		  painted/painted-1920-1080-hand.png\
+		  painted/painted-2560-1080-blank.png\
 		  painted/painted-2560-1080-portrait.png\
 		  painted/painted-2560-1080-portrait2.png\
 		  painted/painted-3120-2080-lick.png\
