@@ -255,20 +255,6 @@ return {
       })
     end,
   },
-  {
-    'jay-babu/mason-null-ls.nvim',
-    event = { 'BufReadPre', 'BufNewFile' },
-    dependencies = {
-      'williamboman/mason.nvim',
-      'jose-elias-alvarez/null-ls.nvim',
-    },
-    config = function()
-      require('mason')
-      require('mason-null-ls').setup({
-        handlers = {},
-      })
-    end,
-  },
 }
 
 -- vim: ts=2 sts=2 sw=2 et
