@@ -1,5 +1,8 @@
 ### Basic key bindings
 
+# Switch to next keyboard layout
+bindsym $mod+Ctrl+Alt+Space input $main_input xkb_switch_layout next
+
 # Start a terminal
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec $scratch_term

@@ -2,8 +2,8 @@
 
 # Layout configuration
 input * {
-    xkb_layout "es"
-    xkb_variant "dvorak"
+    xkb_layout "es,es,us"
+    xkb_variant "dvorak,,"
 }
 
 # Touchpad configuration
