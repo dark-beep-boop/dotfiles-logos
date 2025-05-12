@@ -126,15 +126,9 @@ set -o emacs
 # Keychain initialization
 eval $(keychain \
   --noask \
-  --extended host:hostname \
   --quiet \
   --eval \
   --gpg2 \
-  --agents ssh,gpg)
-  #id_ed25519_aur \
-  #id_ed25519_github \
-  #id_ed25519_nas_local \
-  #id_ed25519_ubuntu2004 \
-  #F59A52223F4607E8 \
-  #BB38067DB6E6B770 \
-  #89CFF2989958DE35)
+  --ssh-spawn-gpg \
+  id_ed25519)
+
