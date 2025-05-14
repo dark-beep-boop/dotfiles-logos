@@ -128,7 +128,5 @@ eval $(keychain \
   --noask \
   --quiet \
   --eval \
-  --gpg2 \
-  --ssh-spawn-gpg \
   id_ed25519)
 
