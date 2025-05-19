@@ -2,32 +2,32 @@
 
 return {
 	texlab = {
-		auxDirectory = ".",
-		bibtexFormatter = "texlab",
+		auxDirectory = '.',
+		bibtexFormatter = 'texlab',
 		build = {
 			args = {
-				"-pdf",
-				"-interaction=nonstopmode",
-				"-synctex=1",
-				"%f"
+				'-pdf',
+				'-interaction=nonstopmode',
+				'-synctex=1',
+				'%f',
 			},
-			executable = "latex",
+			executable = 'latex',
 			forwardSearchAfter = false,
-			onSave = false
+			onSave = false,
 		},
 		chktex = {
 			onEdit = false,
-			onOpenAndSave = false
+			onOpenAndSave = false,
 		},
 		diagnosticsDelay = 300,
 		formatterLineLength = 80,
 		forwardSearch = {
-			args = {}
+			args = {},
 		},
-		latexFormatter = "latexindent",
+		latexFormatter = 'latexindent',
 		latexindent = {
-			modifyLineBreaks = false
-		}
+			modifyLineBreaks = false,
+		},
 	},
 }
 

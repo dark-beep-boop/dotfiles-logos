@@ -18,6 +18,7 @@ config_files :=\
 							 lua/plugins/nvim-window-picker.lua\
 							 lua/plugins/telescope.lua\
 							 lua/plugins/tagbar.lua\
+							 lua/plugins/todo-comments.lua\
 							 lua/plugins/git.lua\
 							 lua/plugins/nvim-autopairs.lua\
 							 lua/plugins/toggleterm.lua\
@@ -25,6 +26,7 @@ config_files :=\
 							 lua/plugins/nvim-treesitter.lua\
 							 lua/plugins/nvim-treesitter-cpp-tools.lua\
 							 lua/plugins/markdown-preview.lua\
+							 lua/plugins/mini.lua\
 							 lua/plugins/vim-latex-live-preview.lua\
 							 lua/plugins/vim-askpass.lua\
 							 lua/plugins/lsp/init.lua\

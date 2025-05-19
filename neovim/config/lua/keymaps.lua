@@ -6,6 +6,25 @@ local keymap = vim.keymap.set
 -- Keymaps for better default experience
 keymap({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- Clear highlights on search when pressing <Esc> in normal mode
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- Diagnostic keymaps
+vim.keymap.set(
+	'n',
+	'<leader>q',
+	vim.diagnostic.setloclist,
+	{ desc = 'Open diagnostic [Q]uickfix list' }
+)
+
+-- Exit terminal mode in the builtin terminal with a <Esc><Esc>
+vim.keymap.set(
+	't',
+	'<Esc><Esc>',
+	'<C-\\><C-n>',
+	{ desc = 'Exit terminal mode' }
+)
+
 -- Spanish dvorak movement keys adjustments
 keymap({ 'n', 'v' }, 'h', 'r', { silent = true })
 keymap({ 'n', 'v' }, 'j', 't', { silent = true })

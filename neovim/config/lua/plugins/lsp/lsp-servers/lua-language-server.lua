@@ -3,8 +3,10 @@
 return {
 	lua_ls = {
 		Lua = {
+			completion = { callSnippet = 'Replace' },
 			workspace = { checkThirdParty = false },
 			telemetry = { enable = false },
+			diagnostics = { disable = { 'missing-fields' } },
 		},
 	},
 }

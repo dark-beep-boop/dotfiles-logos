@@ -2,7 +2,8 @@
 
 function ScanLuaFilesInDirectory(directory)
 	return io.popen(
-		'find "' .. directory .. '" -maxdepth 1 -name "*.lua" -type f')
+		'find "' .. directory .. '" -maxdepth 1 -name "*.lua" -type f'
+	)
 end
 
 function ScanDAPAdapterParametersInDirectory(directory, moduleroot)
@@ -22,8 +23,13 @@ function ScanDAPAdapterParametersInDirectory(directory, moduleroot)
 			local dapAdapterParameters = require(modulename)
 			if type(dapAdapterParameters) == 'table' then
 				if type(dapAdapterParameters.dependencies) == 'table' then
-					for _, dependency in ipairs(dapAdapterParameters.dependencies) do
-						table.insert(dapAdaptersParameters.dependencies, dependency)
+					for _, dependency in
+						ipairs(dapAdapterParameters.dependencies)
+					do
+						table.insert(
+							dapAdaptersParameters.dependencies,
+							dependency
+						)
 					end
 				end
 
@@ -36,7 +42,8 @@ function ScanDAPAdapterParametersInDirectory(directory, moduleroot)
 				if type(dapAdapterParameters.config) == 'function' then
 					table.insert(
 						dapAdaptersParameters.configs,
-						dapAdapterParameters.config)
+						dapAdapterParameters.config
+					)
 				end
 			end
 		end

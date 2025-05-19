@@ -2,7 +2,8 @@
 
 function ScanLuaFilesInDirectory(directory)
 	return io.popen(
-		'find "' .. directory .. '" -maxdepth 1 -name "*.lua" -type f')
+		'find "' .. directory .. '" -maxdepth 1 -name "*.lua" -type f'
+	)
 end
 
 function ScanLSPServersInDirectory(directory, moduleroot)
