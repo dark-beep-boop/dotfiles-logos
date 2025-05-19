@@ -206,6 +206,20 @@ return {
 							)
 						end, 'Toggle inlay hints')
 					end
+
+					vim.api.nvim_create_autocmd(
+						{ 'CursorHold', 'CursorHoldI' },
+						{
+							buffer = event.buf,
+							group = vim.api.nvim_create_augroup(
+								'lsp-diagnostic',
+								{ clear = false }
+							),
+							callback = function()
+								vim.diagnostic.open_float()
+							end,
+						}
+					)
 				end,
 			})
 
@@ -223,19 +237,21 @@ return {
 						[vim.diagnostic.severity.HINT] = '󰌶 ',
 					},
 				} or {},
-				virtual_text = {
-					source = 'if_many',
-					spacing = 2,
-					format = function(diagnostic)
-						local diagnostic_message = {
-							[vim.diagnostic.severity.ERROR] = diagnostic.message,
-							[vim.diagnostic.severity.WARN] = diagnostic.message,
-							[vim.diagnostic.severity.INFO] = diagnostic.message,
-							[vim.diagnostic.severity.HINT] = diagnostic.message,
-						}
-						return diagnostic_message[diagnostic.severity]
-					end,
-				},
+				-- Uncomment to enable inline diagnostics
+				--
+				-- virtual_text = {
+				-- 	source = 'if_many',
+				-- 	spacing = 2,
+				-- 	format = function(diagnostic)
+				-- 		local diagnostic_message = {
+				-- 			[vim.diagnostic.severity.ERROR] = diagnostic.message,
+				-- 			[vim.diagnostic.severity.WARN] = diagnostic.message,
+				-- 			[vim.diagnostic.severity.INFO] = diagnostic.message,
+				-- 			[vim.diagnostic.severity.HINT] = diagnostic.message,
+				-- 		}
+				-- 		return diagnostic_message[diagnostic.severity]
+				-- 	end,
+				-- },
 			})
 
 			-- LSP servers and clients are able to communicate to each other what
