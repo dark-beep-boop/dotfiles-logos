@@ -22,31 +22,79 @@ return {
 			'https://github.com/nvim-neotest/nvim-nio',
 			DapAdaptersParameters.dependencies,
 		},
+		keys = {
+			{
+				'<F5>',
+				function()
+					require('dap').continue()
+				end,
+				desc = 'Debug: Start/Continue',
+			},
+			{
+				'<F6>',
+				function()
+					require('dap').step_into()
+				end,
+				desc = 'Debug: Step into',
+			},
+			{
+				'<F7>',
+				function()
+					require('dap').step_over()
+				end,
+				desc = 'Debug: Step over',
+			},
+			{
+				'<F8>',
+				function()
+					require('dap').step_out()
+				end,
+				desc = 'Debug: Step out',
+			},
+			{
+				'<leader>b',
+				function()
+					require('dap').toggle_breakpoint()
+				end,
+				desc = 'Debug: Toggle breakpoint',
+			},
+			{
+				'<leader>B',
+				function()
+					require('dap').set_breakpoint(
+						vim.fn.input('Breakpoint condition: ')
+					)
+				end,
+				desc = 'Debug: Set conditional breakpoint',
+			},
+			{
+				'<leader>lp',
+				function()
+					require('dap').set_breakpoint(
+						nil,
+						nil,
+						vim.fn.input('Log point message: ')
+					)
+				end,
+				desc = 'Debug: Set log point',
+			},
+			{
+				'<F4>',
+				function()
+					require('dapui').toggle()
+				end,
+				desc = 'Debug: See last session result',
+			},
+		},
 		config = function(_, opts)
 			local dap = require('dap')
 			local dapui = require('dapui')
 
 			require('mason-nvim-dap').setup({
-				automatic_setup = true,
+				automatic_installation = true,
 				handlers = {},
 				ensure_installed = DapAdaptersParameters.adapters,
 			})
-
-			vim.keymap.set('n', '<F5>', dap.continue)
-			vim.keymap.set('n', '<F6>', dap.step_into)
-			vim.keymap.set('n', '<F7>', dap.step_over)
-			vim.keymap.set('n', '<F8>', dap.step_out)
-			vim.keymap.set('n', '<leader>b', dap.toggle_breakpoint)
-			vim.keymap.set('n', '<leader>B', function()
-				dap.set_breakpoint(vim.fn.input('Breakpoint condition: '))
-			end)
-			vim.keymap.set('n', '<leader>lp', function()
-				require('dap').set_breakpoint(
-					nil,
-					nil,
-					vim.fn.input('Log point message: ')
-				)
-			end)
 
 			dapui.setup({
 				icons = {
@@ -68,13 +116,10 @@ return {
 					},
 				},
 			})
-			vim.keymap.set('n', '<F4>', dapui.toggle)
 
 			dap.listeners.after.event_initialized['dapui_config'] = dapui.open
 			dap.listeners.before.event_terminated['dapui_config'] = dapui.close
 			dap.listeners.before.event_exited['dapui_config'] = dapui.close
-
-			require('nvim-dap-virtual-text').setup()
 
 			for _, adapter_config in ipairs(DapAdaptersParameters.configs) do
 				adapter_config(_, opts)

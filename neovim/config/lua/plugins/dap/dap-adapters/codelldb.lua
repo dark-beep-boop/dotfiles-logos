@@ -8,7 +8,6 @@ return {
 			type = 'server',
 			port = '${port}',
 			executable = {
-				-- CHANGE THIS to your path!
 				command = '/home/zus/.local/share/nvim/mason/bin/codelldb',
 				args = { '--port', '${port}' },
 			},
