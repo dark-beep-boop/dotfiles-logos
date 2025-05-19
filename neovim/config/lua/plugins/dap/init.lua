@@ -85,6 +85,13 @@ return {
 				end,
 				desc = 'Debug: See last session result',
 			},
+			{
+				'<F9>',
+				function()
+					require('dap').close()
+				end,
+				desc = 'Debug: Stop',
+			},
 		},
 		config = function(_, opts)
 			local dap = require('dap')

@@ -28,7 +28,6 @@ config_files :=\
 							 lua/plugins/markdown-preview.lua\
 							 lua/plugins/mini.lua\
 							 lua/plugins/vim-latex-live-preview.lua\
-							 lua/plugins/vim-askpass.lua\
 							 lua/plugins/lsp/init.lua\
 							 lua/plugins/lsp/scan-servers.lua\
 							 lua/plugins/lsp/lsp-servers/bash-language-server.lua\
