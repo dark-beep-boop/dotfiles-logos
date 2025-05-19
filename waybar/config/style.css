@@ -75,7 +75,7 @@ window#waybar.hidden {
 #pulseaudio,
 #temperature,
 #tray {
-  padding: 0 9px;
+  padding: 0 10px 0 5px;
 }
 
 #backlight,
@@ -159,12 +159,16 @@ window#waybar.hidden {
  * Inhibitor
  */
 #idle_inhibitor {
-  padding: 0 6px;
   border-radius: 15px;
   font-size: 17px;
 }
 
+#idle_inhibitor.deactivated {
+  padding: 0 15px 0 5px;
+}
+
 #idle_inhibitor.activated {
+  padding: 0 14px 0 6px;
   color: @base00;
   background-color: @base0D;
 }
@@ -248,11 +252,10 @@ window#waybar.hidden {
  * Workspaces
  */
 #workspaces {
-  margin: 0 4px;
+  margin: 0 20px;
 }
 
 #workspaces button {
-  padding: 0 7px;
   background-color: transparent;
   color: @base05;
   border: none;
@@ -260,15 +263,39 @@ window#waybar.hidden {
 }
 
 #workspaces button#sway-workspace-1 {
-  padding: 0 6px;
+  padding: 0 10px 0 5px;
 }
 
 #workspaces button#sway-workspace-2 {
-  padding: 0 6px;
+  padding: 0 12px 0 3px;
 }
 
 #workspaces button#sway-workspace-3 {
-  padding: 0 6px;
+  padding: 0 9px 0 6px;
+}
+
+#workspaces button#sway-workspace-4 {
+  padding: 0 10px 0 5px;
+}
+
+#workspaces button#sway-workspace-5 {
+  padding: 0 10px 0 5px;
+}
+
+#workspaces button#sway-workspace-6 {
+  padding: 0 11px 0 4px;
+}
+
+#workspaces button#sway-workspace-7 {
+  padding: 0 10px 0 5px;
+}
+
+#workspaces button#sway-workspace-8 {
+  padding: 0 9px 0 6px;
+}
+
+#workspaces button#sway-workspace-9 {
+  padding: 0 11px 0 4px;
 }
 
 #workspaces button:hover {
@@ -289,7 +316,7 @@ window#waybar.hidden {
 }
 
 #workspaces button:nth-child(3) {
-  padding: 0 6px;
+  padding: 0 9px;
 }
 
 #workspaces button label {
