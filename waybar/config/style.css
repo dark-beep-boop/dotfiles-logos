@@ -112,7 +112,7 @@ window#waybar.hidden {
  * Battery
  */
 #battery {
-  padding: 0 6px;
+  padding: 0 15px 0 8px;
 }
 
 #battery.warning {
@@ -218,7 +218,7 @@ window#waybar.hidden {
  * Network
  */
 #network {
-  padding: 0 7px;
+  padding: 0 15px 0 7px;
 }
 
 #network.disconnected {
