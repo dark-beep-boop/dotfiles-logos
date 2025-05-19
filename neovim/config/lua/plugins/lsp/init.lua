@@ -198,7 +198,7 @@ return {
 							event.buf
 						)
 					then
-						map('<leader>th', function()
+						map('<leader>tih', function()
 							vim.lsp.inlay_hint.enable(
 								not vim.lsp.inlay_hint.is_enabled({
 									bufnr = event.buf,

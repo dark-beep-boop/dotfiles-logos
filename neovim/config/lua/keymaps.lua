@@ -17,14 +17,6 @@ vim.keymap.set(
 	{ desc = 'Open diagnostic [Q]uickfix list' }
 )
 
--- Exit terminal mode in the builtin terminal with a <Esc><Esc>
-vim.keymap.set(
-	't',
-	'<Esc><Esc>',
-	'<C-\\><C-n>',
-	{ desc = 'Exit terminal mode' }
-)
-
 -- Spanish dvorak movement keys adjustments
 keymap({ 'n', 'v' }, 'h', 'r', { silent = true })
 keymap({ 'n', 'v' }, 'j', 't', { silent = true })
