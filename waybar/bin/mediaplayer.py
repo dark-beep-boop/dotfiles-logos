@@ -3,6 +3,7 @@ import argparse
 import logging
 import sys
 import signal
+from types import NoneType
 import gi
 import json
 gi.require_version('Playerctl', '2.0')
@@ -24,10 +25,10 @@ def write_output(text, player):
 
 def on_play(player, status, manager):
     logger.info('Received new playback status')
-    on_metadata(player, manager)
+    on_metadata(player, None, manager)
 
 
-def on_metadata(player, manager):
+def on_metadata(player, metadata, manager):
     logger.info('Received new metadata')
     track_info = ''
 
@@ -65,7 +66,7 @@ def init_player(manager, name):
     player.connect('playback-status', on_play, manager)
     player.connect('metadata', on_metadata, manager)
     manager.manage_player(player)
-    on_metadata(player, manager)
+    on_metadata(player, None, manager)
 
 
 def signal_handler(sig, frame):

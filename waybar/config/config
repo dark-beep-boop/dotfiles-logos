@@ -150,8 +150,8 @@
       "return-type": "json",
       "max-length": 40,
       "format-icons": {
-          "spotify": "",
-          "default": ""
+          "spotify": " ",
+          "default": " "
       },
       "escape": true,
       "exec": "$HOME/.local/bin/mediaplayer.py"
