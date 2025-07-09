@@ -118,6 +118,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 # Vi like line editing
@@ -129,4 +131,8 @@ eval $(keychain \
   --quiet \
   --eval \
   id_ed25519)
+
+# Anaconda initialization
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
+alias anaconda-activate="source /opt/anaconda/bin/activate"
 
