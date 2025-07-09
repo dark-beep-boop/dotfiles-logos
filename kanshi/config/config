@@ -50,8 +50,8 @@ profile lb-homeoffice {
     exec swaymsg output '"Lenovo Group Limited C24-25 U7607KYT"' background /home/zus/.local/share/backgrounds/painted/painted-1920-1080-hand.png fill
 
     exec swaymsg workspace 1, move workspace to '"Lenovo Group Limited C24-25 U7607KYT"'
-    exec swaymsg workspace 5, move workspace to '"LG Electronics LG ULTRAWIDE 0x00021BB2"'
-    exec swaymsg workspace 3, move workspace to '"Lenovo Group Limited C24-25 U760GXCK"'
+    exec swaymsg workspace 6, move workspace to '"LG Electronics LG ULTRAWIDE 0x00021BB2"'
+    exec swaymsg workspace 4, move workspace to '"Lenovo Group Limited C24-25 U760GXCK"'
 }
 
 # Single display configuration
