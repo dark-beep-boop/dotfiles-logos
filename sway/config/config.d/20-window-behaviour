@@ -12,12 +12,13 @@ for_window [app_id=firefox title="(?!Podimo Player — Mozilla Firefox)(?!Mail -
 assign [app_id="Tor Browser"] 4
 
 # Media workspace windows
-#assign [class=Spotify] 5
+assign [class=Spotify] 5
 for_window [class=Spotify] move window to workspace 5
 for_window [app_id=firefox title="Podimo Player — Mozilla Firefox"] move window to workspace 5
 assign [app_id=mpv] 5
 
 # Mail workspace windows
+assign [app_id=firefox title="Mail - .* - Outlook — Mozilla Firefox"] 6
 for_window [app_id=firefox title="Mail - .* - Outlook — Mozilla Firefox"] move window to workspace 6
 assign [class="Proton Mail"] 6
 
@@ -25,7 +26,6 @@ assign [class="Proton Mail"] 6
 assign [app_id=org.telegram.desktop] 7
 assign [class=discord] 7
 assign [app_id=Slack] 7
-assign [class="Microsoft Teams - Preview"] 7
 assign [class="Mattermost"] 7
 
 # Notes workspace windows
@@ -37,9 +37,7 @@ for_window [app_id=firefox title="Nirvana — Mozilla Firefox"] move window to w
 # Scratchpad windows
 for_window [app_id=scratch] move window to scratchpad, resize set 900 540, move position center
 for_window [app_id=network] move window to scratchpad, resize set 900 600, move position center
-for_window [class=Bitwarden] move window to scratchpad, resize set 1000 600, move position center
-for_window [class=Todoist] move window to scratchpad, resize set 1000 600, move position center
-for_window [class="Authy Desktop"] move window to scratchpad, move position center
+for_window [class=Bitwarden] move window to scratchpad, resize set 1000 600, move position center, sticky enable
 for_window [app_id=protonvpn-app] move window to scratchpad, move position center
 
 ## Window default mode
@@ -48,7 +46,7 @@ for_window [app_id=float] floating enable
 for_window [app_id=firefox title="Password Required"] floating enable
 for_window [app_id=firefox title="Firefox . Sharing Indicator"] floating enable, move position top
 for_window [app_id=firefox title="Extension: \(Bitwarden Password Manager\) - Bitwarden — Mozilla Firefox"] floating enable
-for_window [app_id=zoom] floating enable
+for_window [class=zoom] floating enable
 for_window [app_id=veracrypt] floating enable
 for_window [app_id=ch.proton.bridge-gui] floating enable
 for_window [app_id=thunar] floating enable
