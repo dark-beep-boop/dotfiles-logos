@@ -260,6 +260,7 @@ window#waybar.hidden {
   color: @base05;
   border: none;
   border-radius: 15px;
+  padding: 0 10px 0 5px;
 }
 
 #workspaces button#sway-workspace-1 {
