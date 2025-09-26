@@ -96,8 +96,6 @@ return {
 						['s'] = 'focus_preview',
 						['v'] = 'open_vsplit',
 						['j'] = 'open_tabnew',
-						['h'] = 'rename',
-						['r'] = 'noop',
 						['t'] = 'noop',
 						['n'] = 'noop',
 					},
