@@ -120,6 +120,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias ls="lsd"
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 # Vi like line editing
@@ -132,7 +133,5 @@ eval $(keychain \
   --eval \
   id_ed25519)
 
-# Anaconda initialization
-export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
-alias anaconda-activate="source /opt/anaconda/bin/activate"
-
+# Doom Emacs
+export PATH="$HOME/.emacs.d/bin:$PATH"
