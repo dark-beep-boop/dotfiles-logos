@@ -11,7 +11,7 @@ bindsym $mod+Shift+Return exec $scratch_term
 bindsym $mod+w kill
 
 # Start your launcher
-bindsym $mod+h exec $menu
+bindsym $mod+d exec $menu
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
