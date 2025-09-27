@@ -134,4 +134,5 @@ eval $(keychain \
   id_ed25519)
 
 # Doom Emacs
-export PATH="$HOME/.emacs.d/bin:$PATH"
+export DOOMDIR="$XDG_CONFIG_HOME/doom"
+export PATH="$XDG_CONFIG_HOME/emacs/bin:$PATH"
