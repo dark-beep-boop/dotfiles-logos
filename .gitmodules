@@ -1,0 +1,3 @@
+[submodule "neovim/config"]
+	path = neovim/config
+	url = git@github.com:dark-beep-boop/nvim-config.git
