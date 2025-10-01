@@ -4,7 +4,6 @@ dots :=\
 			 flavours\
 			 gtk\
 			 kanshi\
-			 kitty\
 			 lock\
 			 power-menu\
 			 menu\
@@ -17,6 +16,7 @@ dots :=\
 			 zsh
 			#nvim
 			#doom
+			#kitty
 
 .PHONY:\
 	all\
