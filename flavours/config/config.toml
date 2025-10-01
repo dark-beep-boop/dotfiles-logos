@@ -52,17 +52,17 @@ end = "### end base16 scheme"
 rewrite = false
 light = true
 
-[[items]]
-file = "~/.local/share/nvim/lazy/base16-nvim/colors/base16-current.lua"
-template = "neovim"
-rewrite = true
-light = true
+# [[items]]
+# file = "~/.local/share/nvim/lazy/base16-nvim/colors/base16-current.lua"
+# template = "neovim"
+# rewrite = true
+# light = true
 
-[[items]]
-file = "~/.config/nvim/lua/plugins/lualine/themes/base16.lua"
-template = "lualine"
-rewrite = true
-light = true
+# [[items]]
+# file = "~/.config/nvim/lua/plugins/lualine/themes/base16.lua"
+# template = "lualine"
+# rewrite = true
+# light = true
 
 #[[items]]
 #file = "~/.config/spicetify/Themes/Sleek/color.ini"
