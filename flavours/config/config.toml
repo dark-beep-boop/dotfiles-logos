@@ -107,6 +107,7 @@ hook = "import-gsettings"
 [[items]]
 file = "~/.Xdefaults"
 template = "xresources"
+subtemplate = "base16"
 rewrite = true
 hook = "xrdb -merge ~/.Xdefaults"
 light = false

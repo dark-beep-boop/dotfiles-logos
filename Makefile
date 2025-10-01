@@ -9,13 +9,14 @@ dots :=\
 			 power-menu\
 			 menu\
 			 neofetch\
-			 neovim\
 			 ranger\
 			 screenshot\
 			 sway\
 			 waybar\
 			 zathura\
 			 zsh
+			#nvim
+			#doom
 
 .PHONY:\
 	all\
