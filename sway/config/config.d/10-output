@@ -1,8 +1,0 @@
-### Output configuration
-
-# Default background
-output * background /home/zus/.local/share/backgrounds/default fill
-
-# Display configuration
-exec kanshi
-exec_always kanshictl reload

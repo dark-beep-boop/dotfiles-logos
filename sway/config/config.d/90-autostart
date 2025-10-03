@@ -1,6 +1,0 @@
-### Start applications on init
-
-# Notifications
-exec dunst
-exec lxpolkit
-exec syncthing serve

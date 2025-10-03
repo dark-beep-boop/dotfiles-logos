@@ -1,4 +1,0 @@
-### Last tasks to execute
-
-# Set import gtk settings
-exec_always import-gsettings
