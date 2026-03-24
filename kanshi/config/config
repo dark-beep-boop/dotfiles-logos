@@ -12,7 +12,7 @@ profile tudelftoffice {
 
     exec swaymsg workspace 2, move workspace to '"Dell Inc. DELL P2422H DWL9QP3"'
     exec swaymsg workspace 3, move workspace to '"Philips Consumer Electronics Company PHL 346B1C UK02308041391"'
-    exec swaymsg workspace 4, move workspace to '"Philips Consumer Electronics Company PHL 346B1C UK02308041391"'
+    exec swaymsg workspace 4, move workspace to 'eDP-1'
     exec swaymsg workspace 5, move workspace to 'eDP-1'
     exec swaymsg workspace 6, move workspace to 'eDP-1'
     exec swaymsg workspace 7, move workspace to 'eDP-1'
