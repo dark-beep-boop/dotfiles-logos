@@ -4,12 +4,7 @@ userhome := $(shell echo ~$(username))/
 config_files :=\
 							 config\
 							 config.d/00-color-scheme\
-							 config.d/00-file-explorer\
-							 config.d/00-lock\
-							 config.d/00-mail\
-							 config.d/00-menu\
-							 config.d/00-power-menu\
-							 config.d/00-screenshot\
+							 config.d/00-apps\
 							 config.d/00-variables\
 							 config.d/10-bar\
 							 config.d/10-idle\
@@ -22,7 +17,6 @@ config_files :=\
 							 config.d/50-movement-keys\
 							 config.d/50-resize-keys\
 							 config.d/50-scratchpad-keys\
-							 config.d/50-workspace-keys\
 							 config.d/80-appearance\
 							 config.d/90-autostart\
 							 config.d/99-last
