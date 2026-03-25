@@ -61,7 +61,7 @@
       "tooltip-format-linked": "connected (No IP) with {ifname} via {gwaddr} 󰈀",
       "format-disconnected": "󰈂",
       "tooltip-format-disconnected": "disconnected",
-      "on-click": "nm-connection-editor"
+      "on-click": "kitty --class scratch nmtui-connect"
     },
     "battery": {
       "states": {
