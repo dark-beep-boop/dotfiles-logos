@@ -113,6 +113,7 @@ window#waybar.hidden {
  * Battery
  */
 #battery {
+  font-size: 22px;
   padding: 0 15px 0 8px;
 }
 
@@ -171,15 +172,11 @@ window#waybar.hidden {
  */
 #idle_inhibitor {
   border-radius: 15px;
-  font-size: 17px;
-}
-
-#idle_inhibitor.deactivated {
-  padding: 0 15px 0 5px;
+  font-size: 22px;
+  padding: 0 9px 0 9px;
 }
 
 #idle_inhibitor.activated {
-  padding: 0 14px 0 6px;
   color: @base00;
   background-color: @base0D;
 }
@@ -230,6 +227,7 @@ window#waybar.hidden {
  */
 #network {
   padding: 0 15px 0 7px;
+  font-size: 22px;
 }
 
 #network.disconnected {
@@ -240,6 +238,7 @@ window#waybar.hidden {
  * Temperature
  */
 #temperature.critical {
+  font-size: 22px;
   color: @base08;
 }
 
@@ -271,43 +270,42 @@ window#waybar.hidden {
   color: @base05;
   border: none;
   border-radius: 15px;
-  padding: 0 10px 0 5px;
 }
 
 #workspaces button#sway-workspace-1 {
-  padding: 0 10px 0 5px;
+  padding: 0 7px 0 8px;
 }
 
 #workspaces button#sway-workspace-2 {
-  padding: 0 12px 0 3px;
+  padding: 0 7px 0 8px;
 }
 
 #workspaces button#sway-workspace-3 {
-  padding: 0 9px 0 6px;
+  padding: 0 7px 0 7px;
 }
 
 #workspaces button#sway-workspace-4 {
-  padding: 0 10px 0 5px;
+  padding: 0 7px 0 8px;
 }
 
 #workspaces button#sway-workspace-5 {
-  padding: 0 10px 0 5px;
+  padding: 0 7px 0 8px;
 }
 
 #workspaces button#sway-workspace-6 {
-  padding: 0 11px 0 4px;
+  padding: 0 7px 0 8px;
 }
 
 #workspaces button#sway-workspace-7 {
-  padding: 0 10px 0 5px;
+  padding: 0 7px 0 8px;
 }
 
 #workspaces button#sway-workspace-8 {
-  padding: 0 9px 0 6px;
+  padding: 0 7px 0 8px;
 }
 
 #workspaces button#sway-workspace-9 {
-  padding: 0 11px 0 4px;
+  padding: 0 7px 0 8px;
 }
 
 #workspaces button:hover {
@@ -332,7 +330,7 @@ window#waybar.hidden {
 }
 
 #workspaces button label {
-  font-size: 17px;
+  font-size: 22px;
 }
 
 #workspaces button:nth-child(1) label {
