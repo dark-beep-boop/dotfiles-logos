@@ -13,7 +13,7 @@
     //"output": ["eDP-1"],
 
     // Choose the order of the modules
-    "modules-left": ["clock"],
+    "modules-left": ["clock", "custom/banner"],
     "modules-center": ["sway/workspaces"],
     "modules-right": ["pulseaudio", "network", "battery"],
 
@@ -48,9 +48,10 @@
       }
     },
     "clock": {
-      "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+      "interval": 1,
+      "tooltip-format": "{calendar}",
       "format-alt": "{:%a %d %B %Y}",
-      "format": "{:%R}"
+      "format": "{:%T}"
     },
     "network": {
       "format-wifi": "",
@@ -99,6 +100,10 @@
         "default": ["", "", ""]
       },
       "on-click": "kitty --class scratch pulsemixer"
+    },
+    "custom/banner": {
+      "format": "{icon} Every second counts",
+      "format-icons": ["!"],
     },
   },
   {

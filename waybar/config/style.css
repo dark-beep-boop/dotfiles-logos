@@ -82,6 +82,7 @@ window#waybar.hidden {
 #clock,
 #cpu,
 #custom-media,
+#custom-banner,
 #disk,
 #memory,
 #mode,
@@ -141,7 +142,7 @@ window#waybar.hidden {
 }
 
 /*
- * Custom
+ * Media
  */
 #custom-media {
   padding: 0 20px 0 9px;
@@ -153,6 +154,16 @@ window#waybar.hidden {
 #custom-media.custom-spotify {
   color: @base00;
   background-color: #66cc99;
+}
+
+/*
+ * Banner
+ */
+#custom-banner {
+  padding: 0 20px 0 9px;
+  color: @base00;
+  background-color: @base0D;
+  min-width: 100px;
 }
 
 /*
