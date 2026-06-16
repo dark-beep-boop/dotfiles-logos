@@ -161,7 +161,7 @@ window#waybar.hidden {
  * Banner
  */
 #custom-banner {
-  padding: 0 20px 0 9px;
+  padding: 0 12px 0 12px;
   color: @base00;
   background-color: @base0D;
   min-width: 100px;

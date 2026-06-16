@@ -102,8 +102,10 @@
       "on-click": "kitty --class scratch pulsemixer"
     },
     "custom/banner": {
-      "format": "{icon} Every second counts",
-      "format-icons": ["!"],
+      "exec": "$HOME/.local/bin/banner.py",
+      "format": "<b>{0}</b>",
+      "interval": 3600,
+      "tooltip": false
     },
   },
   {
