@@ -1,9 +1,6 @@
 [submodule "neovim/config"]
 	path = nvim/config
 	url = git@github.com:dark-beep-boop/nvim-config.git
-[submodule "doom/config"]
-	path = doom/config
-	url = git@github.com:dark-beep-boop/doom-config.git
 [submodule "sway/config"]
 	path = sway/config
 	url = git@github.com:dark-beep-boop/sway-config.git
