@@ -7,3 +7,6 @@
 [submodule "sway/config"]
 	path = sway/config
 	url = git@github.com:dark-beep-boop/sway-config.git
+[submodule "waybar/config"]
+	path = waybar/config
+	url = git@github.com:dark-beep-boop/waybar-config.git
