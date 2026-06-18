@@ -8,7 +8,7 @@ dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
 
 bin_files := mediaplayer.py banner.py
 src_bin_dir := bin/
-dst_bin_dir := $(userhome).local/bin/
+dst_bin_dir := $(userhome).config/waybar/bin/
 dst_bin_files := $(addprefix $(dst_bin_dir),$(bin_files))
 
 .PHONY: all, install, uninstall

@@ -102,7 +102,7 @@
       "on-click": "kitty --class scratch pulsemixer"
     },
     "custom/banner": {
-      "exec": "$HOME/.local/bin/banner.py",
+      "exec": "~/.config/waybar/bin/banner.py",
       "format": "<b>{0}</b>",
       "interval": 3600,
       "tooltip": false
@@ -161,7 +161,7 @@
           "default": " "
       },
       "escape": true,
-      "exec": "$HOME/.local/bin/mediaplayer.py"
+      "exec": "~/.config/waybar/bin/mediaplayer.py"
     },
   }
 ]

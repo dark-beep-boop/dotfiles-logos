@@ -4,7 +4,8 @@ import random
 
 messages = (
     " Every second counts!",
-    "  Just grind and chill",
+    "  Just chill and keep grinding",
+    " Get up and start programming!",
 )
 
 index = random.randint(0, len(messages) - 1)
