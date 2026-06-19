@@ -7,3 +7,6 @@
 [submodule "waybar/config"]
 	path = waybar/config
 	url = git@github.com:dark-beep-boop/waybar-config.git
+[submodule "kitty/config"]
+	path = kitty/config
+	url = git@github.com:dark-beep-boop/kitty-config.git
