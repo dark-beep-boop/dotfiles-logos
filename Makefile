@@ -1,7 +1,7 @@
 dots :=\
 			 bpytop\
 			 dunst\
-			 flavours\
+			 greetd\
 			 gtk\
 			 kanshi\
 			 lock\
@@ -10,20 +10,10 @@ dots :=\
 			 neofetch\
 			 ranger\
 			 screenshot\
-			 sway\
 			 waybar\
-			 zathura\
 			 zsh
-			#nvim
-			#doom
-			#kitty
 
-.PHONY:\
-	all\
-	install\
-	uninstall\
-	install-greetd\
-	uninstall-greetd
+.PHONY: all install uninstall
 
 all:
 
@@ -42,13 +32,3 @@ uninstall:
 		make uninstall;\
 		cd ..;\
 	done
-
-install-greetd:
-	@cd greetd;\
-		make install;\
-		cd ..
-
-uninstall-greetd:
-	@cd greetd;\
-		make uninstall;\
-		cd ..
