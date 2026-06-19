@@ -133,6 +133,5 @@ eval $(keychain \
   --eval \
   id_ed25519)
 
-# Doom Emacs
-export DOOMDIR="$XDG_CONFIG_HOME/doom"
-export PATH="$XDG_CONFIG_HOME/emacs/bin:$PATH"
+# Nimble
+export PATH="$HOME/.nimble/bin:$PATH"
