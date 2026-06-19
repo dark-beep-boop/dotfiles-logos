@@ -1,7 +1,7 @@
 username := $(SUDO_USER)
 userhome := $(shell echo ~$(username))/
 
-config_files := bpytop.conf themes/base16-flavours.theme
+config_files := bpytop.conf themes/everforest.theme
 src_config_dir := config/
 dst_config_dir := $(userhome).config/bpytop/
 dst_config_files := $(addprefix $(dst_config_dir),$(config_files))
