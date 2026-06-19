@@ -2,50 +2,43 @@ clock
 image=/home/zus/.local/share/backgrounds/lock
 effect-vignette=0.4:0.4
 
-### begin base16 scheme
-## Base16 painted
-# Author: dark-beep-boop
+## Everforest Dark Hard
+# Author: Sainnhe Park
 
-color=011837
+color=d3c6aa
 
-bs-hl-color=0450b4
-caps-lock-bs-hl-color=0450b4
+bs-hl-color=3c4841
+caps-lock-bs-hl-color=384b55
 
-key-hl-color=f3b73d
-caps-lock-key-hl-color=f3b73d
+key-hl-color=a7c080
+caps-lock-key-hl-color=e67e80
 
-inside-color=011837
-inside-clear-color=011837
-inside-caps-lock-color=011837
-inside-ver-color=4b97fb
-inside-wrong-color=011837
+inside-color=232a2e
+inside-clear-color=2d353b
+inside-caps-lock-color=3d484d
+inside-ver-color=425047
+inside-wrong-color=514045
 
-layout-bg-color=011837
-layout-border-color=011837
-layout-text-color=4b97fb
+layout-bg-color=232a2e
+layout-border-color=4f585e
+layout-text-color=d3c6aa
 
-#line-color=4b97fb
-#line-clear-color=4b97fb
-#line-caps-lock-color=f3b73d
-#line-ver-color=4b97fb
-#line-wrong-color=ff1f1f
-line-color=011837
-line-clear-color=011837
-line-caps-lock-color=011837
-line-ver-color=011837
-line-wrong-color=011837
+line-color=4f585e
+line-clear-color=56635f
+line-caps-lock-color=4f585e
+line-ver-color=4f585e
+line-wrong-color=4f585e
 
-ring-color=011837
-ring-clear-color=011837
-ring-caps-lock-color=011837
-ring-ver-color=011837
-ring-wrong-color=011837
+ring-color=4f585e
+ring-clear-color=56635f
+ring-caps-lock-color=4f585e
+ring-ver-color=4f585e
+ring-wrong-color=4f585e
 
-separator-color=011837
+separator-color=4f585e
 
-text-color=4b97fb
-text-clear-color=4b97fb
-text-caps-lock-color=f3b73d
-text-ver-color=011837
-text-wrong-color=ff1f1f
-### end base16 scheme
+text-color=d3c6aa
+text-clear-color=7fbbb3
+text-caps-lock-color=dbbc7f
+text-ver-color=a7c080
+text-wrong-color=e67e80
