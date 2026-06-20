@@ -7,35 +7,35 @@ effect-vignette=0.4:0.4
 
 color=d3c6aa
 
-bs-hl-color=3c4841
+bs-hl-color=374145
 caps-lock-bs-hl-color=384b55
 
 key-hl-color=a7c080
 caps-lock-key-hl-color=e67e80
 
-inside-color=232a2e
-inside-clear-color=2d353b
-inside-caps-lock-color=3d484d
-inside-ver-color=425047
-inside-wrong-color=514045
+inside-color=1e2326
+inside-clear-color=272e33
+inside-caps-lock-color=374145
+inside-ver-color=3c4841
+inside-wrong-color=493b40
 
 layout-bg-color=232a2e
 layout-border-color=4f585e
 layout-text-color=d3c6aa
 
-line-color=4f585e
-line-clear-color=56635f
-line-caps-lock-color=4f585e
-line-ver-color=4f585e
-line-wrong-color=4f585e
+line-color=495156
+line-clear-color=4f5b58
+line-caps-lock-color=495156
+line-ver-color=495156
+line-wrong-color=495156
 
-ring-color=4f585e
-ring-clear-color=56635f
-ring-caps-lock-color=4f585e
-ring-ver-color=4f585e
-ring-wrong-color=4f585e
+ring-color=495156
+ring-clear-color=4f5b58
+ring-caps-lock-color=495156
+ring-ver-color=495156
+ring-wrong-color=495156
 
-separator-color=4f585e
+separator-color=495156
 
 text-color=d3c6aa
 text-clear-color=7fbbb3
