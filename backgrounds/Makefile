@@ -6,7 +6,7 @@ src_background_dir := backgrounds/
 dst_background_dir := $(userhome).local/share/backgrounds/
 dst_background_files := $(addprefix $(dst_background_dir),$(background_files))
 
-bin_files := set_backgrounds
+bin_files := set-backgrounds
 src_bin_dir := bin/
 dst_bin_dir := $(userhome).local/bin/
 dst_bin_files := $(addprefix $(dst_bin_dir),$(bin_files))
