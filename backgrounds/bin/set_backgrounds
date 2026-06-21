@@ -1,0 +1,30 @@
+#! /usr/bin/env python3
+
+import os
+import random
+import argparse
+from i3ipc import Connection
+
+default_background_dir = r"/home/zus/.local/share/backgrounds/wall"
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-d', '--background_dir', default=default_background_dir)
+    arguments = parser.parse_args()
+    
+    i3_connection = Connection()
+
+    output_list = [output.name for output in i3_connection.get_outputs()]
+    backgroundname_list = []
+    for _, _, filename_list in os.walk(arguments.background_dir):
+        backgroundname_list += filename_list
+    background_list = [os.path.abspath(f"{arguments.background_dir}/{filename}") for filename in backgroundname_list]
+    index_list = random.sample(range(0, len(background_list)-1), len(output_list))
+    ordered_file_list = [background_list[index] for index in index_list]
+
+    for output, background in zip(output_list, ordered_file_list):
+        print(f"{output}: {background}")
+        i3_connection.command(f"output {output} background {background} fill")
+
+if __name__ == "__main__":
+    main()
