@@ -19,7 +19,7 @@ def main():
     for _, _, filename_list in os.walk(arguments.background_dir):
         backgroundname_list += filename_list
     background_list = [os.path.abspath(f"{arguments.background_dir}/{filename}") for filename in backgroundname_list]
-    index_list = random.sample(range(0, len(background_list)-1), len(output_list))
+    index_list = random.sample(range(0, len(background_list)), len(output_list))
     ordered_file_list = [background_list[index] for index in index_list]
 
     for output, background in zip(output_list, ordered_file_list):
