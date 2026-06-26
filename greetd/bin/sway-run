@@ -12,4 +12,4 @@ export SDL_VIDEODRIVER=wayland
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Start sway
-exec systemd-cat --identifier=sway sway $@
+exec systemd-cat --identifier=sway sway --unsupported-gpu $@
