@@ -53,3 +53,9 @@ profile lb-homeoffice {
 profile single {
     output eDP-1 enable mode 3120x2080@90Hz position 0,0 scale 2 transform normal
 }
+
+# TU Delft network office
+profile tudelftnetworkoffic {
+    output eDP-1 enable mode 3120x2080@90Hz position 0,1300 scale 2 transform normal
+    output "HP Inc. HP P34hc G4 CNC4411QKQ" enable mode 3440x1440@59.973 position 1560,0 scale 1 transform normal 
+}
